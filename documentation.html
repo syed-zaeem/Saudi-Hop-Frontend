@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload API Documentation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      pre,
+      code {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #0056b3;
+      }
+      blockquote {
+        margin: 10px 0;
+        padding-left: 20px;
+        border-left: 5px solid #ccc;
+        color: #666;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>File Upload API</h1>
+    <p>
+      This API provides endpoints to upload and retrieve files. Files are stored
+      in a local <code>uploads</code> directory, and users can access uploaded
+      files via their respective URLs.
+    </p>
+
+    <h2>Base URL</h2>
+    <pre><code>http://localhost:5000/files</code></pre>
+
+    <h2>Endpoints</h2>
+
+    <h3>1. Upload a File</h3>
+    <p><strong>Endpoint:</strong></p>
+    <pre><code>POST /upload</code></pre>
+    <p>
+      <strong>Description:</strong><br />Uploads a file to the server and stores
+      it in the <code>uploads</code> directory.
+    </p>
+    <p><strong>Request:</strong></p>
+    <ul>
+      <li>Use <code>multipart/form-data</code> to upload a file.</li>
+      <li>Key for the file: <code>file</code>.</li>
+    </ul>
+    <p><strong>Example Request:</strong></p>
+    <pre><code>POST http://localhost:5000/files/upload</code></pre>
+    <p><strong>Response:</strong></p>
+    <pre><code>{
+  "message": "File uploaded successfully.",
+  "filePath": "/uploads/20240930_163641[1].jpg"
+}</code></pre>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li>
+        The <code>filePath</code> in the response indicates the relative path to
+        the uploaded file.
+      </li>
+      <li>Files are saved with their original names.</li>
+    </ul>
+
+    <h3>2. Retrieve a File</h3>
+    <p><strong>Endpoint:</strong></p>
+    <pre><code>GET /:filename</code></pre>
+    <p>
+      <strong>Description:</strong><br />Fetches a file by its name from the
+      server.
+    </p>
+    <p><strong>Path Parameters:</strong></p>
+    <ul>
+      <li>
+        <code>filename</code>: The name of the file (e.g.,
+        <code>20240930_163641[1].jpg</code>).
+      </li>
+    </ul>
+    <p><strong>Example Request:</strong></p>
+    <pre><code>GET http://localhost:5000/files/20240930_163641[1].jpg</code></pre>
+    <p><strong>Response:</strong></p>
+    <pre><code>200 OK
+Returns the requested file in the response body.</code></pre>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li>
+        The <code>filename</code> must exactly match the name of the uploaded
+        file.
+      </li>
+      <li>
+        If the file does not exist, a <code>404 Not Found</code> response is
+        returned.
+      </li>
+    </ul>
+
+    <h2>How to Use</h2>
+
+    <h3>Setup</h3>
+    <ol>
+      <li><strong>Clone the repository:</strong></li>
+      <pre><code>git clone https://github.com/your-repo/file-upload-api.git
+cd file-upload-api</code></pre>
+      <li><strong>Install dependencies:</strong></li>
+      <pre><code>npm install</code></pre>
+      <li><strong>Start the server:</strong></li>
+      <pre><code>npm start</code></pre>
+      <p>
+        The server will run on <code>http://localhost:5000</code> by default.
+      </p>
+    </ol>
+
+    <h2>Directory Structure</h2>
+    <ul>
+      <li>
+        Uploaded files are stored in the <code>uploads</code> folder at the root
+        of the project.
+      </li>
+      <li>
+        Ensure the <code>uploads</code> directory exists before starting the
+        server. The server will create it automatically if it does not exist.
+      </li>
+    </ul>
+
+    <h2>Error Responses</h2>
+
+    <h3>400 Bad Request</h3>
+    <p>When no file is uploaded:</p>
+    <pre><code>{
+  "error": "No file uploaded."
+}</code></pre>
+
+    <h3>404 Not Found</h3>
+    <p>When a file is not found:</p>
+    <pre><code>{
+  "error": "File not found."
+}</code></pre>
+
+    <h3>500 Internal Server Error</h3>
+    <p>When an unexpected error occurs:</p>
+    <pre><code>{
+  "error": "An unexpected error occurred."
+}</code></pre>
+
+    <h2>Example Usage</h2>
+
+    <h3>Upload a File</h3>
+    <pre><code>curl -X POST -F "file=@path/to/your/file.jpg" http://localhost:5000/files/upload</code></pre>
+
+    <h3>Retrieve a File</h3>
+    <pre><code>curl -X GET http://localhost:5000/files/20240930_163641[1].jpg --output downloaded_file.jpg</code></pre>
+
+    <h2>Technologies Used</h2>
+    <ul>
+      <li><strong>Node.js</strong>: Backend runtime environment.</li>
+      <li><strong>Express.js</strong>: Web framework for building the API.</li>
+      <li>
+        <strong>Multer</strong>: Middleware for handling
+        <code>multipart/form-data</code> file uploads.
+      </li>
+    </ul>
+
+    <h2>Future Enhancements</h2>
+    <ul>
+      <li>
+        <strong>File Type Validation:</strong> Restrict uploads to specific file
+        types (e.g., images, PDFs).
+      </li>
+      <li>
+        <strong>File Size Limitation:</strong> Limit file sizes to avoid
+        excessive resource usage.
+      </li>
+      <li>
+        <strong>Cloud Storage Integration:</strong> Store files in cloud
+        platforms like AWS S3, Google Cloud Storage, or Azure Blob Storage for
+        scalability.
+      </li>
+    </ul>
+
+    <h2>License</h2>
+    <p>This project is licensed under the MIT License.</p>
+  </body>
+</html>

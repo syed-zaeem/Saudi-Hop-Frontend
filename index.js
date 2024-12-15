@@ -6,6 +6,7 @@ const blogRoutes = require("./routes/BlogRoutes");
 const swaggerUi = require("swagger-ui-express");
 const FaqRoutes = require("./routes/FaqRoutes");
 const mongoose = require("mongoose");
+const swaggerSpec = require("./swaggerConfig");
 
 const app = express();
 

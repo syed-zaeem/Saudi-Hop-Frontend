@@ -1,0 +1,897 @@
+:root {
+  --dashboard-width: 300px;
+}
+
+@include media-below(xl) {
+  :root {
+    --dashboard-width: 250px;
+  }
+}
+
+.dashboard {
+  display: flex;
+
+  @include media-below(lg) {
+    flex-direction: column;
+  }
+
+  &__main {
+    overflow: hidden;
+    width: 100%;
+    padding-left: var(--dashboard-width);
+    will-change: padding-left;
+    transition: all 0.5s $easeOutCubic;
+
+    &::after {
+      content: "";
+      display: none;
+      position: fixed;
+      z-index: 50;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(black, 0.5);
+
+      transition: all 0.5s $easeOutCubic;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    @include media-below(lg) {
+      padding-left: 0;
+
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding: 60px;
+    padding-bottom: 0;
+
+    @include media-below(md) {
+      padding: 30px;
+      padding-bottom: 0;
+    }
+
+    @include media-below(sm) {
+      padding: 20px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__sidebar {
+    overflow-y: scroll;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: var(--dashboard-width);
+    height: calc(100% - 90px);
+    padding: 30px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    will-change: transform;
+    transition: all 0.5s $easeOutCubic;
+
+    @include media-below(lg) {
+      transform: translateX(-100%);
+    }
+
+    @include media-below(md) {
+      width: 80%;
+      height: calc(100% - 80px);
+    }
+  }
+}
+
+body.-is-sidebar-open {
+  @include media-below(lg) {
+    .dashboard__sidebar {
+      transform: none;
+    }
+
+    // .dashboard__main {
+    //   &::after {
+    //     pointer-events: auto;
+    //     opacity: 1;
+    //   }
+    // }
+  }
+
+  @include media-above(lg) {
+    .dashboard__sidebar {
+      transform: translateX(-100%);
+    }
+
+    .dashboard__main {
+      padding-left: 0;
+
+      &::after {
+        pointer-events: auto;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.sidebar.-dashboard {
+  .sidebar {
+    &__item {
+      border: none;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      border-radius: 4px;
+      padding: 0 15px;
+      height: 55px;
+
+      @include media-below(sm) {
+        height: 45px;
+      }
+
+      &.-is-active {
+        background-color: color-opac(blue-1, 0.05);
+        color: var(--color-blue-1) !important;
+      }
+    }
+  }
+}
+
+.scroll-bar-1 {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(black, 0.3);
+    border-radius: 12px;
+  }
+}
+
+.dropdown {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+
+  &__button {
+    height: 40px;
+  }
+
+  .icon {
+    transition: all 0.2s $easeOutQuart;
+  }
+
+  &.-is-dd-active {
+    .border-light {
+      border: 2px solid var(--color-dark-1) !important;
+    }
+
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__item {
+    position: absolute;
+    z-index: 500;
+    pointer-events: none;
+    top: 100%;
+    left: 50%;
+    padding: 26px;
+    background-color: white;
+    box-shadow: 0px 25px 70px rgba(1, 33, 58, 0.07);
+    min-width: 180px;
+    border-radius: 8px;
+    transition: all 0.2s $easeOutQuart;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  &:hover {
+    .dropdown__item {
+      z-index: 20;
+      transform: translateX(-50%);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+.toggle-element {
+  transition: all 0.2s $easeOutCubic;
+
+  &.-down {
+    transform: translateY(20px);
+  }
+
+  &.-is-el-visible {
+    z-index: 25;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &.-dropdown {
+    padding: 14px 20px;
+    background-color: white;
+    box-shadow: 0px 25px 70px rgba(1, 33, 58, 0.07);
+    min-width: 160px;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+    font-weight: 500;
+  }
+
+  &.-dropdown-2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 25px 70px rgba(1, 33, 58, 0.07);
+    min-width: 120px;
+    border-radius: 4px;
+    transition: all 0.2s $easeOutQuart;
+    transform: translateX(-50%);
+
+    a,
+    button {
+      padding: 10px;
+
+      &:hover {
+        background-color: var(--color-light-2);
+        color: var(--color-dark-1);
+      }
+    }
+  }
+}
+
+.chart_responsive {
+  @media (max-width: 1800px) {
+    .col-xl-7,
+    .col-xl-5 {
+      width: 100%;
+    }
+  }
+}
+
+//booking table
+.tabs.-underline-2 .tabs__controls .tabs__button.is-tab-el-active,
+.tabs.-underline-2 .tabs__controls .tabs__button:hover {
+  color: var(--color-blue-1) !important;
+}
+.tabs.-underline-2 .tabs__controls .tabs__button {
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.tabs.-underline-2 .tabs__controls .tabs__button:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-blue-1);
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0;
+}
+.tabs.-underline-2 .tabs__controls .tabs__button.is-tab-el-active:after {
+  opacity: 1;
+}
+
+
+// ____________________________________ Add FAQs Styling ___________________________________
+
+// Base Styling
+$primary-color: #4c6ef5;
+$secondary-color: #365df0;
+$border-color: #ddd;
+$focus-color: #4c6ef5;
+$text-color: #333;
+$label-color: #666;
+$background-color: #f9f9f9;
+
+
+.faq-form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .form-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: $label-color;
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      font-size: 16px;
+      color: $text-color;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: $focus-color;
+      outline: none;
+      box-shadow: 0 0 5px rgba(76, 110, 245, 0.3);
+    }
+  }
+
+  .form-button {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(76, 110, 245, 0.3);
+    }
+  }
+
+  .text-right {
+    text-align: right;
+  }
+}
+
+.categoryDropdown{
+  cursor: pointer;
+}
+
+
+// Responsive Design
+@media screen and (max-width: 768px) {
+.dashboard__content {
+  padding: 20px;
+}
+
+.faq-form {
+  padding: 20px;
+
+  .form-heading {
+    font-size: 20px;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .form-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+}
+
+@media screen and (max-width: 480px) {
+.dashboard__content {
+  padding: 15px;
+}
+
+.faq-form {
+  padding: 15px;
+
+  .form-heading {
+    font-size: 18px;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .form-button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+}
+
+
+
+
+
+
+
+// ____________________________________ Add Blogs Styling ___________________________________
+.blog-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .form-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #666;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+
+    &:focus {
+      border-color: #4c6ef5;
+      outline: none;
+    }
+  }
+
+  .add-section-button {
+    background-color: #4c6ef5;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #365df0;
+    }
+  }
+
+  .form-button {
+    background-color: #4c6ef5;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #365df0;
+    }
+  }
+
+  // Styles for video input
+  .video-upload-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #f9f9f9;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      color: #4c6ef5;
+
+      svg {
+        font-size: 40px;
+        color: #666;
+        margin-bottom: 8px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #4c6ef5;
+        }
+      }
+
+      span {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+  }
+
+  .uploaded-videos-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    // border: 2px solid red;
+
+    .uploaded-video-item {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 8px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 20px;
+
+      span {
+        font-size: 14px;
+        color: #333;
+        word-break: break-word;
+      }
+      
+      .uploaded-image {
+        width: 100%;
+        height: 200px;
+      }
+
+      button {
+        background: none;
+        border: none;
+        color: #e63946;
+        cursor: pointer;
+        font-size: 16px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #d62828;
+        }
+      } 
+
+      @media screen and (max-width: 600px){
+        width: 45%;
+      }
+    }
+
+    @media screen and (max-width: 600px){
+      gap: 5%;
+    }
+  }
+}
+
+
+
+
+
+
+
+// ____________________________________ Add Packages Styling ___________________________________
+.package-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .form-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #666;
+  }
+
+  .form-input,
+  .form-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+
+  .form-input:focus,
+  .form-select:focus {
+    outline: none;
+    border-color: #00aaff;
+  }
+
+  .add-stay-info-button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .add-stay-info-button:hover {
+    background-color: #0088cc;
+  }
+
+  .form-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .form-button:hover {
+    background-color: #45a049;
+  }
+
+  // Styles for video input
+  .video-upload-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #f9f9f9;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      color: #4c6ef5;
+
+      svg {
+        font-size: 40px;
+        color: #666;
+        margin-bottom: 8px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #4c6ef5;
+        }
+      }
+
+      span {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+  }
+
+  .uploaded-videos-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    // border: 2px solid red;
+
+    .uploaded-video-item {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 8px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 20px;
+
+      span {
+        font-size: 14px;
+        color: #333;
+        word-break: break-word;
+      }
+      
+      .uploaded-image {
+        width: 100%;
+        height: 200px;
+      }
+
+      button {
+        background: none;
+        border: none;
+        color: #e63946;
+        cursor: pointer;
+        font-size: 16px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #d62828;
+        }
+      } 
+
+      @media screen and (max-width: 600px){
+        width: 45%;
+      }
+    }
+
+    @media screen and (max-width: 600px){
+      gap: 5%;
+    }
+  }
+}
+
+
+
+
+
+
+
+// ____________________________________ Add Hotels Styling ___________________________________
+.hotel-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .form-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #666;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: #00aaff;
+  }
+
+  .form-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .form-button:hover {
+    background-color: #45a049;
+  }
+}
+
+
+
+// ____________________________ View Blogs Table ________________________________
+.tableEditButton{
+  color: #4eb753;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover{
+    text-decoration: underline;
+    color: #418a44;
+  }
+}
+
+.tableDeleteButton{
+  color: rgb(253, 62, 62);
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover{
+    text-decoration: underline;
+    color: rgb(215, 53, 53);
+  }
+}
+
+.addBlogButton{
+  background-color: #027dba;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 8px 20px;
+  border-radius: 6px;
+  width: 30%;
+  margin: 50px 35%;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+  font-weight: 500;
+
+  &:hover{
+    background-color: #025985;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 40%;
+    margin-left: 30%;
+    font-size: 17px;
+  }
+
+  @media screen and (max-width: 468px) {
+    width: 60%;
+    margin: 35px 20%;
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+

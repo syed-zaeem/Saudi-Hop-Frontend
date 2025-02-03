@@ -90,6 +90,12 @@ import DBEditBlogs from "./pages/dashboard/dashboard/db-editBlogs";
 import DBEditFaqs from "./pages/dashboard/dashboard/db-editFaqs";
 import DBEditPackages from "./pages/dashboard/dashboard/db-editPackages";
 import DBEditHotels from "./pages/dashboard/dashboard/db-editHotels";
+import Three_Star_Packages from "./components/Packages/Three_Star_Packages";
+import ThreeStarPackages from "./pages/packages/three_star_packages";
+import Four_Star_Packages from "./components/Packages/Four_Star_Packages";
+import FourStarPackages from "./pages/packages/four_star_packages";
+import FiveStarPackages from "./pages/packages/five_star_packages";
+import UltraLuxuryPackages from "./pages/packages/ultra_luxury_packages";
 
 function App() {
   useEffect(() => {
@@ -133,6 +139,10 @@ function App() {
               <Route path="invoice" element={<Invoice />} />
               <Route path="contact" element={<Contact />} />
               <Route path="destinations" element={<Destinations />} />
+              <Route path="three-star-packages" element={<ThreeStarPackages />} />
+              <Route path="four-star-packages" element={<FourStarPackages />} />
+              <Route path="five-star-packages" element={<FiveStarPackages />} />
+              <Route path="ultra-luxury-packages" element={<UltraLuxuryPackages />} />
 
               <Route path="dashboard">
                 <Route path="db-dashboard" element={<DBDashboard />} />

@@ -2,7 +2,7 @@ export const hotelsData = [
   {
     id: 1,
     tag: "Breakfast Included",
-    slideImg: ["/img/hotels/1.png"],
+    slideImg: "/img/hotels/1.png",
     img: "/img/hotels/1.png",
     title: "The Montcalm At Brewery London City",
     location: "Westminster Borough, London",
@@ -16,7 +16,7 @@ export const hotelsData = [
   {
     id: 2,
     tag: "",
-    slideImg: ["/img/hotels/2.png", "/img/hotels/1.png", "/img/hotels/3.png"],
+    slideImg: "/img/hotels/2.png",
     img: "/img/hotels/2.png",
     title: "Staycity Aparthotels Deptford Bridge Station",
     location: "Ciutat Vella, Barcelona",
@@ -30,7 +30,7 @@ export const hotelsData = [
   {
     id: 3,
     tag: "best seller",
-    slideImg: ["/img/hotels/3.png"],
+    slideImg: "/img/hotels/3.png",
     img: "/img/hotels/3.png",
     title: "The Westin New York at Times Square West",
     location: "Manhattan, New York",
@@ -44,7 +44,7 @@ export const hotelsData = [
   {
     id: 4,
     tag: "top rated",
-    slideImg: ["/img/hotels/4.png"],
+    slideImg: "/img/hotels/4.png",
     img: "/img/hotels/4.png",
     title: "DoubleTree by Hilton Hotel New York Times Square West",
     location: "Vaticano Prati, Rome",
@@ -58,7 +58,7 @@ export const hotelsData = [
   {
     id: 5,
     tag: "Breakfast Included",
-    slideImg: ["/img/hotels/5.png"],
+    slideImg: "/img/hotels/5.png",
     img: "/img/hotels/5.png",
     title: "The Montcalm At Brewery London City",
     location: "Westminster Borough, London",
@@ -72,7 +72,7 @@ export const hotelsData = [
   {
     id: 6,
     tag: "-25% today",
-    slideImg: ["/img/hotels/6.png"],
+    slideImg: "/img/hotels/6.png",
     img: "/img/hotels/6.png",
     title: "The Montcalm At Brewery London City",
     location: "Westminster Borough, London",
@@ -86,7 +86,7 @@ export const hotelsData = [
   {
     id: 7,
     tag: "best seller",
-    slideImg: ["/img/hotels/7.png"],
+    slideImg: "/img/hotels/7.png",
     img: "/img/hotels/7.png",
     title: "Staycity Aparthotels Deptford Bridge Station",
     location: "Ciutat Vella, Barcelona",
@@ -100,7 +100,7 @@ export const hotelsData = [
   {
     id: 8,
     tag: "top rated",
-    slideImg: ["/img/hotels/8.png"],
+    slideImg: "/img/hotels/8.png",
     img: "/img/hotels/8.png",
     title: "The Westin New York at Times Square West",
     location: "Manhattan, New York",
@@ -115,7 +115,7 @@ export const hotelsData = [
     id: 9,
     tag: "Breakfast Included",
     img: "/img/hotels/9.png",
-    slideImg: ["/img/hotels/9.png"],
+    slideImg: "/img/hotels/9.png",
     title: "The Montcalm At Brewery London City",
     location: "Westminster Borough, London",
     ratings: "4.7",
@@ -128,11 +128,9 @@ export const hotelsData = [
   {
     id: 10,
     tag: "",
-    slideImg: [
-      "/img/hotels/10.png",
-      "/img/hotels/11.png",
-      "/img/hotels/12.png",
-    ],
+    slideImg: 
+      "/img/hotels/10.png"
+    ,
     title: "Staycity Aparthotels Deptford Bridge Station",
     img: "/img/hotels/10.png",
     location: "Ciutat Vella, Barcelona",
@@ -146,7 +144,7 @@ export const hotelsData = [
   {
     id: 11,
     tag: "best seller",
-    slideImg: ["/img/hotels/11.png"],
+    slideImg: "/img/hotels/11.png",
     img: "/img/hotels/11.png",
     title: "The Westin New York at Times Square West",
     location: "Manhattan, New York",
@@ -160,7 +158,7 @@ export const hotelsData = [
   {
     id: 12,
     tag: "top rated",
-    slideImg: ["/img/hotels/12.png"],
+    slideImg: "/img/hotels/12.png",
     img: "/img/hotels/12.png",
     title: "DoubleTree by Hilton Hotel New York Times Square West",
     location: "Vaticano Prati, Rome",
@@ -174,7 +172,7 @@ export const hotelsData = [
   {
     id: 13,
     tag: "Breakfast Included",
-    slideImg: ["/img/hotels/13.png"],
+    slideImg: "/img/hotels/13.png",
     img: "/img/hotels/13.png",
     title: "The Montcalm At Brewery London City",
     location: "Westminster Borough, London",
@@ -188,7 +186,7 @@ export const hotelsData = [
   {
     id: 14,
     tag: "-25% today",
-    slideImg: ["/img/hotels/14.png"],
+    slideImg: "/img/hotels/14.png",
     img: "/img/hotels/14.png",
     title: "The Montcalm At Brewery London City",
     location: "Westminster Borough, London",
@@ -202,7 +200,7 @@ export const hotelsData = [
   {
     id: 15,
     tag: "best seller",
-    slideImg: ["/img/hotels/15.png"],
+    slideImg: "/img/hotels/15.png",
     img: "/img/hotels/15.png",
     title: "Staycity Aparthotels Deptford Bridge Station",
     location: "Ciutat Vella, Barcelona",
@@ -216,7 +214,7 @@ export const hotelsData = [
   {
     id: 16,
     tag: "top rated",
-    slideImg: ["/img/hotels/16.png"],
+    slideImg: "/img/hotels/16.png",
     img: "/img/hotels/16.png",
     title: "The Westin New York at Times Square West",
     location: "Manhattan, New York",

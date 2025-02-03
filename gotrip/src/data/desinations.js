@@ -21,6 +21,64 @@ export const destinations1 = [
   { id: 20, city: "London", properties: "12,683", region: "europe" },
 ];
 
+export const allDestinations = [
+  { id: 1, city: "Al Ula", highlight: "A Journey Through Time", img: "/img/destinations/Destinations/alula.avif" },
+  { id: 2, city: "Jeddah", highlight: "Gateway to the Red Sea", img: "/img/destinations/Destinations/jeddah.avif" },
+  {
+    id: 3,
+    city: "Riyadh",
+    highlight: "A Vibrant Capital at the Crossroads of History and Modernity",
+    img: "/img/destinations/Destinations/riyadh.avif"
+  },
+  { id: 4, city: "Aseer", highlight: "The Jewel of Saudi Arabia’s Highlands", img: "/img/destinations/Destinations/aseer.avif" },
+  { id: 5, city: "Al Ahsa", highlight: "A Desert Oasis Like No Other", img: "/img/destinations/Destinations/alahsa.jpeg" },
+  { id: 6, city: "The Red Sea", highlight: "A Marine Wonderland", img: "/img/destinations/Destinations/theredsea.jpeg" },
+  {
+    id: 7,
+    city: "King Abdullah Economic City (KAEC)k",
+    highlight: "A Modern Coastal Getaway",
+    img: "/img/destinations/Destinations/kingabdullahcity.jpeg"
+  },
+  { id: 8, city: "Makkah", highlight: "The Heart of the Islamic World", img: "/img/destinations/Destinations/makkah.jpeg" },
+  { id: 9, city: "Madinah", highlight: "The City of the Prophet", img: "/img/destinations/Destinations/madinah.jpeg" },
+  { id: 10, city: "Taif", highlight: "The Mountain Retreat", img: "/img/destinations/Destinations/taif.jpeg" },
+  { id: 11, city: "Dammam", highlight: "A Modern Coastal Hub", img: "/img/destinations/Destinations/dammam.jpeg" },
+  {
+    id: 12,
+    city: "Diriyah",
+    highlight: "A Window into Saudi Arabia’s History",
+    img: "/img/destinations/Destinations/diriyah.jpeg"
+  },
+  { id: 13, city: "Tabuk", highlight: "The Gateway to NEOM and Beyond", img: "/img/destinations/Destinations/tabuk.jpeg" },
+  { id: 14, city: "Yanbu", highlight: "A Coastal Haven with a Rich History", img: "/img/destinations/Destinations/yanbu.jpeg" },
+  { id: 15, city: "Al Baha", highlight: "A Green Paradise in the Mountains", img: "/img/destinations/Destinations/albaha.jpeg" },
+  {
+    id: 16,
+    city: "Jazan",
+    highlight: "Island Adventures and Cultural Treasures",
+    img: "/img/destinations/Destinations/jazan.avif"
+  },
+  { id: 17, city: "Hail", highlight: "The Desert Capital of Adventure", img: "/img/destinations/Destinations/hail.jpeg" },
+  {
+    id: 18,
+    city: "Al Jubail",
+    highlight: "Industrial Powerhouse Meets Coastal Serenity",
+    img: "/img/destinations/Destinations/aljubail.jpeg"
+  },
+  {
+    id: 19,
+    city: "Najran",
+    highlight: "A Land of Ancient Forts and Palm Groves",
+    img: "/img/destinations/Destinations/najran.jpeg"
+  },
+  {
+    id: 20,
+    city: "Qassim",
+    highlight: "A Heartland of Culture and Agriculture",
+    img: "/img/destinations/Destinations/qassim.jpeg"
+  },
+];
+
 export const destinations2 = [
   {
     id: 1,

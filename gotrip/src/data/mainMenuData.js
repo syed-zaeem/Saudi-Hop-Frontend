@@ -54,6 +54,33 @@ export const blogItems = [
     routePath: "/blog-details/1",
   },
 ];
+export const packageItems = [
+  {
+    name: "3 Star Packages",
+    routePath: "/three-star-packages",
+  },
+  {
+    name: "4 Star Packages",
+    routePath: "/four-star-packages",
+  },
+  {
+    name: "5 Star Packages",
+    routePath: "/five-star-packages",
+  },
+  {
+    name: "Ultra-Luxury Packages",
+    routePath: "/ultra-luxury-packages",
+  },
+  {
+    name: "Group Booking Packages",
+    routePath: "/group-booking-packages",
+  },
+  {
+    name: "Umrah + Packages",
+    routePath: "/umrah+-packages",
+  }
+]
+
 export const pageItems = [
   {
     name: "404",

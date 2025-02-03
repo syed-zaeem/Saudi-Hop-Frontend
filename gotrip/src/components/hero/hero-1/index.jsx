@@ -4,7 +4,12 @@ const index = () => {
   return (
     <section className="masthead -type-1 z-5">
       <div className="masthead__bg">
-        <img alt="image" src="/img/masthead/1/bg.webp" className="js-lazy" />
+        <img
+          alt="image"
+          src="/img/masthead/hero_background/one.jpg"
+          // src="/img/masthead/hero_background/khana_kaba.avif"
+          className="js-lazy"
+        />
       </div>
       <div className="container">
         <div className="row justify-center">
@@ -14,14 +19,16 @@ const index = () => {
                 className="text-60 lg:text-40 md:text-30 text-white"
                 data-aos="fade-up"
               >
-                Find Next Place To Visit
+                Umrah & Dubai
               </h1>
               <p
                 className="text-white mt-6 md:mt-10"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                Discover amzaing places at exclusive deals
+                Enhance Your Umrah Experience: Combine with a Luxurious Stay in
+                Dubai! 
+                {/* <span style={{backgroundColor: 'blue', color: 'white', fontWeight: 'bold', padding: '12px', borderRadius: '24px'}}>Price from £1169/pp</span> */}
               </p>
             </div>
             {/* End hero title */}

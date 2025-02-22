@@ -1,5 +1,5 @@
 import { useState } from "react";
-import InputRange from "react-input-range";
+// import InputRange from "react-input-range";
 
 const PirceSlider = () => {
   const [price, setPrice] = useState({
@@ -22,13 +22,13 @@ const PirceSlider = () => {
       </div>
 
       <div className="px-5">
-        <InputRange
+        {/* <InputRange
           formatLabel={(value) => ``}
           minValue={0}
           maxValue={2000}
           value={price.value}
           onChange={(value) => handleOnChange(value)}
-        />
+        /> */}
       </div>
     </div>
   );

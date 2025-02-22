@@ -22,20 +22,19 @@ const MainFilterSearchBox = () => {
             className={`tabs__button text-15 fw-500 text-white pb-4 js-tabs-button ${
               tab?.name === currentTab ? "is-tab-el-active" : ""
             }`}
-            onClick={() => dispatch(addCurrentTab(tab?.name))}
-          >
+            onClick={() => dispatch(addCurrentTab(tab?.name))}>
             {tab?.name}
           </button>
         ))}
       </div>
 
-      <div className="position-relative mt-30 md:mt-20 js-tabs-content">
-        <div className="mainSearch -w-900 bg-white px-10 py-10 lg:px-20 lg:pt-5 lg:pb-20 rounded-100">
+      <div className="position-relative mt-30 md:mt-5 js-tabs-content">
+        <div className="mainSearch -w-900 bg-white px-10 py-2 lg:px-20 lg:py-1 rounded-100">
           <div className="button-grid items-center">
             {/* <LocationSearch /> */}
             {/* End Location */}
 
-            <div className="searchMenu-date px-30 lg:py-20 lg:px-0 js-form-dd js-calendar">
+            <div className="searchMenu-date px-30 lg:py-1 lg:px-0 js-form-dd js-calendar">
               <div className="items-center bg-gray-100 p-3 contact_box_section">
                 {/* Left Icon (Fixed Size) */}
                 <FaPhoneAlt size={28} className="text-gray-600" />
@@ -48,7 +47,7 @@ const MainFilterSearchBox = () => {
               </div>
             </div>
 
-            <div className="searchMenu-date px-20 lg:py-20 lg:px-0 js-form-dd js-calendar">
+            <div className="searchMenu-date px-20 lg:py-1 lg:px-0 js-form-dd js-calendar">
               <div className="items-center bg-gray-100 contact_box_section">
                 {/* Left Icon (Fixed Size) */}
                 <MdEmail size={28} className="text-gray-600" />
@@ -63,7 +62,7 @@ const MainFilterSearchBox = () => {
               </div>
             </div>
 
-            <div className="searchMenu-date px-30 lg:py-20 lg:px-0 js-form-dd js-calendar">
+            <div className="searchMenu-date px-30 lg:py-1 lg:px-0 js-form-dd js-calendar">
               <div className="items-center bg-gray-100 p-3 contact_box_section">
                 {/* Left Icon (Fixed Size) */}
                 <FaKaaba size={28} className="text-gray-600" />

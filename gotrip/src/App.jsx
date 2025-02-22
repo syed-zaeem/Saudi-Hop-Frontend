@@ -139,10 +139,16 @@ function App() {
               <Route path="invoice" element={<Invoice />} />
               <Route path="contact" element={<Contact />} />
               <Route path="destinations" element={<Destinations />} />
-              <Route path="three-star-packages" element={<ThreeStarPackages />} />
+              <Route
+                path="three-star-packages"
+                element={<ThreeStarPackages />}
+              />
               <Route path="four-star-packages" element={<FourStarPackages />} />
               <Route path="five-star-packages" element={<FiveStarPackages />} />
-              <Route path="ultra-luxury-packages" element={<UltraLuxuryPackages />} />
+              <Route
+                path="ultra-luxury-packages"
+                element={<UltraLuxuryPackages />}
+              />
 
               <Route path="dashboard">
                 <Route path="db-dashboard" element={<DBDashboard />} />

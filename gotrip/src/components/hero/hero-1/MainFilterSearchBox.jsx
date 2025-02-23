@@ -15,11 +15,11 @@ const MainFilterSearchBox = () => {
 
   return (
     <>
-      <div className="tabs__controls d-flex x-gap-30 y-gap-20 justify-center sm:justify-start js-tabs-controls">
+      <div className="tabs__controls d-flex x-gap-30 y-gap-20 justify-center sm:justify-start js-tabs-controls w-full">
         {tabs?.map((tab) => (
           <button
             key={tab?.id}
-            className={`tabs__button text-15 fw-500 text-white pb-4 js-tabs-button ${
+            className={`tabs__button text-15 fw-500 text-white pb-4 js-tabs-button  ${
               tab?.name === currentTab ? "is-tab-el-active" : ""
             }`}
             onClick={() => dispatch(addCurrentTab(tab?.name))}>
@@ -28,32 +28,33 @@ const MainFilterSearchBox = () => {
         ))}
       </div>
 
-      <div className="position-relative mt-30 md:mt-5 js-tabs-content">
-        <div className="mainSearch -w-900 bg-white px-10 py-2 lg:px-20 lg:py-1 rounded-100">
+      {/* <div className=" mt-30 md:mt-5 js-tabs-content"> */}
+      <div className="tabs__controls d-flex x-gap-30 y-gap-20 w-full mt-20 justify-center sm:justify-start js-tabs-controls">
+        <div className="mainSearch bg-white px-10 py-2  lg:px-20 lg:py-1 rounded-100">
           <div className="button-grid items-center">
             {/* <LocationSearch /> */}
             {/* End Location */}
 
-            <div className="searchMenu-date px-30 lg:py-1 lg:px-0 js-form-dd js-calendar">
+            <div className="searchMenu-date px-30 lg:py-1 lg:px-0">
               <div className="items-center bg-gray-100 p-3 contact_box_section">
                 {/* Left Icon (Fixed Size) */}
                 <FaPhoneAlt size={28} className="text-gray-600" />
 
                 {/* Right Content */}
-                <div className="">
+                <div className=" ml-20">
                   <h4 className="text-15 fw-500 ls-2 lh-16">Open Everyday</h4>
                   <h4 className="text-18 fw-500 ls-2 lh-16">0208 944 9145</h4>
                 </div>
               </div>
             </div>
 
-            <div className="searchMenu-date px-20 lg:py-1 lg:px-0 js-form-dd js-calendar">
-              <div className="items-center bg-gray-100 contact_box_section">
+            <div className="searchMenu-date px-30 lg:py-1 lg:px-0">
+              <div className="items-center bg-gray-100 p-3 contact_box_section">
                 {/* Left Icon (Fixed Size) */}
                 <MdEmail size={28} className="text-gray-600" />
 
                 {/* Right Content */}
-                <div className="">
+                <div className="ml-20">
                   <h4 className="text-15 fw-500 ls-2 lh-16">
                     Request Quote Now
                   </h4>
@@ -61,31 +62,20 @@ const MainFilterSearchBox = () => {
                 </div>
               </div>
             </div>
-
-            <div className="searchMenu-date px-30 lg:py-1 lg:px-0 js-form-dd js-calendar">
+            <div className="searchMenu-date px-30 lg:py-1 lg:px-0">
               <div className="items-center bg-gray-100 p-3 contact_box_section">
                 {/* Left Icon (Fixed Size) */}
-                <FaKaaba size={28} className="text-gray-600" />
+                <MdEmail size={28} className="text-gray-600" />
 
                 {/* Right Content */}
-                <div className="">
+                <div className="ml-20">
                   <h4 className="text-15 fw-500 ls-2 lh-16">
-                    View Best Offers
+                    Request Quote Now
                   </h4>
-                  <h4 className="text-18 fw-500 ls-2 lh-16">Discover</h4>
+                  <h4 className="text-18 fw-500 ls-2 lh-16">Enquire</h4>
                 </div>
               </div>
             </div>
-
-            {/* <div className="button-item">
-              <button
-                className="mainSearch__submit button -dark-1 h-60 px-35 col-12 rounded-100 bg-blue-1 text-white"
-                onClick={() => navigate("/hotel-list-v1")}
-              >
-                <i className="icon-search text-20 mr-10" />
-                Search
-              </button>
-            </div> */}
             {/* End search button_item */}
           </div>
         </div>

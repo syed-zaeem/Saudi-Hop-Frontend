@@ -24,17 +24,23 @@ const BlockGuide = () => {
   ];
   return (
     <>
-      <h3 className="mb-10" style={{textAlign: "center"}}>All of Our Packages Include:</h3>
+      <h4 className="mb-10" style={{ textAlign: "center" }}>
+        All of Our Packages Include:
+      </h4>
       {blockContent.map((item) => (
         <div
           className="col-lg-3 col-sm-6"
           data-aos="fade"
           data-aos-delay={item.delayAnim}
-          key={item.id}
-        >
+          key={item.id}>
           <div className="featureIcon -type-1 ">
             <div className="d-flex justify-center">
-              <img src={item.icon} style={{width: '52px'}} alt="image" className="js-lazy" />
+              <img
+                src={item.icon}
+                style={{ width: "52px" }}
+                alt="image"
+                className="js-lazy"
+              />
             </div>
             <div className="text-center mt-30">
               <h4 className="text-18 fw-500">{item.title}</h4>
@@ -43,7 +49,9 @@ const BlockGuide = () => {
           </div>
         </div>
       ))}
-      <h5 className="mt-10" style={{textAlign: "center"}}>Ground Transfers Can Be Included</h5>
+      <h5 className="mt-10" style={{ textAlign: "center" }}>
+        Ground Transfers Can Be Included
+      </h5>
     </>
   );
 };

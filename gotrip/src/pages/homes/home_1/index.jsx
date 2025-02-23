@@ -93,57 +93,21 @@ const Home_1 = () => {
           <div>
             <button
               type="submit"
-              className="button px-24 h-50 -dark-1 bg-blue-1 text-white enquiry_button"
-            >
+              className="button px-24 h-50 -dark-1 bg-blue-1 text-white enquiry_button">
               Submit
             </button>
           </div>
         </form>
       </section>
 
-      <section className="layout-pt-lg layout-pb-md" data-aos="fade-up">
-        <div className="container">
-          <div className="row y-gap-20 justify-between items-end">
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Popular Destinations</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  These popular destinations have a lot to offer
-                </p>
-              </div>
-            </div>
-            {/* End col-auto */}
-
-            <div className="col-auto md:d-none">
-              <a
-                href="#"
-                className="button -md -blue-1 bg-blue-1-05 text-blue-1"
-              >
-                View All Destinations
-                <div className="icon-arrow-top-right ml-15" />
-              </a>
-            </div>
-            {/* End col-auto */}
-          </div>
-          {/* End .row */}
-
-          <div className="relative pt-40 sm:pt-20">
-            <PopularDestinations />
-          </div>
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End Popular Destinations */}
-
-      <section className="layout-pt-md layout-pb-md">
+      <section className="layout-pt-md layout-pb-md mt-20">
         <div className="container">
           <div className="row y-gap-10 justify-between items-end">
             <div className="col-auto" style={{ width: "100%" }}>
               <div className="sectionTitle -md">
                 <h2
                   className="sectionTitle__title"
-                  style={{ textAlign: "center" }}
-                >
+                  style={{ textAlign: "center" }}>
                   Featured Offers of the Week: Discover Exclusive Deals Now!
                 </h2>
               </div>
@@ -155,13 +119,12 @@ const Home_1 = () => {
           {/* End .row */}
 
           <div>
-            <p
+            <h4
               className=" sectionTitle__text mt-5"
-              style={{ textAlign: "center" }}
-            >
+              style={{ textAlign: "center" }}>
               5 Star Umrah Package Deals: Choose from Luxurious to Deluxe
               Options!
-            </p>
+            </h4>
             <div className="relative overflow-hidden pt-40 sm:pt-20 js-section-slider item_gap-x30">
               {/* <Hotels /> */}
               <StarPackages
@@ -173,12 +136,11 @@ const Home_1 = () => {
           </div>
 
           <div>
-            <p
+            <h4
               className=" sectionTitle__text mt-20"
-              style={{ textAlign: "center" }}
-            >
+              style={{ textAlign: "center" }}>
               4 Star Umrah Package Deals: Reserve Premium to Affordable Options!
-            </p>
+            </h4>
             <div className="relative overflow-hidden pt-40 sm:pt-20 js-section-slider item_gap-x30">
               {/* <Hotels /> */}
               <StarPackages
@@ -190,13 +152,12 @@ const Home_1 = () => {
           </div>
 
           <div>
-            <p
+            <h4
               className=" sectionTitle__text mt-20"
-              style={{ textAlign: "center" }}
-            >
+              style={{ textAlign: "center" }}>
               3 Star Umrah Package Deals: Choose from Economical to
               Budget-Friendly Options!
-            </p>
+            </h4>
             <div className="relative overflow-hidden pt-40 sm:pt-20 js-section-slider item_gap-x30">
               {/* <Hotels /> */}
               <StarPackages
@@ -220,7 +181,7 @@ const Home_1 = () => {
       </section>
       {/* Block Guide Section */}
 
-      <section className="bg-blue-2"  data-aos="fade-up">
+      <section className="bg-blue-2" data-aos="fade-up">
         <div className="">
           <div className="row y-gap-40 justify-between">
             <div className="col-xl-6 col-lg-6 p-0">
@@ -235,8 +196,7 @@ const Home_1 = () => {
             <div className="col-lg-6">
               <div
                 className="overflow-hidden js-testimonials-slider-3 flex_right_col"
-                data-aos-delay="50"
-              >
+                data-aos-delay="50">
                 <h2 className="flex_right_col_heading">
                   Unlock Exclusive Discount Offers
                 </h2>
@@ -256,7 +216,39 @@ const Home_1 = () => {
         </div>
         {/* End container */}
       </section>
-      {/* End testimonial Section */}
+
+      <section className="layout-pt-lg layout-pb-md" data-aos="fade-up">
+        <div className="container">
+          <div className="row y-gap-20 justify-between items-end">
+            <div className="col-auto">
+              <div className="sectionTitle -md">
+                <h2 className="sectionTitle__title">Popular Destinations</h2>
+                <p className=" sectionTitle__text mt-5 sm:mt-0">
+                  These popular destinations have a lot to offer
+                </p>
+              </div>
+            </div>
+            {/* End col-auto */}
+
+            <div className="col-auto md:d-none">
+              <a
+                href="#"
+                className="button -md -blue-1 bg-blue-1-05 text-blue-1">
+                View All Destinations
+                <div className="icon-arrow-top-right ml-15" />
+              </a>
+            </div>
+            {/* End col-auto */}
+          </div>
+          {/* End .row */}
+
+          <div className="relative pt-40 sm:pt-20">
+            <PopularDestinations />
+          </div>
+        </div>
+        {/* End .container */}
+      </section>
+      {/* End Popular Destinations */}
 
       <section className="layout-pt-md layout-pb-md">
         <div className="page_paragraph">
@@ -302,8 +294,7 @@ const Home_1 = () => {
             <div className="col-lg-6">
               <div
                 className="overflow-hidden js-testimonials-slider-3 content_right_col"
-                data-aos-delay="50"
-              >
+                data-aos-delay="50">
                 <h2 className="content_right_col_heading">
                   Saudi Hop Offers Best Umrah Packages at the Lowest Price
                 </h2>
@@ -332,9 +323,7 @@ const Home_1 = () => {
           <div className="row y-gap-40 justify-between">
             <div
               className="col-xl-6 col-lg-6 mid_content_left_col"
-              
-              style={{backgroundColor: "rgb(166, 207, 250)"}}
-            >
+              style={{ backgroundColor: "rgb(166, 207, 250)" }}>
               <h4 className="mid_content_left_col_text">
                 Unlock Up to 15% Discount on Our Packages!
               </h4>
@@ -344,11 +333,12 @@ const Home_1 = () => {
             </div>
             {/* End col */}
 
-            <div className="col-lg-6" style={{backgroundColor: "rgb(199, 202, 203)"}}>
+            <div
+              className="col-lg-6"
+              style={{ backgroundColor: "rgb(199, 202, 203)" }}>
               <div
                 className="overflow-hidden js-testimonials-slider-3 mid_content_right_col"
-                data-aos-delay="50"
-              >
+                data-aos-delay="50">
                 <h4 className="mid_content_right_col_text">
                   Not Sure Where to Start? Let Us Guide You!
                 </h4>
@@ -363,8 +353,10 @@ const Home_1 = () => {
         {/* End container */}
       </section>
 
-      <section className="layout-pt-md layout-pb-lg bg-light-2" style={{marginTop: '52px'}}>
-        <div className="section-bg__item"/>
+      <section
+        className="layout-pt-md layout-pb-lg bg-light-2"
+        style={{ marginTop: "52px" }}>
+        <div className="section-bg__item" />
         <div className="container">
           <div className="row justify-center text-center">
             <div className="col-auto">

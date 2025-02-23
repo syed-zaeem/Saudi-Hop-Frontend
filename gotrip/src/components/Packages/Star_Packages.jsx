@@ -31,14 +31,12 @@ const StarPackages = ({ packagesData, title, uniqueId }) => {
           1200: {
             slidesPerView: 4,
           },
-        }}
-      >
+        }}>
         {packagesData.slice(0, 8).map((item) => (
           <SwiperSlide key={item?.id}>
             <div
               className="hotelsCard -type-1 hover-inside-slider"
-              data-aos="fade"
-            >
+              data-aos="fade">
               <div className="hotelsCard__image">
                 <div className="cardImage ratio ratio-1:1">
                   <div className="cardImage__content">
@@ -47,8 +45,7 @@ const StarPackages = ({ packagesData, title, uniqueId }) => {
                         className="mySwiper"
                         modules={[Pagination, Navigation]}
                         pagination={{ clickable: true }}
-                        navigation={true}
-                      >
+                        navigation={true}>
                         <img
                           className="rounded-4 col-12 js-lazy"
                           src={item.img}
@@ -59,11 +56,11 @@ const StarPackages = ({ packagesData, title, uniqueId }) => {
                   </div>
                 </div>
 
-                <div className="cardImage__wishlist">
+                {/* <div className="cardImage__wishlist">
                   <button className="button -blue-1 bg-white size-30 rounded-full shadow-2">
                     <i className="icon-heart text-12" />
                   </button>
-                </div>
+                </div> */}
               </div>
 
               <div className="hotelsCard__content mt-10">
@@ -74,15 +71,15 @@ const StarPackages = ({ packagesData, title, uniqueId }) => {
                   {item?.location}
                 </p>
                 <div className="d-flex items-center mt-20">
-                  <div className="flex-center bg-blue-1 rounded-4 size-30 text-12 fw-600 text-white">
+                  {/* <div className="flex-center bg-blue-1 rounded-4 size-30 text-12 fw-600 text-white">
                     {item?.ratings}
-                  </div>
-                  <div className="text-14 text-dark-1 fw-500 ml-10">
+                  </div> */}
+                  {/* <div className="text-14 text-dark-1 fw-500 ml-10">
                     Exceptional
                   </div>
                   <div className="text-14 text-light-1 ml-10">
                     {item?.numberOfReviews} reviews
-                  </div>
+                  </div> */}
                 </div>
                 <div className="mt-5">
                   <div className="fw-500">
@@ -100,8 +97,7 @@ const StarPackages = ({ packagesData, title, uniqueId }) => {
                 }
                 onMouseLeave={(e) =>
                   (e.target.style.backgroundColor = "#007bff")
-                }
-              >
+                }>
                 Book Now
               </button>
             </div>
@@ -110,20 +106,20 @@ const StarPackages = ({ packagesData, title, uniqueId }) => {
       </Swiper>
 
       <div className="d-flex x-gap-15 items-center justify-center sm:justify-start pt-40 sm:pt-20">
-      <div className="col-auto">
+        <div className="col-auto">
           <button
-            className={`d-flex items-center text-24 arrow-left-hover js-hotels-prev-${uniqueId}`}
-          >
+            className={`d-flex items-center text-24 arrow-left-hover js-hotels-prev-${uniqueId}`}>
             <i className="icon icon-arrow-left" />
           </button>
         </div>
         <div className="col-auto">
-          <div className={`pagination -dots text-border js-hotels-pag-${uniqueId}`} />
+          <div
+            className={`pagination -dots text-border js-hotels-pag-${uniqueId}`}
+          />
         </div>
         <div className="col-auto">
           <button
-            className={`d-flex items-center text-24 arrow-right-hover js-hotels-next-${uniqueId}`}
-          >
+            className={`d-flex items-center text-24 arrow-right-hover js-hotels-next-${uniqueId}`}>
             <i className="icon icon-arrow-right" />
           </button>
         </div>

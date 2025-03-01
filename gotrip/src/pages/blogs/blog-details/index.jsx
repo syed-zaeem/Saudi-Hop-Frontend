@@ -60,24 +60,24 @@ const BlogSingleDynamic = () => {
               <DetailsContent />
               {/* Details content */}
 
-              <div className="border-top-light border-bottom-light py-30 mt-30">
+              {/* <div className="border-top-light border-bottom-light py-30 mt-30">
                 <TopComment />
-              </div>
+              </div> */}
               {/* End  topcommnet  */}
-              <div className="border-bottom-light py-30">
+              <div className="py-30">
                 <BlogNavigator />
               </div>
               {/* End BlogNavigator */}
 
-              <h2 className="text-22 fw-500 mb-15 pt-30">Guest reviews</h2>
-              <Comments />
+              {/* <h2 className="text-22 fw-500 mb-15 pt-30">Guest reviews</h2>
+              <Comments /> */}
               {/* End comments components */}
 
               <div className="border-top-light pt-40 mt-40" />
 
               <div className="row">
                 <div className="col-auto">
-                  <h3 className="text-22 fw-500">Leave a Reply</h3>
+                  <h3 className="text-22 fw-500">Share your thoughts to us</h3>
                   <p className="text-15 text-dark-1 mt-5">
                     Your email address will not be published.
                   </p>

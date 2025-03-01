@@ -60,7 +60,7 @@ const DetailsContent = () => {
         amet parturient turpis vitae. Faucibus ipsum felis et duis fames.
       </div>
 
-      <div className="row y-gap-30 pt-30">
+      {/* <div className="row y-gap-30 pt-30">
         <div className="col-md-6">
           <img src="/img/blog/single/2.png" alt="image" className="rounded-4" />
           <div className="text-15 mt-10">
@@ -73,7 +73,7 @@ const DetailsContent = () => {
             Donec purus posuere nullam lacus aliquam.
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="text-15 mt-20">
         Donec purus posuere nullam lacus aliquam egestas arcu. A egestas a,

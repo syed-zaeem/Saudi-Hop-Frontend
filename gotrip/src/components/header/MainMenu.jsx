@@ -103,7 +103,7 @@ const MainMenu = ({ style = "" }) => {
             isActiveParentChaild(blogItems, pathname) ? "current" : ""
           } menu-item-has-children`}
         >
-          <Link to="/blogs">
+          <Link to="/blog-list">
             <span className="mr-10">Blogs</span>
             {/* <i className="icon icon-chevron-sm-down" /> */}
           </Link>

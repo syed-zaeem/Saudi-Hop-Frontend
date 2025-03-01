@@ -123,8 +123,8 @@ function App() {
               <Route path="home_9" element={<Home_9 />} />
               <Route path="home_10" element={<Home_10 />} />
 
-              <Route path="blog-list-v1" element={<BlogListV1 />} />
-              <Route path="blog-list-v2" element={<BlogListV2 />} />
+              {/* <Route path="blog-list-v1" element={<BlogListV1 />} /> */}
+              <Route path="blog-list" element={<BlogListV2 />} />
               <Route path="blog-details/:id" element={<BlogSingleDynamic />} />
 
               <Route path="404" element={<NotFoundPage />} />

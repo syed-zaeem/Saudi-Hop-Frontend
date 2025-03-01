@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
+const cors = require("cors");
 const fileRoutes = require("./routes/FileRoutes");
 const blogRoutes = require("./routes/BlogRoutes");
 const swaggerUi = require("swagger-ui-express");
@@ -9,7 +10,7 @@ const mongoose = require("mongoose");
 const swaggerSpec = require("./swaggerConfig");
 
 const app = express();
-
+app.use(cors());
 // Middleware to parse JSON
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

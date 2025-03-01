@@ -1,17 +1,19 @@
 const mongoose = require("mongoose");
 
-const sectionSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  image: { type: String, required: true },
-  description: { type: String, required: true },
-});
+const BlogSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true },
+    paragraphs: [
+      {
+        id: { type: String, required: true },
+        content: { type: String, required: true },
+      },
+    ],
+    tags: [{ type: String }],
+    image: { type: String, required: true }, // Store image URL (or use Buffer if storing binary)
+    createdAt: { type: Date, default: Date.now },
+  },
+  { timestamps: true }
+);
 
-const blogSchema = new mongoose.Schema({
-  image: { type: String, required: true },
-  title: { type: String, required: true },
-  description: { type: String, required: true },
-  sections: [sectionSchema], // Array of sections
-  timestamp: { type: Date, default: Date.now },
-});
-
-module.exports = mongoose.model("Blog", blogSchema);
+module.exports = mongoose.model("Blog", BlogSchema);

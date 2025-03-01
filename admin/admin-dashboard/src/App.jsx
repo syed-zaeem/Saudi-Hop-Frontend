@@ -1,11 +1,11 @@
 // src/App.jsx
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './pages/Login';
-import Dashboard from './pages/Dashboard'; // Your dashboard component
-import ProtectedRoute from './components/ProtectedRoute';
-import ManageBlogs from './pages/ManageBlogs';
-import CreateBlog from './pages/CreateBlog';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard"; // Your dashboard component
+import ProtectedRoute from "./components/ProtectedRoute";
+import ManageBlogs from "./pages/ManageBlogs";
+import CreateBlog from "./pages/CreateBlog";
 
 const App = () => {
   return (
@@ -25,7 +25,9 @@ const App = () => {
           path="/manage-blogs"
           element={
             <ProtectedRoute>
-              <ManageBlogs />
+              <Dashboard>
+                <ManageBlogs />
+              </Dashboard>
             </ProtectedRoute>
           }
         />
@@ -33,7 +35,9 @@ const App = () => {
           path="/create/blog"
           element={
             <ProtectedRoute>
-              <CreateBlog />
+              <Dashboard>
+                <CreateBlog />
+              </Dashboard>
             </ProtectedRoute>
           }
         />

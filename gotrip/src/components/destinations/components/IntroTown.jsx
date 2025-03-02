@@ -1,8 +1,17 @@
-const IntroTown = () => {
+const IntroTown = ({ paragraphs }) => {
   return (
     <>
       <div className="col-xl-8">
-        <p className="text-15 text-dark-1">
+        {paragraphs.map((paragraph) => {
+          return (
+            <p key={paragraph} className="text-15 text-dark-1">
+              {paragraph}
+              <br />
+              <br />
+            </p>
+          );
+        })}
+        {/* <p className="text-15 text-dark-1">
           London is a shining example of a metropolis at the highest peak of
           modernity and boasts an economy and cultural diversity that’s the envy
           of other global superpowers.
@@ -20,13 +29,13 @@ const IntroTown = () => {
           West End, Abbey Road, the Royal Albert Hall, Oxford Street and the
           Westfield Shopping Centers, and areas referenced and seen in
           literature and film.
-        </p>
-        <a
+        </p> */}
+        {/* <a
           href="#"
           className="d-block text-14 fw-500 text-blue-1 underline mt-20"
         >
           Show More
-        </a>
+        </a> */}
       </div>
       {/* End .col */}
 

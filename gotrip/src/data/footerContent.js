@@ -3,7 +3,7 @@ const footercontent = [
     id: 1,
     title: "Company",
     menuList: [
-      { name: "About Us", routerPath: "/" },
+      { name: "About Us", routerPath: "/about" },
       { name: "Careers", routerPath: "/" },
       { name: "Blog", routerPath: "/" },
       { name: "Press", routerPath: "/" },
@@ -14,11 +14,12 @@ const footercontent = [
     id: 2,
     title: "Support",
     menuList: [
-      { name: "Contact", routerPath: "/" },
+      { name: "Contact", routerPath: "/contact" },
       { name: "Legal Notice", routerPath: "/" },
-      { name: "Privacy Policy", routerPath: "/" },
-      { name: "Terms and Conditions", routerPath: "/" },
+      { name: "Privacy Policy", routerPath: "/privacy-policy" },
+      { name: "Terms and Conditions", routerPath: "/terms" },
       { name: "Sitemap", routerPath: "/" },
+      { name: "FAQs", routerPath: "/faqs"},
     ],
   },
   {

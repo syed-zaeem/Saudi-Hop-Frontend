@@ -22,60 +22,207 @@ export const destinations1 = [
 ];
 
 export const allDestinations = [
-  { id: 1, city: "Al Ula", highlight: "A Journey Through Time", img: "/img/destinations/Destinations/alula.avif" },
-  { id: 2, city: "Jeddah", highlight: "Gateway to the Red Sea", img: "/img/destinations/Destinations/jeddah.avif" },
+  {
+    id: 1,
+    city: "Al Ula",
+    highlight: "A Journey Through Time",
+    img: "/img/destinations/Destinations/alula.avif",
+    paragraphs: [
+      "Al Ula is a destination unlike any other, offering a harmonious blend of ancient history, breathtaking landscapes, and modern artistic expression. This region, nestled in northwest Saudi Arabia, is home to Hegra, Saudi Arabia’s first UNESCO World Heritage Site. Visitors can explore the intricately carved Nabataean tombs set against the golden sandstone cliffs and delve into thousands of years of human history.",
+      "The stunning natural formations, such as Elephant Rock, offer iconic backdrops perfect for photography enthusiasts. For those seeking luxury and culture, the Maraya Concert Hall, a fully mirrored architectural marvel, hosts world-class performances. Al Ula also invites adventurers to trek its hidden valleys, ride hot air balloons, or stargaze in its pristine desert skies. This blend of heritage and modernity ensures Al Ula is a must-visit for anyone exploring Saudi Arabia.",
+    ],
+  },
+  {
+    id: 2,
+    city: "Jeddah",
+    highlight: "Gateway to the Red Sea",
+    img: "/img/destinations/Destinations/jeddah.avif",
+    paragraphs: [
+      "Jeddah is a city of contrasts, seamlessly merging ancient traditions with contemporary living. At its heart lies Al-Balad, the city’s historic district and a UNESCO World Heritage Site, where visitors can wander through narrow alleyways lined with coral-built houses and bustling souqs.",
+      "The city’s stunning Corniche stretches along the Red Sea, offering a mix of serene walking paths, art installations, and vibrant nightlife. Adventure seekers can dive into the crystal-clear waters of the Red Sea to discover some of the world’s most unspoiled coral reefs. Food lovers will relish Jeddah’s cosmopolitan culinary scene, which features both international cuisine and traditional Saudi dishes. With attractions like the King Fahd Fountain—the world’s tallest fountain—Jeddah is a dynamic city that caters to every type of traveler.",
+    ],
+  },
   {
     id: 3,
     city: "Riyadh",
     highlight: "A Vibrant Capital at the Crossroads of History and Modernity",
-    img: "/img/destinations/Destinations/riyadh.avif"
+    img: "/img/destinations/Destinations/riyadh.avif",
+    paragraphs: [
+      "Riyadh, the bustling capital of Saudi Arabia, is a city where the old meets the new. History buffs will marvel at Diriyah, the birthplace of the Saudi state and a UNESCO World Heritage Site, with its well-preserved mudbrick architecture. The National Museum provides an immersive journey through the Kingdom’s rich heritage.",
+      "In contrast, modern marvels like the Kingdom Centre and the Al Faisaliah Tower dominate the skyline, offering luxurious shopping and fine dining experiences. Riyadh’s vibrant culinary scene includes everything from traditional Saudi fare to cutting-edge international gastronomy. For those seeking outdoor adventures, the Edge of the World, a dramatic desert escarpment just outside the city, provides breathtaking views and unforgettable memories. Riyadh is the beating heart of Saudi Arabia, combining innovation with a deep respect for its roots.",
+    ],
   },
-  { id: 4, city: "Aseer", highlight: "The Jewel of Saudi Arabia’s Highlands", img: "/img/destinations/Destinations/aseer.avif" },
-  { id: 5, city: "Al Ahsa", highlight: "A Desert Oasis Like No Other", img: "/img/destinations/Destinations/alahsa.jpeg" },
-  { id: 6, city: "The Red Sea", highlight: "A Marine Wonderland", img: "/img/destinations/Destinations/theredsea.jpeg" },
+  {
+    id: 4,
+    city: "Aseer",
+    highlight: "The Jewel of Saudi Arabia’s Highlands",
+    img: "/img/destinations/Destinations/aseer.avif",
+    paragraphs: [
+      "Aseer is a region of lush greenery, mist-covered mountains, and a thriving cultural heritage. Nestled in the southwest of Saudi Arabia, Aseer offers visitors a cooler climate, making it a refreshing escape from the desert heat. Its villages, like the Rijal Almaa, are a testament to the region’s architectural ingenuity, with their striking stone buildings and colorful decorations.",
+      "Nature lovers can explore Asir National Park, which offers stunning vistas, diverse wildlife, and challenging hiking trails. The region’s vibrant traditions come alive through its colorful art, local cuisine, and warm hospitality. Don’t miss the chance to ride the cable car from Abha to Al Soudah, which provides panoramic views of the breathtaking landscapes below. Aseer is a perfect blend of nature, culture, and adventure.",
+    ],
+  },
+  {
+    id: 5,
+    city: "Al Ahsa",
+    highlight: "A Desert Oasis Like No Other",
+    img: "/img/destinations/Destinations/alahsa.jpeg",
+    paragraphs: [
+      "Al Ahsa is a land of contrasts: a lush oasis in the heart of the desert. Recognized as a UNESCO World Heritage Site, it is one of the world’s largest natural oases, with over 2.5 million date palms. Visitors can relax in the shade of the palms, enjoy the natural springs, or explore the region’s historical treasures, such as Al Qarah Mountain and its cool, otherworldly caves.",
+      "The region is also known for its vibrant markets, where traditional crafts and local delicacies abound. The blend of serene natural beauty and rich cultural heritage makes Al Ahsa a unique destination for those looking to experience a different side of Saudi Arabia.",
+    ],
+  },
+  {
+    id: 6,
+    city: "The Red Sea",
+    highlight: "A Marine Wonderland",
+    img: "/img/destinations/Destinations/theredsea.jpeg",
+    paragraphs: [
+      "The Red Sea coastline offers an unparalleled aquatic experience. This region boasts pristine beaches, luxury resorts, and some of the best diving and snorkeling sites in the world. The coral reefs here are teeming with marine life, making it a haven for underwater explorers.",
+      "Whether you’re looking to relax on secluded beaches or engage in adventurous water sports, the Red Sea caters to all tastes. Eco-tourism initiatives and plans for sustainable luxury developments, such as the Amaala and Red Sea Project, highlight the region’s commitment to preserving its natural beauty while offering world-class hospitality.",
+    ],
+  },
   {
     id: 7,
     city: "King Abdullah Economic City (KAEC)k",
     highlight: "A Modern Coastal Getaway",
-    img: "/img/destinations/Destinations/kingabdullahcity.jpeg"
+    img: "/img/destinations/Destinations/kingabdullahcity.jpeg",
+    paragraphs: [
+      "King Abdullah Economic City (KAEC) is a shining example of Saudi Arabia’s commitment to innovation and sustainability. Situated along the Red Sea coast, KAEC is a city designed for the future, offering state-of-the-art facilities and a relaxing seaside ambiance. Visitors can enjoy the pristine beaches of Yam Beach, indulge in water sports, or take a peaceful stroll through the city’s modern, eco-friendly developments.",
+      "KAEC is also home to the world-class Royal Greens Golf Club, which hosts international tournaments and offers a luxurious experience for golf enthusiasts. Whether you're seeking a relaxing escape or a family-friendly destination, KAEC provides the perfect balance of leisure and innovation.",
+    ],
   },
-  { id: 8, city: "Makkah", highlight: "The Heart of the Islamic World", img: "/img/destinations/Destinations/makkah.jpeg" },
-  { id: 9, city: "Madinah", highlight: "The City of the Prophet", img: "/img/destinations/Destinations/madinah.jpeg" },
-  { id: 10, city: "Taif", highlight: "The Mountain Retreat", img: "/img/destinations/Destinations/taif.jpeg" },
-  { id: 11, city: "Dammam", highlight: "A Modern Coastal Hub", img: "/img/destinations/Destinations/dammam.jpeg" },
+  {
+    id: 8,
+    city: "Makkah",
+    highlight: "The Heart of the Islamic World",
+    img: "/img/destinations/Destinations/makkah.jpeg",
+    paragraphs: [
+      "Makkah holds a special place in the hearts of Muslims worldwide. As the birthplace of Prophet Muhammad (peace be upon him) and the home of the Kaaba, it is the holiest city in Islam. Every year, millions of pilgrims visit Makkah to perform Hajj or Umrah, following in the footsteps of centuries of devotion.",
+      "At the center of the city lies the Masjid Al-Haram, the largest mosque in the world, which houses the Kaaba. Beyond its religious significance, Makkah offers insights into Islamic history through landmarks such as Jabal Al-Nour, where the first verses of the Quran were revealed, and Thawr Cave, where the Prophet sought refuge during migration. Modern developments like the Abraj Al-Bait Towers provide convenient facilities for visitors while preserving the city’s spiritual essence.",
+      "For Muslims, a journey to Makkah is both a spiritual duty and a transformative experience, making it a cornerstone of faith and devotion.",
+    ],
+  },
+  {
+    id: 9,
+    city: "Madinah",
+    highlight: "The City of the Prophet",
+    img: "/img/destinations/Destinations/madinah.jpeg",
+    paragraphs: [
+      "Madinah, known as Al-Madinah Al-Munawwarah, is the second holiest city in Islam. It is the resting place of Prophet Muhammad (peace be upon him) and home to the Masjid Al-Nabawi, one of the most revered mosques in the world. Pilgrims visiting Makkah often include a visit to Madinah to pray at the Prophet’s Mosque and reflect on its profound serenity.",
+      "The city is rich in Islamic history, with sites like Quba Mosque, the first mosque in Islam, and Mount Uhud, the site of a significant battle in early Islamic history. Beyond its religious landmarks, Madinah is also known for its warm hospitality and vibrant bazaars offering traditional goods and souvenirs.",
+      "For Muslims, visiting Madinah is an act of love and devotion, providing an opportunity to connect with the life and teachings of the Prophet Muhammad.",
+    ],
+  },
+  {
+    id: 10,
+    city: "Taif",
+    highlight: "The Mountain Retreat",
+    img: "/img/destinations/Destinations/taif.jpeg",
+    paragraphs: [
+      "Nestled in the Sarawat Mountains, Taif is a city of natural beauty and cultural charm. Known as the City of Roses, Taif is famous for its sprawling rose gardens and the annual Taif Rose Festival, where visitors can learn about the production of rose water and perfumes.",
+      "The city’s cool climate makes it a popular summer retreat, with attractions such as the Shubra Palace Museum and the Al Rudaf Park, a picturesque spot for picnics and relaxation. Adventure seekers can explore the surrounding mountains, take a ride on the cable cars, or visit the local souqs for traditional handicrafts and delicacies. Taif is a perfect blend of relaxation and exploration, making it a favorite among locals and tourists alike.",
+    ],
+  },
+  {
+    id: 11,
+    city: "Dammam",
+    highlight: "A Modern Coastal Hub",
+    img: "/img/destinations/Destinations/dammam.jpeg",
+    paragraphs: [
+      "Dammam is a vibrant city that serves as the gateway to Saudi Arabia’s Eastern Province. Its location on the Arabian Gulf makes it a prime destination for seaside relaxation and water activities. The city’s Corniche offers a mix of family-friendly parks, cafes, and picturesque views, making it a favorite spot for both residents and visitors.",
+      "Dammam is also known for its cultural offerings, such as the King Abdulaziz Center for World Culture (Ithra) in nearby Dhahran, which hosts art exhibitions, films, and interactive science displays. Whether you’re exploring the local seafood cuisine, shopping in modern malls, or venturing to nearby islands, Dammam offers a rich mix of experiences.",
+    ],
+  },
   {
     id: 12,
     city: "Diriyah",
     highlight: "A Window into Saudi Arabia’s History",
-    img: "/img/destinations/Destinations/diriyah.jpeg"
+    img: "/img/destinations/Destinations/diriyah.jpeg",
+    paragraphs: [
+      "Diriyah is a must-visit for anyone interested in Saudi Arabia’s heritage. This UNESCO World Heritage Site was the original home of the Saudi royal family and the cradle of the first Saudi state. Visitors can explore the At-Turaif District, with its well-preserved mudbrick architecture and fascinating museums that narrate the Kingdom’s early history.",
+      "The area has been transformed into a cultural and recreational hub, with traditional markets, upscale dining options, and live performances that celebrate Saudi heritage. The ongoing development of Diriyah aims to make it a global tourist destination while preserving its historical significance. A visit to Diriyah offers a unique journey through time and a glimpse into the Kingdom’s cultural soul.",
+    ],
   },
-  { id: 13, city: "Tabuk", highlight: "The Gateway to NEOM and Beyond", img: "/img/destinations/Destinations/tabuk.jpeg" },
-  { id: 14, city: "Yanbu", highlight: "A Coastal Haven with a Rich History", img: "/img/destinations/Destinations/yanbu.jpeg" },
-  { id: 15, city: "Al Baha", highlight: "A Green Paradise in the Mountains", img: "/img/destinations/Destinations/albaha.jpeg" },
+  {
+    id: 13,
+    city: "Tabuk",
+    highlight: "The Gateway to NEOM and Beyond",
+    img: "/img/destinations/Destinations/tabuk.jpeg",
+    paragraphs: [
+      "Tabuk is a land of striking contrasts, from its ancient history to its role in shaping Saudi Arabia’s future. Known as the gateway to the NEOM project, Tabuk is poised to become a hub of innovation and sustainability.",
+      "Visitors can explore the Al Bidaa ruins and Tayma, which hold remnants of ancient civilizations. The region is also famous for its beautiful landscapes, including the Wadi Rum-like deserts and coastal treasures along the Red Sea. Tabuk’s location makes it an excellent starting point for adventures into the Kingdom’s northwestern frontier.",
+    ],
+  },
+  {
+    id: 14,
+    city: "Yanbu",
+    highlight: "A Coastal Haven with a Rich History",
+    img: "/img/destinations/Destinations/yanbu.jpeg",
+    paragraphs: [
+      "Yanbu, often referred to as The Pearl of the Red Sea, is a coastal city that offers a perfect mix of history, natural beauty, and relaxation. Its stunning beaches and vibrant coral reefs make it a favorite destination for diving enthusiasts and water sports lovers. The serene waterfront and well-maintained parks provide a peaceful escape for families and travelers alike.",
+      "Yanbu also boasts a rich maritime history. The Yanbu Historic Area, with its traditional architecture and old souqs, offers a glimpse into the city’s past as a vital trading hub. The annual Flower Festival is another highlight, showcasing millions of blooming flowers in a spectacular display. Whether you're exploring its underwater wonders or enjoying its tranquil charm, Yanbu is a destination that leaves a lasting impression.",
+    ],
+  },
+  {
+    id: 15,
+    city: "Al Baha",
+    highlight: "A Green Paradise in the Mountains",
+    img: "/img/destinations/Destinations/albaha.jpeg",
+    paragraphs: [
+      "Al Baha is a hidden gem in Saudi Arabia, known for its cooler climate, lush landscapes, and captivating mountain views. Often referred to as The Land of a Thousand Caves, Al Baha offers visitors a chance to explore its natural beauty through hiking trails and stunning viewpoints.",
+      "One of the most iconic attractions is the Dhee Ayn Marble Village, a historic settlement perched on a rocky hilltop, surrounded by flowing streams and palm groves. Visitors can also enjoy the serenity of the region’s forests, such as the Raghadan Forest Park, which is perfect for picnics and family outings. For adventure seekers, Al Baha’s rugged terrain provides opportunities for rock climbing and trekking. Al Baha is a destination that combines history, nature, and adventure in one unforgettable package.",
+    ],
+  },
   {
     id: 16,
     city: "Jazan",
     highlight: "Island Adventures and Cultural Treasures",
-    img: "/img/destinations/Destinations/jazan.avif"
+    img: "/img/destinations/Destinations/jazan.avif",
+    paragraphs: [
+      "Jazan is a region of contrasts, offering pristine beaches, fertile valleys, and a gateway to the breathtaking Farasan Islands. These islands are a paradise for divers and snorkelers, with their crystal-clear waters and vibrant marine life. The region is also renowned for its coffee production, with farms in the highlands of Al-Dayer producing some of the finest beans in the world.",
+      "The city itself boasts cultural landmarks such as the Jazan Heritage Village, where visitors can learn about the region’s traditions and architectural styles. From its warm coastal climate to its welcoming people, Jazan is a destination that offers relaxation and discovery in equal measure.",
+    ],
   },
-  { id: 17, city: "Hail", highlight: "The Desert Capital of Adventure", img: "/img/destinations/Destinations/hail.jpeg" },
+  {
+    id: 17,
+    city: "Hail",
+    highlight: "The Desert Capital of Adventure",
+    img: "/img/destinations/Destinations/hail.jpeg",
+    paragraphs: [
+      "Hail is a city steeped in Bedouin traditions and a hub for desert exploration. Known as The Land of Rock Art, Hail is home to the Jubbah and Shuwaymis sites, which are UNESCO World Heritage Sites showcasing ancient petroglyphs and carvings.",
+      "The city also hosts the annual Hail International Rally, attracting motorsport enthusiasts from around the world to experience the thrill of desert racing. For history lovers, Hail offers traditional mudbrick forts, such as A’arif Fort, which overlooks the city. Whether you’re drawn to its rich history or its adventurous spirit, Hail is a destination that captures the essence of Saudi Arabia’s desert culture.",
+    ],
+  },
   {
     id: 18,
     city: "Al Jubail",
     highlight: "Industrial Powerhouse Meets Coastal Serenity",
-    img: "/img/destinations/Destinations/aljubail.jpeg"
+    img: "/img/destinations/Destinations/aljubail.jpeg",
+    paragraphs: [
+      "Al Jubail is known as Saudi Arabia’s industrial hub, but it also offers visitors a tranquil coastal escape. Its pristine beaches, such as Fanateer Beach, are perfect for swimming, picnics, and family gatherings. The city is also a leader in eco-friendly initiatives, with beautifully landscaped parks and green spaces designed for relaxation and recreation.",
+      "Visitors can explore the Jubail Mangrove Park, a haven for birdwatchers and nature lovers, or take a stroll along the Corniche for picturesque views of the Arabian Gulf. Al Jubail’s unique combination of industrial innovation and natural beauty makes it a fascinating destination.",
+    ],
   },
   {
     id: 19,
     city: "Najran",
     highlight: "A Land of Ancient Forts and Palm Groves",
-    img: "/img/destinations/Destinations/najran.jpeg"
+    img: "/img/destinations/Destinations/najran.jpeg",
+    paragraphs: [
+      "Najran, located in the southern part of Saudi Arabia, is a city of rich history and natural beauty. Its iconic Najran Fort, with its distinctive mudbrick architecture, stands as a symbol of the region’s heritage. Visitors can also explore the lush Najran Valley, lined with palm groves and ancient ruins that tell the story of the region’s long history as a trading crossroads.",
+      "Najran’s traditional markets are a delight for those seeking unique souvenirs, including locally crafted silver jewelry and textiles. The city’s welcoming atmosphere and stunning landscapes make it a must-visit for those seeking a deeper connection with Saudi Arabia’s past.",
+    ],
   },
   {
     id: 20,
     city: "Qassim",
     highlight: "A Heartland of Culture and Agriculture",
-    img: "/img/destinations/Destinations/qassim.jpeg"
+    img: "/img/destinations/Destinations/qassim.jpeg",
+    paragraphs: [
+      "Qassim is known as Saudi Arabia’s agricultural heartland, famed for its vast date farms and the annual Qassim Date Festival, one of the largest of its kind in the world. Visitors can enjoy sampling a variety of dates and learning about the traditional methods of cultivation.",
+      "The region’s rich heritage is reflected in its historical landmarks, such as the Uyun AlJiwa, an ancient site mentioned in Arabian poetry, and the Al-Mithnab Heritage Village, where traditional mudbrick buildings have been beautifully preserved. Qassim’s blend of cultural richness, agricultural abundance, and friendly locals makes it a destination worth exploring.",
+    ],
   },
 ];
 

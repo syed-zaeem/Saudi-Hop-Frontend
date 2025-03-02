@@ -6,19 +6,24 @@ import DropdownSelelctBar from "@/components/hotel-list/common/DropdownSelelctBa
 import PackagesCards from "@/components/Packages/Packages_Cards";
 import CallToActions from "@/components/common/CallToActions";
 import DefaultFooter from "@/components/footer/default";
+import LuxuryPackagesCards from "@/components/Packages/Luxury_Packages_Cards";
+import LuxuryCallToActions from "@/components/common/LuxuryCallToActions";
 
 const UltraLuxuryPackages = () => {
   return (
     <>
       <Header1 />
       <HeroSectionPackages
-        title="Ultra Luxury Umrah Packages"
+        title="Ultra-Luxury Umrah Packages"
         paragraph="Experience unparalleled opulence and extravagance with our premier ultra-luxury Umrah packages, featuring the finest hotels and impeccable luxury services"
         heroImage="/img/masthead/hero_background/package_four_background.avif"
       />
 
       <section className="page_paragraph" data-aos="fade-up">
-        <h3 className="page_paragraph_heading">
+        <h3
+          className="page_paragraph_heading"
+          style={{ color: "rgb(134, 118, 38)" }}
+        >
           Experience unparalleled opulence and comfort with our exclusive
           ultra-luxury Umrah packages.
         </h3>
@@ -32,7 +37,10 @@ const UltraLuxuryPackages = () => {
       </section>
 
       <section className="page_paragraph" data-aos="fade-up">
-        <h3 className="packages_page_paragraph_heading">
+        <h3
+          className="packages_page_paragraph_heading"
+          style={{ color: "rgb(134, 118, 38)" }}
+        >
           Ultra-Luxury Umrah Package deals
         </h3>
       </section>
@@ -63,7 +71,7 @@ const UltraLuxuryPackages = () => {
             {/* <div className="border-top-light mt-30 mb-30"></div> */}
 
             <div className="row y-gap-30">
-              <PackagesCards />
+              <LuxuryPackagesCards />
             </div>
             {/* End .row */}
           </div>
@@ -73,7 +81,7 @@ const UltraLuxuryPackages = () => {
       </section>
       {/* End layout for listing sidebar and content */}
 
-      <section className="bg-blue-2" data-aos="fade-up">
+      <section className="bg-gray-900" data-aos="fade-up">
         <div className="">
           <div className="row y-gap-40 justify-between">
             <div className="col-lg-5">
@@ -87,12 +95,10 @@ const UltraLuxuryPackages = () => {
                   airport
                 </h2>
                 <p className="luxury_flex_left_col_paragraph">
-                  Enjoy up to 15% off on all Umrah packages when you book with
-                  Saudi Hop. We diligently compare hotel, flight, and
-                  transportation prices to offer you the best rates in the
-                  market.
+                  If you have specific vehicle preferences, please inform one of
+                  our advisors
                 </p>
-                <button className="button -dark-1 bg-blue-1 text-white luxury_flex_left_col_button">
+                <button className="button luxury_flex_left_col_button">
                   Enquire Now
                 </button>
               </div>
@@ -113,7 +119,7 @@ const UltraLuxuryPackages = () => {
       </section>
       {/* End testimonial Section */}
 
-      <CallToActions />
+      <LuxuryCallToActions />
       {/* End Call To Actions Section */}
 
       <DefaultFooter />

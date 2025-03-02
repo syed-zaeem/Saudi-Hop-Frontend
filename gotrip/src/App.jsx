@@ -96,6 +96,10 @@ import Four_Star_Packages from "./components/Packages/Four_Star_Packages";
 import FourStarPackages from "./pages/packages/four_star_packages";
 import FiveStarPackages from "./pages/packages/five_star_packages";
 import UltraLuxuryPackages from "./pages/packages/ultra_luxury_packages";
+import SingleDestination from "./pages/others/destinations/single_destination";
+import PrivacyPolicy from "./pages/others/privacy-policy";
+import FAQs from "./pages/others/faqs";
+import Enquire from "./pages/others/Enquire";
 
 function App() {
   useEffect(() => {
@@ -136,9 +140,13 @@ function App() {
               <Route path="signup" element={<SignUp />} />
               <Route path="login" element={<LogIn />} />
               <Route path="terms" element={<Terms />} />
+              <Route path="privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="faqs" element={<FAQs />} />
               <Route path="invoice" element={<Invoice />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="Enquire" element={<Enquire />} />
               <Route path="destinations" element={<Destinations />} />
+              <Route path="destination-details/:id" element={<SingleDestination />} />
               <Route
                 path="three-star-packages"
                 element={<ThreeStarPackages />}

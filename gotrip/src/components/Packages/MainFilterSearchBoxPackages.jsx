@@ -16,13 +16,13 @@ const MainFilterSearchBoxPackages = () => {
 
   return (
     <>
-      <div className="position-relative mt-30 md:mt-20 js-tabs-content">
-        <div className="mainSearch -w-900 bg-white px-10 py-10 lg:px-20 lg:pt-5 lg:pb-20 rounded-100">
+      <div className="position-relative mt-30 md:mt-5 js-tabs-content">
+        <div className="mainSearch w-full bg-white px-10 py-2 lg:px-20 lg:py-1 rounded-100">
           <div className="button-grid items-center">
             {/* <LocationSearch /> */}
             {/* End Location */}
 
-            <div className="searchMenu-date px-30 lg:py-20 lg:px-0 js-form-dd js-calendar">
+            <div className="searchMenu-date px-30 lg:py-1 lg:px-0 js-form-dd js-calendar">
               <div className="items-center bg-gray-100 p-3 contact_box_section">
                 {/* Left Icon (Fixed Size) */}
                 <FaPhoneAlt size={28} className="text-gray-600" />
@@ -35,7 +35,7 @@ const MainFilterSearchBoxPackages = () => {
               </div>
             </div>
 
-            <div className="searchMenu-date px-20 lg:py-20 lg:px-0 js-form-dd js-calendar">
+            <div className="searchMenu-date px-20 lg:py-1 lg:px-0 js-form-dd js-calendar">
               <div className="items-center bg-gray-100 contact_box_section">
                 {/* Left Icon (Fixed Size) */}
                 <MdEmail size={28} className="text-gray-600" />
@@ -50,7 +50,7 @@ const MainFilterSearchBoxPackages = () => {
               </div>
             </div>
 
-            <div className="searchMenu-date px-30 lg:py-20 lg:px-0 js-form-dd js-calendar">
+            <div className="searchMenu-date px-30 lg:py-1 lg:px-0 js-form-dd js-calendar">
               <div className="items-center bg-gray-100 p-3 contact_box_section">
                 {/* Left Icon (Fixed Size) */}
                 <FaKaaba size={28} className="text-gray-600" />
@@ -79,8 +79,8 @@ const MainFilterSearchBoxPackages = () => {
         </div>
         {/* End .mainSearch */}
       </div>
-      {/* End serarchbox tab-content */}
-    </>
+        {/* End serarchbox tab-content */}
+      </>
   );
 };
 

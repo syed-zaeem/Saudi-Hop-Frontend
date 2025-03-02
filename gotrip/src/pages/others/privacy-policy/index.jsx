@@ -5,13 +5,14 @@ import TermsConent from "@/components/common/TermsConent";
 
 import MetaComponent from "@/components/common/MetaComponent";
 import TermsAndConditions from "@/components/common/TermsAndConditions";
+import PrivacyPolicyContent from "@/components/common/PrivacyPolicyContent";
 
 const metadata = {
   title: "Terms & Conditions || GoTrip - Travel & Tour ReactJs Template",
   description: "GoTrip - Travel & Tour ReactJs Template",
 };
 
-const Terms = () => {
+const PrivacyPolicy = () => {
   return (
     <>
       <MetaComponent meta={metadata} />
@@ -25,8 +26,7 @@ const Terms = () => {
 
       <section className="">
         <div className="">
-          {/* <TermsConent /> */}
-          <TermsAndConditions />
+          <PrivacyPolicyContent />
         </div>
       </section>
       {/* End terms section */}
@@ -40,4 +40,4 @@ const Terms = () => {
   );
 };
 
-export default Terms;
+export default PrivacyPolicy;

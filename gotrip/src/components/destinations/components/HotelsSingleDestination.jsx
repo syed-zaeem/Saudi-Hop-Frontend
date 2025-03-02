@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { hotelsData } from "../../data/hotels";
-import isTextMatched from "../../utils/isTextMatched";
+import isTextMatched from "../../../utils/isTextMatched";
 
-const Hotels2 = () => {
+const HotelsSingleDestination = () => {
   var settings = {
     dots: true,
     infinite: true,
@@ -116,7 +116,7 @@ const Hotels2 = () => {
                     </button>
                   </div>
 
-                  <div className="cardImage__leftBadge">
+                  {/* <div className="cardImage__leftBadge">
                     <div
                       className={`py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase ${
                         isTextMatched(item?.tag, "breakfast included")
@@ -134,7 +134,7 @@ const Hotels2 = () => {
                     >
                       {item?.tag}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="hotelsCard__content mt-10">
@@ -170,4 +170,4 @@ const Hotels2 = () => {
   );
 };
 
-export default Hotels2;
+export default HotelsSingleDestination;

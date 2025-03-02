@@ -19,8 +19,11 @@ import Tours from "@/components/tours/Tours";
 import Activity from "@/components/activity/Activity";
 import Rentals from "@/components/rentals/Rentals";
 import Hotels from "@/components/hotels/Hotels2";
+import { useParams } from "react-router-dom";
+import { allDestinations } from "@/data/desinations";
 
 import MetaComponent from "@/components/common/MetaComponent";
+import HotelsSingleDestination from "@/components/destinations/components/HotelsSingleDestination";
 
 const metadata = {
   title: "Destinations || GoTrip - Travel & Tour ReactJs Template",
@@ -28,6 +31,14 @@ const metadata = {
 };
 
 const SingleDestination = () => {
+  let params = useParams()
+  const id = params.id
+  const destination = allDestinations.find((item) => item.id == id)
+
+  if (!destination) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <>
       <MetaComponent meta={metadata} />
@@ -39,13 +50,13 @@ const SingleDestination = () => {
       <DefaultHeader />
       {/* End Header 1 */}
 
-      <LocationTopBar />
+      {/* <LocationTopBar /> */}
       {/* End location top bar section */}
 
       <section className="layout-pb-md">
         <div className="container">
           <div className="row">
-            <Banner />
+            <Banner image={destination.img} city={destination.city} highlight={destination.highlight} />
           </div>
           {/* End .row */}
 
@@ -54,13 +65,13 @@ const SingleDestination = () => {
           </div>
           {/* End .row */}
 
-          <div className="row y-gap-20 pt-40">
+          <div className="y-gap-20 pt-40">
             <div className="col-auto">
-              <h2>What to know before visiting London</h2>
+              <h2>About {destination.city}</h2>
             </div>
             {/* End .col-auto */}
 
-            <IntroTown />
+            <IntroTown paragraphs={destination.paragraphs} />
           </div>
           {/* End .row */}
 
@@ -77,14 +88,13 @@ const SingleDestination = () => {
           </div>
           {/* End local weather */}
 
-          <div className="pt-30 mt-30 border-top-light" />
+          {/* <div className="pt-30 mt-30 border-top-light" />
           <div className="row y-gap-20">
             <div className="col-12">
               <h2 className="text-22 fw-500">General info</h2>
             </div>
-            {/* End .col */}
             <GeneralInfo />
-          </div>
+          </div> */}
           {/* End .row */}
           <div className="mt-30 border-top-light" />
           {/* border separation */}
@@ -106,24 +116,24 @@ const SingleDestination = () => {
             </div>
             {/* End .col */}
 
-            <div className="col-auto">
+            {/* <div className="col-auto">
               <Link
                 to="#"
                 className="button -md -blue-1 bg-blue-1-05 text-blue-1"
               >
                 More <div className="icon-arrow-top-right ml-15" />
               </Link>
-            </div>
+            </div> */}
           </div>
 
           <div className="row y-gap-30 pt-40 sm:pt-20 item_gap-x30">
-            {/* <Hotels /> */}
+            <HotelsSingleDestination />
           </div>
         </div>
       </section>
       {/* End  Hotel sections */}
 
-      <section className="layout-pt-md layout-pb-md">
+      {/* <section className="layout-pt-md layout-pb-md">
         <div className="container">
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
@@ -134,163 +144,21 @@ const SingleDestination = () => {
                 </p>
               </div>
             </div>
-            {/* End .col */}
-
-            <div className="col-auto">
-              <Link
-                to="#"
-                className="button -md -blue-1 bg-blue-1-05 text-blue-1"
-              >
-                More <div className="icon-arrow-top-right ml-15" />
-              </Link>
-            </div>
-            {/* End .col */}
           </div>
-          {/* End .row */}
 
           <div className="row y-gap-30 pt-40 sm:pt-20 item_gap-x30">
             <Tours />
           </div>
-          {/* End .row */}
         </div>
-        {/* End .container */}
-      </section>
+      </section> */}
       {/* End Tours Sections */}
-
-      <section className="layout-pt-md layout-pb-md">
-        <div className="container">
-          <div className="row y-gap-20 justify-between items-end">
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Trending Activity</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Interdum et malesuada fames ac ante ipsum
-                </p>
-              </div>
-            </div>
-            {/* End .col */}
-
-            <div className="col-auto">
-              <Link
-                to="#"
-                className="button -md -blue-1 bg-blue-1-05 text-blue-1"
-              >
-                More <div className="icon-arrow-top-right ml-15" />
-              </Link>
-            </div>
-            {/* End .col */}
-          </div>
-          {/* End .row */}
-
-          <div className="row y-gap-30 pt-40 sm:pt-20 item_gap-x30">
-            <Activity />
-          </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* Trending Activity Sections */}
-
-      <section className="layout-pt-md layout-pb-md">
-        <div className="container">
-          <div className="row y-gap-20 justify-between items-end">
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">
-                  Featured Holiday Rentals
-                </h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Interdum et malesuada fames ac ante ipsum
-                </p>
-              </div>
-            </div>
-            {/* End .col */}
-
-            <div className="col-auto">
-              <Link
-                to="#"
-                className="button -md -blue-1 bg-blue-1-05 text-blue-1"
-              >
-                More <div className="icon-arrow-top-right ml-15" />
-              </Link>
-            </div>
-            {/* End .col */}
-          </div>
-          {/* End .row */}
-
-          <div className="y-gap-30 pt-40 sm:pt-20 item_gap-x30">
-            <Rentals />
-          </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* Featured Rentals Sections */}
-
-      <section className="layout-pt-md layout-pb-md">
-        <div className="container">
-          <div className="row y-gap-20 justify-between items-end">
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Popular Car Hire</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Interdum et malesuada fames ac ante ipsum
-                </p>
-              </div>
-            </div>
-            {/* End .col */}
-
-            <div className="col-auto">
-              <Link
-                to="#"
-                className="button -md -blue-1 bg-blue-1-05 text-blue-1"
-              >
-                More <div className="icon-arrow-top-right ml-15" />
-              </Link>
-            </div>
-            {/* End .col */}
-          </div>
-          {/* End .row */}
-
-          <div className="row y-gap-30 pt-40 sm:pt-20 item_gap-x30">
-            <Cars />
-          </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* Popular Car Hire Sections */}
-
-      <section className="layout-pt-md layout-pb-md">
-        <div className="container">
-          <div className="row justify-center text-center">
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">
-                  Get inspiration for your next trip
-                </h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Interdum et malesuada fames
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* End .row  */}
-          <div className="row y-gap-30 pt-40">
-            <Blog />
-          </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End blog Section */}
 
       <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Top sights in London</h2>
+                <h2 className="sectionTitle__title">Top Places in {destination.city}</h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
                   These popular destinations have a lot to offer
                 </p>
@@ -320,13 +188,36 @@ const SingleDestination = () => {
       </section>
       {/* End Top sights in London */}
 
-      <section className="layout-pt-lg layout-pb-lg bg-light-2">
+      <section className="layout-pt-sm layout-pb-xl">
+        <div className="container">
+          <div className="row justify-center text-center">
+            <div className="col-auto">
+              <div className="sectionTitle -md">
+                <h2 className="sectionTitle__title">
+                  Get inspiration for your next trip
+                </h2>
+                <p className=" sectionTitle__text mt-5 sm:mt-0">
+                  Interdum et malesuada fames
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* End .row  */}
+          <div className="row y-gap-30 pt-40">
+            <Blog />
+          </div>
+          {/* End .row */}
+        </div>
+        {/* End .container */}
+      </section>
+      {/* End blog Section */}
+
+      {/* <section className="layout-pt-lg layout-pb-lg bg-light-2">
         <div className="container">
           <div className="row y-gap-40 justify-between">
             <div className="col-xl-5 col-lg-6" data-aos="fade-up">
               <TestimonialLeftCol />
             </div>
-            {/* End col */}
 
             <div className="col-lg-6">
               <div
@@ -338,13 +229,11 @@ const SingleDestination = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
         </div>
-        {/* End container */}
-      </section>
+      </section> */}
       {/* End testimonial Section */}
 
-      <section className="layout-pt-lg layout-pb-md">
+      {/* <section className="layout-pt-lg layout-pb-md">
         <div className="container">
           <div className="row y-gap-20">
             <div className="col-lg-4">
@@ -354,22 +243,18 @@ const SingleDestination = () => {
                 London
               </h2>
             </div>
-            {/* End .col */}
 
             <div className="col-lg-8">
               <div className="accordion -simple row y-gap-20 js-accordion">
                 <Faq />
               </div>
             </div>
-            {/* End .col-lg-8 */}
           </div>
-          {/* End .row */}
         </div>
-        {/* End .container */}
-      </section>
+      </section> */}
       {/* End Faq Section */}
 
-      <section className="layout-pt-md layout-pb-lg">
+      {/* <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row y-gap-20">
             <div className="col-auto">
@@ -383,14 +268,12 @@ const SingleDestination = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
 
           <div className="pt-40 relative">
             <TopDestinations2 />
           </div>
         </div>
-        {/* End .container */}
-      </section>
+      </section> */}
       {/* End top destinations */}
 
       <CallToActions />

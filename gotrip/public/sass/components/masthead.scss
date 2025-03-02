@@ -1456,6 +1456,7 @@
 
 .luxury_flex_left_col_heading {
   font-size: 30px;
+  color: rgb(255, 255, 255);
 
   @include media-below(xl) {
     font-size: 28px;
@@ -1477,6 +1478,7 @@
 .luxury_flex_left_col_paragraph {
   font-size: 16px;
   margin: 32px 0px;
+  color: rgb(255, 255, 255);
 
   @include media-below(xl) {
     margin: 32px 0px;
@@ -1498,6 +1500,13 @@
   margin-top: 20px;
   padding: 10px 0px;
   font-size: 18px;
+  background-color: rgb(168, 158, 145);
+  color: white;
+
+  &:hover{
+    background-color: white;
+    color: rgb(168, 158, 145);;
+  }
 
   @include media-below(xl) {
     width: 50%;
@@ -1581,5 +1590,28 @@
 
   @include media-below(sm) {
     font-size: 24px;
+  }
+}
+
+
+
+// Updated Styles
+
+.luxury_call_to_action_button {
+  width: 25%;
+  background-color: rgb(168, 158, 145);
+  color: white;
+
+  &:hover{
+    background-color: white;
+    color: rgb(168, 158, 145);;
+  }
+
+  @include media-below(xl) {
+    width: 27%;
+  }
+
+  @include media-below(sm) {
+    width: 40%;
   }
 }

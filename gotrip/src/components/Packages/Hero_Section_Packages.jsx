@@ -12,7 +12,7 @@ const HeroSectionPackages = ({ title, paragraph, heroImage }) => {
       </div>
       <div className="container">
         <div className="row justify-center">
-          <div className="col-auto">
+          <div className="col-auto md:min-w-[95%] xl:min-w-[90%]">
             <div className="text-center">
               <h1
                 className="text-60 lg:text-40 md:text-30 text-white"
@@ -35,7 +35,6 @@ const HeroSectionPackages = ({ title, paragraph, heroImage }) => {
               className="tabs -underline mt-60 js-tabs"
               data-aos="fade-up"
               data-aos-delay="200"
-              style={{display: 'flex', justifyContent: 'center'}}
             >
               <MainFilterSearchBoxPackages />
             </div>

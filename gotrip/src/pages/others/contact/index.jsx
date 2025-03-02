@@ -26,26 +26,46 @@ const Contact = () => {
       <DefaultHeader />
       {/* End Header 1 */}
 
-      <LocationTopBar />
+      {/* <LocationTopBar /> */}
       {/* End location top bar section */}
 
-      <div className="map-outer">
+      {/* <div className="map-outer">
         <div className="map-canvas">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d182586.0420340798!2d-73.99038430252834!3d40.749936548349346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1670824458615!5m2!1sen!2sbd"
             loading="lazy"
           ></iframe>
         </div>
-      </div>
+      </div> */}
       {/* End map section */}
 
-      <section className="relative container">
-        <div className="row justify-end">
-          <div className="col-xl-5 col-lg-7">
-            <div className="map-form px-40 pt-40 pb-50 lg:px-30 lg:py-30 md:px-24 md:py-24 bg-white rounded-4 shadow-4">
-              <div className="text-22 fw-500">Send a message</div>
+      <div className="section-bg layout-pt-xl layout-pb-xl">
+        <div className="section-bg__item col-12">
+          <img src="/img/pages/contact/hero_section_2.jpeg" alt="image" />
+        </div>
+        {/* End section-bg__item */}
+
+        <div className="container">
+          <div className="row justify-center text-center">
+            <div className="col-lg-10 col-md-12 py-12 sm:py-0 lg:py-8">
+              <h1 className="text-60 lg:text-40 md:text-30 text-white">
+                Contact Us
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section className="container mb-80 mt-[70px] lg:mt-[130px] xl:mt-[160px]">
+        <div className="row">
+          <div className="col-lg-6">
+            <div className="px-40 pt-40 pb-50 lg:px-30 lg:py-30 md:px-24 md:py-24 bg-white rounded-4 shadow-4">
+              <div className="text-[22px] sm:text-2xl md:text-2xl lg:text-3xl fw-600">Send a Message</div>
               <ContactForm />
             </div>
+          </div>
+          <div className="col-lg-6">
+            <img src="/img/pages/contact/main_section.webp" className="h-full lg:mt-60 mt-0" alt="image" />
           </div>
         </div>
       </section>
@@ -77,7 +97,7 @@ const Contact = () => {
       </section>
       {/* End Address Section */}
 
-      <section className="layout-pt-lg layout-pb-lg bg-blue-2">
+      {/* <section className="layout-pt-lg layout-pb-lg bg-blue-2">
         <div className="container">
           <div className="row justify-center text-center">
             <div className="col-auto">
@@ -89,15 +109,12 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
 
           <div className="row y-gap-40 justify-between pt-50">
             <WhyChoose />
           </div>
-          {/* End .row */}
         </div>
-        {/* End .container */}
-      </section>
+      </section> */}
       {/* End Why Choose Us section */}
 
       <CallToActions />

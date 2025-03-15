@@ -17,7 +17,7 @@ exports.uploadFile = (req, res) => {
 
 // Retrieve a file
 exports.getFile = (req, res) => {
-  const filePath = path.join(__dirname, "..", req.params.filename);
+  const filePath = path.join(__dirname, "../uploads", req.params.filename);
 
   // Check if the file exists
   if (fs.existsSync(filePath)) {

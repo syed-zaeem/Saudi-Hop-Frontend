@@ -8,6 +8,8 @@ const swaggerUi = require("swagger-ui-express");
 const FaqRoutes = require("./routes/FaqRoutes");
 const mongoose = require("mongoose");
 const swaggerSpec = require("./swaggerConfig");
+const hotelRoutes = require("./routes/HotelRoutes");
+
 
 const app = express();
 app.use(cors());
@@ -29,6 +31,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use("/files", fileRoutes);
 app.use("/blogs", blogRoutes);
 app.use("/faqs", FaqRoutes);
+app.use("/hotels", hotelRoutes);
 
 const DB_URI = "mongodb://localhost:27017/saudi_hop"; // Replace with your MongoDB URI
 mongoose

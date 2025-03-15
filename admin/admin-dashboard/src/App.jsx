@@ -10,6 +10,7 @@ import ManageFaqs from "./pages/ManageFaqs";
 import ManageHotels from "./pages/ManageHotels";
 import CreateHotel from "./pages/CreateHotel";
 import ManagePackage from "./pages/ManagePackages";
+import CreatePackage from "./pages/CreatePackage";
 
 const App = () => {
   return (
@@ -99,6 +100,16 @@ const App = () => {
             <ProtectedRoute>
               <Dashboard>
                 <ManagePackage />
+              </Dashboard>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/create/package"
+          element={
+            <ProtectedRoute>
+              <Dashboard>
+                <CreatePackage />
               </Dashboard>
             </ProtectedRoute>
           }

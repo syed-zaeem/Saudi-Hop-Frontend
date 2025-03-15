@@ -74,7 +74,7 @@ const ManageBlogs = () => {
                     <td className="px-6 py-4">
                       <div className="flex flex-wrap gap-1">
                         {blog.tags &&
-                          JSON.parse(blog.tags).map((tag, index) => (
+                          blog.tags.map((tag, index) => (
                             <span
                               key={index}
                               className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-sm">

@@ -14,7 +14,7 @@ const PackageSchema = new mongoose.Schema({
         required: true,
     },
     highlights: {
-        type: [String],
+        type: String,
         required: true,
     },
     rating: {
@@ -24,16 +24,20 @@ const PackageSchema = new mongoose.Schema({
         max: 5,
     },
     description: {
-        type: [String],
+        type: String,
         required: true,
     },
     hotels: {
-        type: [String], // Can later be changed to ObjectId references
+        type: [String],
         default: [],
     },
     category: {
         type: String,
         required: true,
+    },
+    tags: {
+        type: [String],
+        default: [],
     },
 }, { timestamps: true });
 

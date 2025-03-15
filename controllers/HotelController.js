@@ -23,8 +23,6 @@ const hotelController = {
                 return res.status(400).json({ message: "Image upload failed", error: err.message });
             }
 
-            console.log("Request Body:", req.body);
-            console.log("Uploaded Files:", req.files);
 
             // Check for missing fields
             const missingFields = [];

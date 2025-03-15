@@ -23,11 +23,11 @@ const packageController = {
                 return res.status(400).json({ message: "Image upload failed", error: err.message });
             }
 
-            console.log("Request Body:", req.body);
-            console.log("Uploaded File:", req.file);
+            console.log(req.body)
 
             // Validate required fields
-            const missingFields = ["title", "price", "description", "highlights", "rating", "category"].filter(field => !req.body[field]);
+            const requiredFields = ["title", "price", "description", "highlights", "rating", "category"];
+            const missingFields = requiredFields.filter(field => !req.body[field]);
             if (!req.file) missingFields.push("img");
 
             if (missingFields.length > 0) {
@@ -39,10 +39,11 @@ const packageController = {
                     img: "uploads/" + req.file.filename, // Store image path
                     title: req.body.title,
                     price: req.body.price,
-                    highlights: req.body.highlights.split(","), // Convert to array
-                    rating: req.body.rating,
-                    description: req.body.description.split(","), // Convert to array
-                    hotels: req.body.hotels ? req.body.hotels.split(",") : [],
+                    highlights: req.body.highlights, // Convert to array
+                    rating: Number(req.body.rating),
+                    description: req.body.description,
+                    tags: req.body.tags ? req.body.tags.split(",") : [], // Convert to array
+                    hotels: req.body.hotels ? JSON.parse(req.body.hotels) : [],
                     category: req.body.category,
                 });
 
@@ -93,9 +94,10 @@ const packageController = {
                     title: req.body.title || packageItem.title,
                     price: req.body.price || packageItem.price,
                     highlights: req.body.highlights ? req.body.highlights.split(",") : packageItem.highlights,
-                    rating: req.body.rating || packageItem.rating,
-                    description: req.body.description ? req.body.description.split(",") : packageItem.description,
-                    hotels: req.body.hotels ? req.body.hotels.split(",") : packageItem.hotels,
+                    rating: req.body.rating !== undefined ? Number(req.body.rating) : packageItem.rating,
+                    description: req.body.description || packageItem.description,
+                    tags: req.body.tags ? req.body.tags.split(",") : packageItem.tags,
+                    hotels: Array.isArray(req.body.hotels) ? req.body.hotels : packageItem.hotels,
                     category: req.body.category || packageItem.category,
                 };
 

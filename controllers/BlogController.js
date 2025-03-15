@@ -39,9 +39,10 @@ exports.createBlog = async (req, res) => {
       const newBlog = new Blog({
         title,
         paragraphs: parsedParagraphs,
-        tags,
-        image: req.file.path, // Store image path
+        tags: tags ? JSON.parse(tags) : [], // ✅ Parse tags correctly
+        image: req.file.path,
       });
+
 
       const savedBlog = await newBlog.save();
       res.status(201).json(savedBlog);

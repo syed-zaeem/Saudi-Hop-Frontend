@@ -9,7 +9,7 @@ const BlogSchema = new mongoose.Schema(
         content: { type: String, required: true },
       },
     ],
-    tags: [{ type: String }],
+    tags: [String],
     image: { type: String, required: true }, // Store image URL (or use Buffer if storing binary)
     createdAt: { type: Date, default: Date.now },
   },

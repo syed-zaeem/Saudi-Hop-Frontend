@@ -224,7 +224,7 @@ const CreateBlog = () => {
                   <button
                     type="button"
                     onClick={handleAddParagraph}
-                    className="bg-blue-700 text-white px-4 py-1 rounded-lg hover:bg-blue-800">
+                    className="bg-blue-600 text-white px-4 py-1 rounded-lg hover:bg-blue-800">
                     Add Paragraph
                   </button>
                 </div>
@@ -271,7 +271,7 @@ const CreateBlog = () => {
                   <button
                     type="button"
                     onClick={handleAddTag}
-                    className="ml-2 bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800">
+                    className="ml-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800">
                     Add
                   </button>
                 </div>
@@ -295,7 +295,7 @@ const CreateBlog = () => {
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full bg-blue-700 text-white py-2.5 px-5 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                className="w-full bg-blue-600 text-white py-2.5 px-5 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                 Create Blog Post
               </button>
             </form>

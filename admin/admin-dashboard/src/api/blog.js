@@ -13,7 +13,6 @@ export async function createPost(blogData) {
         formData.append("createdAt", blogData.createdAt);
 
         // Replace with your actual API endpoint
-        debugger;
         const response = await fetch(`${BACKEND_API}/blogs/create`, {
             method: "POST",
             body: formData,

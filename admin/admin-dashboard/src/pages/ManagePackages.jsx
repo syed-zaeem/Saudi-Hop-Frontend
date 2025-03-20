@@ -122,10 +122,10 @@ const ManagePackage = () => {
                       <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900">
                         {packageItem.title}
                       </h5>
-                      <p>
-                        {packageItem.highlights.slice(0, 100)}{" "}
-                        {packageItem.length > 100 && "..."}
-                      </p>
+                      {packageItem.highlights.map((item, index) => {
+                        return <p>{item}</p>;
+                      })}
+
                       <div className="flex items-center justify-between">
                         <span></span>
                         <div className="flex items-center gap-1 text-green-600 font-semibold">

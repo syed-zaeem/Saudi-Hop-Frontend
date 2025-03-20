@@ -14,7 +14,7 @@ const PackageSchema = new mongoose.Schema({
         required: true,
     },
     highlights: {
-        type: String,
+        type: [String],
         required: true,
     },
     rating: {

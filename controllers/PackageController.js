@@ -39,7 +39,7 @@ const packageController = {
                     img: "uploads/" + req.file.filename, // Store image path
                     title: req.body.title,
                     price: req.body.price,
-                    highlights: req.body.highlights, // Convert to array
+                    highlights: req.body.highlights ? JSON.parse(req.body.highlights) : [],
                     rating: Number(req.body.rating),
                     description: req.body.description,
                     tags: req.body.tags ? req.body.tags.split(",") : [], // Convert to array

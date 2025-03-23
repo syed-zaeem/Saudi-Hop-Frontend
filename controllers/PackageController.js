@@ -26,7 +26,7 @@ const packageController = {
             console.log(req.body)
 
             // Validate required fields
-            const requiredFields = ["title", "price", "description", "highlights", "rating", "category"];
+            const requiredFields = ["title", "price", "description", "highlights", "rating", "category", "isUmrahPlus"];
             const missingFields = requiredFields.filter(field => !req.body[field]);
             if (!req.file) missingFields.push("img");
 
@@ -45,9 +45,12 @@ const packageController = {
                     tags: req.body.tags ? req.body.tags.split(",") : [], // Convert to array
                     hotels: req.body.hotels ? JSON.parse(req.body.hotels) : [],
                     category: req.body.category,
+                    isUmrahPlus: req.body.isUmrahPlus
                 });
 
                 await newPackage.save();
+
+                console.log(newPackage);
                 res.status(201).json({ message: "Package created successfully", package: newPackage });
             } catch (error) {
                 res.status(500).json({ error: error.message });
@@ -99,6 +102,7 @@ const packageController = {
                     tags: req.body.tags ? req.body.tags.split(",") : packageItem.tags,
                     hotels: Array.isArray(req.body.hotels) ? req.body.hotels : packageItem.hotels,
                     category: req.body.category || packageItem.category,
+                    isUmrahPlus: req.body.isUmrahPlus || packageItem.isUmrahPlus,
                 };
 
                 // Handle Image Replacement

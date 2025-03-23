@@ -39,6 +39,10 @@ const PackageSchema = new mongoose.Schema({
         type: [String],
         default: [],
     },
+    isUmrahPlus: {
+        type: Boolean,
+        default: false
+    }
 }, { timestamps: true });
 
 const Package = mongoose.model("Package", PackageSchema);

@@ -96,7 +96,7 @@ const packageController = {
                 const updatedData = {
                     title: req.body.title || packageItem.title,
                     price: req.body.price || packageItem.price,
-                    highlights: req.body.highlights ? req.body.highlights.split(",") : packageItem.highlights,
+                    highlights: req.body.highlights ? JSON.parse(req.body.highlights) : [],
                     rating: req.body.rating !== undefined ? Number(req.body.rating) : packageItem.rating,
                     description: req.body.description || packageItem.description,
                     tags: req.body.tags ? req.body.tags.split(",") : packageItem.tags,

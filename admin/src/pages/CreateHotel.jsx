@@ -95,42 +95,6 @@ const CreateHotel = ({ isEditableMode = false }) => {
     }
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   setMessage("");
-
-  //   try {
-  //     const formData = new FormData();
-  //     formData.append("title", hotelData.title);
-  //     formData.append("price", hotelData.price);
-  //     formData.append("description", hotelData.description);
-  //     formData.append("tags", hotelData.tags);
-  //     formData.append("facilities", hotelData.facilities);
-  //     formData.append("rating", hotelData.rating);
-  //     formData.append("destination", hotelData.destination);
-  //     formData.append("location", hotelData.location);
-
-  //     hotelData.images.forEach((file) => formData.append("files", file));
-
-  //     if (deletedImages.length > 0) {
-  //       deletedImages.forEach((image) =>
-  //         formData.append("deletedImages", image)
-  //       );
-  //     }
-
-  //     if (isEditableMode) {
-  //       await HostelAPI.editHotel(id, formData);
-  //     } else {
-  //       await HostelAPI.createHotel(formData);
-  //     }
-  //     navigate("/manage-hotels");
-  //   } catch (error) {
-  //     setLoading(false);
-  //     setMessage("Error updating hotel");
-  //     throw error;
-  //   }
-  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -176,7 +140,14 @@ const CreateHotel = ({ isEditableMode = false }) => {
       [name]: value, // Dynamically update the state
     }));
   };
-
+  const deleteItem = async (_id) => {
+    try {
+      await HostelAPI.deleteHotel(_id);
+      setHotels((prev) => prev.filter((hotel) => hotel._id !== _id));
+    } catch (error) {
+      console.error("Error deleting hotel:", error);
+    }
+  };
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
       <h1 className="text-2xl font-bold text-blue-600 mb-4">Add New Hotel</h1>
@@ -334,6 +305,13 @@ const CreateHotel = ({ isEditableMode = false }) => {
           disabled={loading}>
           {loading ? "Adding..." : "Add Hotel"}
         </button>
+        {isEditableMode && (
+          <button
+            onClick={() => deleteItem(hotelData._id)}
+            className="w-full inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-400 rounded-lg hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300">
+            Delete
+          </button>
+        )}
       </form>
     </div>
   );

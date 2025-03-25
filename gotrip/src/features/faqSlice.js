@@ -64,7 +64,7 @@ const initialState = {
 // })
 
 export const getAllFaqs = createAsyncThunk("faqs/getAllFaqs", async () => {
-  const res = await fetch("http://localhost:5000/faqs/");
+  const res = await fetch("http://209.97.137.58:5000/faqs/");
 
   const response = await res.json();
   console.log("This is the response of redux faqs: ", response.json);

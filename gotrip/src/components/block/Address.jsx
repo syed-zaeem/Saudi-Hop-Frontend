@@ -23,7 +23,7 @@ const Address = () => {
       content: (
         <>
           {" "}
-          <a href="mailto:i@gotrip.com">team@saudihop.com</a>
+          <a href="mailto:team@saudihop.com">team@saudihop.com</a>
         </>
       ),
     },

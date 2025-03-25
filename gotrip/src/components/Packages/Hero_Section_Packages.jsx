@@ -5,7 +5,7 @@ const HeroSectionPackages = ({ title, paragraph, heroImage }) => {
     <section className="masthead -type-1 z-5">
       <div className="masthead__bg">
         <img
-          alt="image"
+          alt="Discover different Packages in Saudi Arabia"
           src={heroImage}
           className="js-lazy"
         />

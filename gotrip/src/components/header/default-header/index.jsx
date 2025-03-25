@@ -32,8 +32,9 @@ const Header1 = () => {
             <div className="col-auto">
               <div className="d-flex items-center">
                 <Link to="/" className="header-logo mr-20">
-                  <img src="/img/general/logo-dark.svg" alt="logo icon" />
-                  <img src="/img/general/logo-dark.svg" alt="logo icon" />
+                  {/* <img src="/img/general/logo-dark.svg" alt="logo icon" />
+                  <img src="/img/general/logo-dark.svg" alt="logo icon" /> */}
+                  <img src="/img/general/logo-saudi-hop.avif" alt="Saudi Hop" />
                 </Link>
                 {/* End logo */}
 
@@ -73,12 +74,12 @@ const Header1 = () => {
                   >
                     Become An Expert
                   </Link> */}
-                  <Link
+                  {/* <Link
                     to="/signup"
                     className="button px-30 fw-400 text-14 -outline-blue-1 h-50 text-blue-1 ml-20"
                   >
                     Sign In / Register
-                  </Link>
+                  </Link> */}
                 </div>
                 {/* End btn-group */}
 

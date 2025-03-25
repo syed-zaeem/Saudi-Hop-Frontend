@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RiStarFill, RiMoneyDollarCircleFill } from "react-icons/ri";
 import UploadFiles from "../api/uploadFiles";
 import PackageAPI from "../api/Package";
+import { TiTick } from "react-icons/ti";
 
 const ManagePackage = () => {
   const [packages, setPackages] = useState([]);
   const [packageImages, setPackageImages] = useState({});
   const [loadingImages, setLoadingImages] = useState({});
-
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchPackages = async () => {
       try {
@@ -118,6 +119,7 @@ const ManagePackage = () => {
                         </span>
                       )}
                     </div>
+
                     <div className="p-5">
                       <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900">
                         {packageItem.title}
@@ -127,17 +129,25 @@ const ManagePackage = () => {
                       })}
 
                       <div className="flex items-center justify-between">
-                        <span></span>
+                        <span className="flex flex-row items-center">
+                          {packageItem.isUmrahPlus == true && (
+                            <>
+                              {" "}
+                              <TiTick size={20} /> Umrah Plus
+                            </>
+                          )}
+                        </span>
                         <div className="flex items-center gap-1 text-green-600 font-semibold">
-                          <RiMoneyDollarCircleFill size={18} />
-                          <span>{packageItem.price} /-</span>
+                          £<span>{packageItem.price} /-</span>
                         </div>
                       </div>
                       <div className="flex w-full gap-2 mt-4">
                         <button
-                          onClick={() => deleteItem(packageItem._id)}
-                          className="w-full inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-400 rounded-lg hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300">
-                          Delete
+                          onClick={() => {
+                            navigate(`/edit/package/${packageItem._id}`);
+                          }}
+                          className="w-full inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-red-300">
+                          Edit
                         </button>
                       </div>
                     </div>

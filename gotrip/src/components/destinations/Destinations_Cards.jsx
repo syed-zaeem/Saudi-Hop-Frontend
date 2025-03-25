@@ -36,7 +36,7 @@ const DestinationsCards = () => {
                     <img
                       className="cover w-100 img-fluid destination_card_image"
                       src={item.img}
-                      alt="image"
+                      alt={`${item.city} – ${item.highlight}`}
                     />
                   </div>
                 </div>

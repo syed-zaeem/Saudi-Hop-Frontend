@@ -1595,7 +1595,6 @@
 
 
 
-// Updated Styles
 
 .luxury_call_to_action_button {
   width: 25%;
@@ -1613,5 +1612,17 @@
 
   @include media-below(sm) {
     width: 40%;
+  }
+}
+
+
+// Updated Styles
+
+.luxury_single_package_book_now_button{
+  background-color: rgba(44, 44, 45, 0.906);
+  color: white;
+
+  &:hover{
+    background-color: rgb(16, 24, 40);
   }
 }

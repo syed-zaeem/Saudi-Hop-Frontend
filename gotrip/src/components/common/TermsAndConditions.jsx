@@ -8,7 +8,7 @@ const TermsAndConditions = () => {
         <div className="section-bg__item col-12">
           <img
             src="/img/pages/Terms_And_Conditions/hero_section_3.jpeg"
-            alt="image"
+            alt="Saudi Hop Terms and Conditions"
           />
         </div>
         {/* End section-bg__item */}

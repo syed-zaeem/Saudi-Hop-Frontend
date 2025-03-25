@@ -37,7 +37,7 @@ const HeroSectionDestinations = () => {
   <section className="masthead -type-1 z-5">
   <div className="masthead__bg">
     <img
-      alt="image"
+      alt="Discover Destinations in Saudi Arabia"
       src="/img/destinations/main_background.jpg"
       className="js-lazy"
     />

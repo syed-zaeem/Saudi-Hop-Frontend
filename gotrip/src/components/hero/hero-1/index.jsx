@@ -5,17 +5,17 @@ const index = () => {
     <section className="masthead -type-1 z-5">
       <div className="masthead__bg">
         <img
-          alt="image"
+          alt="Discover Saudi Arabia"
           src="/img/masthead/hero_background/one.jpg"
           // src="/img/masthead/hero_background/khana_kaba.avif"
           className="js-lazy"
         />
       </div>
-      <div className="container">
+      <div className="container sm:mt-32 lg:mt-0">
         <div className="row justify-center">
-          <div className="col-auto">
+          <div className="col-auto ">
             <div className="flex flex-row align-items-center gap-20">
-              <div className="text-left lg:text-center lg:mt-20 lg:w-full w-2/3 ">
+              <div className="text-left lg:text-center md:mt-20 mt-0 lg:w-full w-2/3 ">
                 <h1
                   className="text-60 lg:text-40 md:text-30 text-white"
                   data-aos="fade-up">
@@ -48,15 +48,15 @@ const index = () => {
 
                   <div className="flex-1 flex flex-col gap-2">
                     <img
-                      className="rounded-lg"
+                      className="rounded-lg w-auto h-auto min-w-[105px] min-h-[105px]"
                       src="img/kabbah/tour.jpeg"
-                      width={200}
+                      // width={}
                       alt=""
                     />
                     <img
-                      className="rounded-lg"
+                      className="rounded-lg w-auto h-auto min-w-[105px] min-h-[105px]"
                       src="img/kabbah/jeddah.jpeg"
-                      width={200}
+                      // width={200}
                       alt=""
                     />
                   </div>

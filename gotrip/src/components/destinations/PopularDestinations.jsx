@@ -3,8 +3,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { Scrollbar } from "swiper";
 import { destinations2 } from "../../data/desinations";
+import { allDestinations } from "../../data/desinations";
+import { useNavigate } from "react-router-dom";
 
 const PopularDestinations = () => {
+  const navigate = useNavigate()
+
   return (
     <>
       <Swiper
@@ -36,7 +40,7 @@ const PopularDestinations = () => {
           },
         }}
       >
-        {destinations2.map((item) => (
+        {allDestinations.map((item) => (
           <SwiperSlide key={item.id}>
             <Link
               to="#"
@@ -44,20 +48,20 @@ const PopularDestinations = () => {
               key={item.id}
             >
               <div className="citiesCard__image ratio ratio-3:4">
-                <img src={item.img} alt="image" className="js-lazy" />
+                <img src={item.img} alt={`${item.city} - ${item.highlight}`} className="js-lazy" />
               </div>
               <div className="citiesCard__content d-flex flex-column justify-between text-center pt-30 pb-20 px-20">
                 <div className="citiesCard__bg" />
                 <div className="citiesCard__top">
-                  <div className="text-14 text-white">{item.hoverText}</div>
+                  <div className="text-14 text-white">{item.city}</div>
                 </div>
                 <div className="citiesCard__bottom">
                   <h4 className="text-26 md:text-20 lh-13 text-white mb-20">
                     {item.city}
                   </h4>
-                  <button className="button col-12 h-60 -blue-1 bg-white text-dark-1">
+                  <Link to={`/destination-details/${item.id}`} className="button col-12 h-60 -blue-1 bg-white text-dark-1">
                     Discover
-                  </button>
+                  </Link>
                 </div>
               </div>
             </Link>

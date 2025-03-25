@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header1 from "@/components/header/header-1";
 import HeroSectionPackages from "@/components/Packages/Hero_Section_Packages";
 import Pagination from "@/components/hotel-list/common/Pagination";
@@ -6,10 +7,32 @@ import DropdownSelelctBar from "@/components/hotel-list/common/DropdownSelelctBa
 import PackagesCards from "@/components/Packages/Packages_Cards";
 import CallToActions from "@/components/common/CallToActions";
 import DefaultFooter from "@/components/footer/default";
+import { fourStarPackagesData } from "@/data/packages";
+import MetaComponent from "@/components/common/MetaComponent";
+import { getAllPackages } from "@/features/packageSlice";
+import { useDispatch } from "react-redux";
+import { getAllHotels } from "@/features/hotelSlice";
+
+const metadata = {
+  title: "Premium 4-Star Umrah Packages – Comfortable Stays | Saudi Hop",
+  description:
+    "Explore premium 4-star Umrah packages with luxury stays near Haram in Makkah and Medina. Enjoy exclusive amenities and a seamless pilgrimage booking with Saudi Hop.",
+  keywords:
+    "4-star Umrah packages, premium Umrah deals, Makkah and Medina hotels, luxury Umrah stays, book Umrah Saudi Hop",
+};
 
 const FourStarPackages = () => {
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getAllPackages())
+    dispatch(getAllHotels())
+  }, [])
+
   return (
     <>
+      <MetaComponent meta={metadata} />
       <Header1 />
       <HeroSectionPackages
         title="4 Star Umrah Packages"
@@ -17,32 +40,34 @@ const FourStarPackages = () => {
         heroImage="/img/masthead/hero_background/package_two_background.avif"
       />
 
-      <section className="page_paragraph" data-aos="fade-up">
-        <h3 className="page_paragraph_heading">
-          Embark on a journey of comfort and luxury with our distinguished
-          4-star Umrah packages.
-        </h3>
-        <p className="page_paragraph_paragraph">
-          Delve into our thoughtfully curated assortment of 4-star Umrah
-          packages, catering to a variety of preferences: from inclusive options
-          to economical choices, romantic escapes to family adventures.
-          Meticulously crafted by our seasoned team, each package guarantees a
-          seamless experience from inquiry to departure. Immerse yourself in the
-          spiritual essence of our premier Islamic destinations. Select from our
-          array of offerings and embark on a rejuvenating pilgrimage today.
-        </p>
-      </section>
+      <main>
+        <section className="page_paragraph" data-aos="fade-up">
+          <h3 className="page_paragraph_heading">
+            Embark on a journey of comfort and luxury with our distinguished
+            4-star Umrah packages.
+          </h3>
+          <p className="page_paragraph_paragraph">
+            Delve into our thoughtfully curated assortment of 4-star Umrah
+            packages, catering to a variety of preferences: from inclusive
+            options to economical choices, romantic escapes to family
+            adventures. Meticulously crafted by our seasoned team, each package
+            guarantees a seamless experience from inquiry to departure. Immerse
+            yourself in the spiritual essence of our premier Islamic
+            destinations. Select from our array of offerings and embark on a
+            rejuvenating pilgrimage today.
+          </p>
+        </section>
 
-      <section className="page_paragraph" data-aos="fade-up">
-        <h3 className="packages_page_paragraph_heading">
-          4 Star Umrah Package Deals: Reserve Premium to Affordable Options!
-        </h3>
-      </section>
+        <section className="page_paragraph" data-aos="fade-up">
+          <h3 className="packages_page_paragraph_heading">
+            4 Star Umrah Package Deals: Reserve Premium to Affordable Options!
+          </h3>
+        </section>
 
-      <section className="layout-pt-md layout-pb-lg">
-        <div className="container">
-          <div className="row y-gap-20 justify-between items-center">
-            {/* <div className="col-auto">
+        <section className="layout-pt-md layout-pb-lg">
+          <div className="container">
+            <div className="row y-gap-20 justify-between items-center">
+              {/* <div className="col-auto">
               <div className="row x-gap-20 y-gap-10 items-center">
                 <div className="col-auto">
                   <div className="text-18 fw-500">Filter</div>
@@ -62,18 +87,19 @@ const FourStarPackages = () => {
               </button>
             </div> */}
 
-            {/* <div className="border-top-light mt-30 mb-30"></div> */}
+              {/* <div className="border-top-light mt-30 mb-30"></div> */}
 
-            <div className="row y-gap-30">
-              <PackagesCards />
+              <div className="row y-gap-30">
+                <PackagesCards category="4 Star" packagesData={fourStarPackagesData} />
+              </div>
+              {/* End .row */}
             </div>
             {/* End .row */}
           </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End layout for listing sidebar and content */}
+          {/* End .container */}
+        </section>
+        {/* End layout for listing sidebar and content */}
+      </main>
 
       <CallToActions />
       {/* End Call To Actions Section */}

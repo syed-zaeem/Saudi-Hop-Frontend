@@ -98,13 +98,16 @@ const MainMenu = ({ style = "" }) => {
         </li>
         {/* End Flights single menu */}
 
+        <li className={pathname === "/hotels" ? "current" : ""}>
+          <Link to="/hotels">Hotels</Link>
+        </li>
+        {/* End Flights single menu */}
+
         <li
-          className={`${
-            isActiveParentChaild(blogItems, pathname) ? "current" : ""
-          } menu-item-has-children`}
+          className={pathname === "/blog-list" ? "current" : ""}
         >
           <Link to="/blog-list">
-            <span className="mr-10">Blogs</span>
+            <span className="mr-10">News</span>
             {/* <i className="icon icon-chevron-sm-down" /> */}
           </Link>
           {/* <ul className="subnav">
@@ -122,15 +125,13 @@ const MainMenu = ({ style = "" }) => {
         </li>
         {/* End blogIems */}
 
-        <li
-          className={`${
-            isActiveParentChaild(blogItems, pathname) ? "current" : ""
-          } menu-item-has-children`}
+        {pathname!=="/" ? <li
+          className={pathname === "/enquire" ? "current" : ""}
         >
           <Link to="/enquire">
             <span className="mr-10">Enquire</span>
           </Link>
-        </li>
+        </li> : ""}
         {/* End Enquire */}
 
         {/* <li
@@ -183,9 +184,9 @@ const MainMenu = ({ style = "" }) => {
           </ul>
         </li> */}
 
-        <li className={pathname === "/contact" ? "current" : ""}>
+        {pathname !== "/" ? <li className={pathname === "/contact" ? "current" : ""}>
           <Link to="/contact">Contact Us</Link>
-        </li>
+        </li>: ""}
       </ul>
     </nav>
   );

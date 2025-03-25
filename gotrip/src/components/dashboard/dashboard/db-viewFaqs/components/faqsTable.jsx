@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import DataTable from "react-data-table-component";
 import { useNavigate } from "react-router-dom";
-import { getAllFaqs, deleteFaq } from "@/features/faqSlice";
+// import { getAllFaqs, deleteFaq } from "@/features/faqSlice";
 
 const FaqsTable = () => {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ const FaqsTable = () => {
   const { faqs, loading, error } = useSelector((state) => state.faqs);
 
   useEffect(() => {
-    dispatch(getAllFaqs());
+    // dispatch(getAllFaqs());
   }, []);
 
   const handleEdit = (row) => {
@@ -22,8 +22,8 @@ const FaqsTable = () => {
 
   const handleDelete = (row) => {
     console.log("Delete row:", row._id);
-    dispatch(deleteFaq(row._id));
-    dispatch(getAllFaqs);
+    // dispatch(deleteFaq(row._id));
+    // dispatch(getAllFaqs);
     // Add your delete logic here
   };
 

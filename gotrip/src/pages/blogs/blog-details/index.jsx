@@ -1,27 +1,55 @@
+import { useState, useEffect } from "react";
 import CallToActions from "@/components/common/CallToActions";
 import DefaultHeader from "@/components/header/default-header";
 import DefaultFooter from "@/components/footer/default";
 import LocationTopBar from "@/components/common/LocationTopBar";
 import RelatedBlog from "@/components/blog/blog-details/RelatedBlog";
-import blogsData from "@/data/blogs";
+import blogs from "@/data/blogs";
 import DetailsContent from "@/components/blog/blog-details/DetailsContent";
 import FormReply from "@/components/blog/blog-details/FormReply";
 import TopComment from "@/components/blog/blog-details/TopComment";
 import BlogNavigator from "@/components/blog/blog-details/BlogNavigator";
 import Comments from "@/components/blog/blog-details/Comments";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import UploadFiles from "@/features/fileSlice";
 
 import MetaComponent from "@/components/common/MetaComponent";
 
-const metadata = {
-  title: "Blog Single || GoTrip - Travel & Tour ReactJs Template",
-  description: "GoTrip - Travel & Tour ReactJs Template",
-};
-
 const BlogSingleDynamic = () => {
+  const [blogImages, setBlogImages] = useState({})
   let params = useParams();
   const id = params.id;
-  const blog = blogsData.find((item) => item.id == id) || blogsData[0];
+  const { blogs } = useSelector((state)=>state.blogs)
+  const blog = blogs.find((item) => item._id == id);
+
+  useEffect(() => {
+    if (blogs && blogs.length > 0) {
+      fetchBlogImages(blogs);
+    }
+  }, [blogs]);
+
+  const fetchBlogImages = async (blogs) => {
+    const responseImages = await UploadFiles.getBlogImages(blogs);
+    setBlogImages(responseImages);
+  };
+
+  const metadata = {
+    title: `${blog.title} – Saudi Hop Travel News & Updates`,
+    description: `Read ${blog.title} for expert travel insights. Stay updated with the latest travel news, tips, and exclusive destination guides from Saudi Hop.`,
+    keywords: `${blog.tags.join(
+      ", "
+    )}, travel news, Saudi Arabia tourism, latest travel updates, destination guides, expert travel tips`,
+  };
+
+  const formatDate = (isoString) => {
+    const date = new Date(isoString);
+    return new Intl.DateTimeFormat("en-US", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }).format(date);
+  };
 
   return (
     <>
@@ -32,70 +60,76 @@ const BlogSingleDynamic = () => {
       <DefaultHeader />
       {/* End Header 1 */}
 
-      <LocationTopBar />
+      {/* <LocationTopBar /> */}
       {/* End location top bar section */}
 
-      <section className="layout-pt-md layout-pb-md">
-        <div className="container">
-          <div className="row y-gap-40 justify-center text-center">
-            <div className="col-auto">
-              <div className="text-15 fw-500 text-blue-1 mb-8 text-capitalize">
-                {blog?.tag}
-              </div>
-              <h1 className="text-30 fw-600">{blog?.title}</h1>
-              <div className="text-15 text-light-1 mt-10">{blog?.date}</div>
-            </div>
-            <div className="col-12">
-              <img
-                src={blog?.img}
-                alt={blog?.title}
-                className="col-12 rounded-8 w-100 img_large_details"
-              />
-            </div>
-          </div>
-          {/* End .row top bar image and title */}
-
-          <div className="row y-gap-30 justify-center">
-            <div className="col-xl-8 col-lg-10 layout-pt-md">
-              <DetailsContent />
-              {/* Details content */}
-
-              {/* <div className="border-top-light border-bottom-light py-30 mt-30">
-                <TopComment />
+      <main>
+        <section className="layout-pt-md layout-pb-md">
+          <div className="container">
+            <div className="row y-gap-40 justify-center text-center">
+              <div className="col-auto">
+                {/* <div className="text-15 fw-500 text-blue-1 mb-8 text-capitalize">
+                {blog?.tags}
               </div> */}
-              {/* End  topcommnet  */}
-              <div className="py-30">
-                <BlogNavigator />
-              </div>
-              {/* End BlogNavigator */}
-
-              {/* <h2 className="text-22 fw-500 mb-15 pt-30">Guest reviews</h2>
-              <Comments /> */}
-              {/* End comments components */}
-
-              <div className="border-top-light pt-40 mt-40" />
-
-              <div className="row">
-                <div className="col-auto">
-                  <h3 className="text-22 fw-500">Share your thoughts to us</h3>
-                  <p className="text-15 text-dark-1 mt-5">
-                    Your email address will not be published.
-                  </p>
+                <h1 className="text-30 fw-600">{blog?.title}</h1>
+                <div className="text-15 text-light-1 mt-10">
+                  {formatDate(blog?.createdAt)}
                 </div>
               </div>
-              {/* End Leave a repy title */}
-
-              <FormReply />
+              <div className="col-12">
+                <img
+                  // src={blog?.image}
+                  src={blogImages[blog._id]}
+                  alt={blog?.title}
+                  className="col-12 rounded-8 w-100 img_large_details"
+                />
+              </div>
             </div>
-            {/* End .col */}
-          </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* Details Blog Details Content */}
+            {/* End .row top bar image and title */}
 
-      <section className="layout-pt-md layout-pb-lg">
+            <div className="row y-gap-30 justify-center">
+              <div className="col-xl-8 col-lg-10 layout-pt-md">
+                <DetailsContent blog={blog} />
+                {/* Details content */}
+
+                {/* <div className="border-top-light border-bottom-light py-30 mt-30">
+                <TopComment />
+              </div> */}
+                {/* End  topcommnet  */}
+                {/* <div className="py-30">
+                <BlogNavigator />
+              </div> */}
+                {/* End BlogNavigator */}
+
+                {/* <h2 className="text-22 fw-500 mb-15 pt-30">Guest reviews</h2>
+              <Comments /> */}
+                {/* End comments components */}
+
+                <div className="border-top-light pt-40 mt-40" />
+
+                <div className="row">
+                  <div className="col-auto">
+                    <h3 className="text-22 fw-500">
+                      Share your thoughts to us
+                    </h3>
+                    <p className="text-15 text-dark-1 mt-5">
+                      Your email address will not be published.
+                    </p>
+                  </div>
+                </div>
+                {/* End Leave a repy title */}
+
+                <FormReply />
+              </div>
+              {/* End .col */}
+            </div>
+            {/* End .row */}
+          </div>
+          {/* End .container */}
+        </section>
+        {/* Details Blog Details Content */}
+
+        {/* <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row justify-center text-center">
             <div className="col-auto">
@@ -107,16 +141,14 @@ const BlogSingleDynamic = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
 
           <div className="row y-gap-30 pt-40">
             <RelatedBlog />
           </div>
-          {/* End .row */}
         </div>
-        {/* End .container */}
-      </section>
-      {/* End Related Content */}
+      </section> */}
+        {/* End Related Content */}
+      </main>
 
       <CallToActions />
       {/* End Call To Actions Section */}

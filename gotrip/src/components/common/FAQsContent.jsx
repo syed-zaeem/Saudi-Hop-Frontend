@@ -2,13 +2,21 @@ import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Faq from "../faq/Faq";
 import { FaqsAccordion } from "../faq/FaqsAccordion";
+import { useSelector } from "react-redux";
 
 const FAQsContent = () => {
+  const { faqs, loading, error } = useSelector((state) => state.faqs);
+
+  const uniqueCategories = [...new Set(faqs.map((faq) => faq.category))];
+
   return (
     <>
       <div className="section-bg layout-pt-xl layout-pb-xl">
         <div className="section-bg__item col-12">
-          <img src="/img/pages/FAQs/hero_section_2.jpeg" alt="image" />
+          <img
+            src="/img/pages/FAQs/hero_section_2.jpeg"
+            alt="Saudi Hop Frequently Asked Questions"
+          />
         </div>
         {/* End section-bg__item */}
 
@@ -28,67 +36,67 @@ const FAQsContent = () => {
             <div className="col-lg-3">
               <div className="px-30 py-30 rounded-4 border-light">
                 <TabList className="tabs__controls row y-gap-10 js-tabs-controls">
-                  <Tab className="col-12 tabs__button js-tabs-button">
-                    Tourist Visa
-                  </Tab>
-                  <Tab className="col-12 tabs__button js-tabs-button">
-                    Entry Requirements
-                  </Tab>
-                  <Tab className="col-12 tabs__button js-tabs-button">
-                    General Information
-                  </Tab>
-                  <Tab className="col-12 tabs__button js-tabs-button">
-                    GCC Residents
-                  </Tab>
+                  {uniqueCategories.map((category) => (
+                    <Tab
+                      key={category}
+                      className="col-12 tabs__button js-tabs-button"
+                    >
+                      {category}
+                    </Tab>
+                  ))}
                 </TabList>
               </div>
             </div>
             {/* End .col-lg-3 */}
 
             <div className="col-lg-9">
+              {uniqueCategories.map((category) => {
+                return (
+                  <TabPanel key={category}>
+                    <div
+                      className="row y-gap-30 justify-center"
+                      data-aos="fade"
+                    >
+                      <div className="col-lg-10">
+                        {/* <div className="accordion -simple row y-gap-20 js-accordion"> */}
+                        <FaqsAccordion category={category} />
+                        {/* </div> */}
+                      </div>
+                    </div>
+                  </TabPanel>
+                );
+              })}
+              {/* <TabPanel>
+                <div className="row y-gap-30 justify-center" data-aos="fade">
+                  <div className="col-lg-10">
+                    <FaqsAccordion category="GCC Residents" />
+                  </div>
+                </div>
+              </TabPanel>
+
               <TabPanel>
                 <div className="row y-gap-30 justify-center" data-aos="fade">
                   <div className="col-lg-10">
-                    {/* <div className="accordion -simple row y-gap-20 js-accordion"> */}
-                    <FaqsAccordion />
-                    {/* </div> */}
+                    <FaqsAccordion category="Tourist Visa" />
                   </div>
                 </div>
               </TabPanel>
-              {/* End  General Terms of Use */}
 
               <TabPanel>
-              <div className="row y-gap-30 justify-center" data-aos="fade">
+                <div className="row y-gap-30 justify-center" data-aos="fade">
                   <div className="col-lg-10">
-                    {/* <div className="accordion -simple row y-gap-20 js-accordion"> */}
-                    <FaqsAccordion />
-                    {/* </div> */}
+                    <FaqsAccordion category="Entry Requirements" />
                   </div>
                 </div>
               </TabPanel>
-              {/* End  Privacy policy */}
 
               <TabPanel>
-              <div className="row y-gap-30 justify-center" data-aos="fade">
+                <div className="row y-gap-30 justify-center" data-aos="fade">
                   <div className="col-lg-10">
-                    {/* <div className="accordion -simple row y-gap-20 js-accordion"> */}
-                    <FaqsAccordion />
-                    {/* </div> */}
+                    <FaqsAccordion category="General Information" />
                   </div>
                 </div>
-              </TabPanel>
-              {/* End  Cookie Policy */}
-
-              <TabPanel>
-              <div className="row y-gap-30 justify-center" data-aos="fade">
-                  <div className="col-lg-10">
-                    {/* <div className="accordion -simple row y-gap-20 js-accordion"> */}
-                    <FaqsAccordion />
-                    {/* </div> */}
-                  </div>
-                </div>
-              </TabPanel>
-              {/* End  Best Price Guarantee */}
+              </TabPanel> */}
             </div>
             {/* End col-lg-9 */}
           </div>

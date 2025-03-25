@@ -1,12 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import MainMenu from "../MainMenu";
 import CurrenctyMegaMenu from "../CurrenctyMegaMenu";
 import LanguageMegaMenu from "../LanguageMegaMenu";
 import MobileMenu from "../MobileMenu";
+import { FaPhoneAlt, FaTags } from "react-icons/fa";
 
 const Header1 = () => {
   const [navbar, setNavbar] = useState(false);
+
+  const { pathname } = useLocation();
 
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -31,8 +34,9 @@ const Header1 = () => {
             <div className="col-auto">
               <div className="d-flex items-center">
                 <Link to="/" className="header-logo mr-20">
-                  <img src="/img/general/logo-light.svg" alt="logo icon" />
-                  <img src="/img/general/logo-dark.svg" alt="logo icon" />
+                  {/* <img src="/img/general/logo-light.svg" alt="logo icon" />
+                  <img src="/img/general/logo-dark.svg" alt="logo icon" /> */}
+                  <img src="/img/general/logo-saudi-hop.avif" alt="Saudi Hop" />
                 </Link>
                 {/* End logo */}
 
@@ -54,9 +58,9 @@ const Header1 = () => {
                   {/* End Megamenu for Currencty */}
 
                   {/* Start vertical devider*/}
-                  <div className="col-auto">
+                  {/* <div className="col-auto">
                     <div className="w-1 h-20 bg-white-20" />
-                  </div>
+                  </div> */}
                   {/* End vertical devider*/}
 
                   {/* <LanguageMegaMenu textClass="text-white" /> */}
@@ -72,12 +76,35 @@ const Header1 = () => {
                   >
                     Become An Expert
                   </Link> */}
-                  <Link
-                    to="/signup"
-                    className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
-                  >
-                    Sign In / Register
-                  </Link>
+
+                  {pathname === "/" && (
+                    <Link
+                      to="/enquire"
+                      className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
+                    >
+                      <FaPhoneAlt size={20} className="" />
+
+                      {/* Right Content */}
+                      <div className=" ml-20">
+                        <h4 className="text-14 fw-500 ls-2 lh-16">
+                          020 8944 9145
+                        </h4>
+                      </div>
+                    </Link>
+                  )}
+
+                  <div className="col-auto">
+                    <div className="w-1 mr-4 ml-20 h-20 bg-white-20" />
+                  </div>
+
+                  {pathname === "/" && (
+                    <Link
+                      to="/enquire"
+                      className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
+                    >
+                      Enquire
+                    </Link>
+                  )}
                 </div>
                 {/* End btn-group */}
 

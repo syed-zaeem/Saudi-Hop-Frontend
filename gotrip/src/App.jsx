@@ -100,6 +100,9 @@ import SingleDestination from "./pages/others/destinations/single_destination";
 import PrivacyPolicy from "./pages/others/privacy-policy";
 import FAQs from "./pages/others/faqs";
 import Enquire from "./pages/others/Enquire";
+import SinglePackage from "./pages/packages/single_package";
+import LuxurySinglePackage from "./pages/packages/luxury_single_package";
+import UmrahPlusPackages from "./pages/packages/umrah_plus_packages";
 
 function App() {
   useEffect(() => {
@@ -153,10 +156,13 @@ function App() {
               />
               <Route path="four-star-packages" element={<FourStarPackages />} />
               <Route path="five-star-packages" element={<FiveStarPackages />} />
+              <Route path="umrah+-packages" element={<UmrahPlusPackages />} />
               <Route
                 path="ultra-luxury-packages"
                 element={<UltraLuxuryPackages />}
               />
+              <Route path="package-details/:id" element={<SinglePackage />} />
+              <Route path="luxury-package-details/:id" element={<LuxurySinglePackage />} />
 
               <Route path="dashboard">
                 <Route path="db-dashboard" element={<DBDashboard />} />
@@ -186,7 +192,8 @@ function App() {
               </Route>
 
               <Route path="hotel-list-v1" element={<HotelListPage1 />} />
-              <Route path="hotel-list-v2" element={<HotelListPage2 />} />
+              {/* <Route path="hotel-list-v2" element={<HotelListPage2 />} /> */}
+              <Route path="hotels" element={<HotelListPage2 />} />
               <Route path="hotel-list-v3" element={<HotelListPage3 />} />
               <Route path="hotel-list-v4" element={<HotelListPage4 />} />
               <Route path="hotel-list-v5" element={<HotelListPage5 />} />

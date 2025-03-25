@@ -11,6 +11,7 @@ import ManageHotels from "./pages/ManageHotels";
 import CreateHotel from "./pages/CreateHotel";
 import ManagePackage from "./pages/ManagePackages";
 import CreatePackage from "./pages/CreatePackage";
+import EditPackage from "./pages/EditPackage";
 
 const App = () => {
   return (
@@ -110,6 +111,16 @@ const App = () => {
             <ProtectedRoute>
               <Dashboard>
                 <CreatePackage />
+              </Dashboard>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/edit/package/:id"
+          element={
+            <ProtectedRoute>
+              <Dashboard>
+                <EditPackage />
               </Dashboard>
             </ProtectedRoute>
           }

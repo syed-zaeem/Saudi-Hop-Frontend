@@ -158,6 +158,14 @@ const MobileMenu = () => {
           {/* End  Flights Menu */}
 
           <MenuItem
+            onClick={() => navigate("/hotels")}
+            className={pathname === "/hotels" ? "menu-active-link" : ""}
+          >
+            Hotels
+          </MenuItem>
+          {/* End  Hotels Menu */}
+
+          <MenuItem
             onClick={() => navigate("/")}
             className={pathname === "/blogs" ? "menu-active-link" : ""}
           >

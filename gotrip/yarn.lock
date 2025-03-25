@@ -677,6 +677,11 @@
   resolved "https://registry.npmjs.org/@types/stylis/-/stylis-4.2.5.tgz"
   integrity sha512-1Xve+NMN7FWjY14vLoY5tL3BVEQ/n42YLwaqJIPYhotZ9uBHt87VceMwWQpzmdEt2TNXIorIFG+YeCUUW7RInw==
 
+"@types/trusted-types@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.npmjs.org/@types/trusted-types/-/trusted-types-2.0.7.tgz"
+  integrity sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==
+
 "@types/use-sync-external-store@^0.0.3":
   version "0.0.3"
   resolved "https://registry.npmjs.org/@types/use-sync-external-store/-/use-sync-external-store-0.0.3.tgz"
@@ -1136,6 +1141,13 @@ dom7@^4.0.4:
   integrity sha512-emjdpPLhpNubapLFdjNL9tP06Sr+GZkrIHEXLWvOGsytACUrkbeIdjO5g77m00BrHTznnlcNqgmn7pCN192TBA==
   dependencies:
     ssr-window "^4.0.0"
+
+dompurify@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.npmjs.org/dompurify/-/dompurify-3.2.4.tgz"
+  integrity sha512-ysFSFEDVduQpyhzAob/kkuJjf5zWkZD8/A9ywSp1byueyuCfHamrCBa14/Oc2iiB0e51B+NpxSl5gmzn+Ms/mg==
+  optionalDependencies:
+    "@types/trusted-types" "^2.0.7"
 
 electron-to-chromium@^1.5.73:
   version "1.5.103"
@@ -2369,7 +2381,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prop-types@^15.5.0, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1, "prop-types@>= 15.7.0", prop-types@15.8.1:
+prop-types@^15, prop-types@^15.5.0, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1, "prop-types@>= 15.7.0", prop-types@15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -2488,6 +2500,13 @@ react-multi-date-picker@^4.4.0:
     react-date-object "^2.1.8"
     react-element-popper "^2.1.6"
 
+react-paginate@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.npmjs.org/react-paginate/-/react-paginate-8.3.0.tgz"
+  integrity sha512-TptZE37HPkT3R+7AszWA++LOTIsIHXcCSWMP9WW/abeF8sLpJzExFB/dVs7xbtqteJ5njF6kk+udTDC0AR3y5w==
+  dependencies:
+    prop-types "^15"
+
 react-parallax@^3.5.1:
   version "3.5.1"
   resolved "https://registry.npmjs.org/react-parallax/-/react-parallax-3.5.1.tgz"
@@ -2569,7 +2588,7 @@ react-transition-group@^4.4.2:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@*, "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.6.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.0 || ^18.2.0", react@^18.0.0, react@^18.2.0, "react@>= 16.8.0", "react@>= 16.8.3", react@>=16.6.0, react@>=16.8, "react@>=16.8 || ^17.0.0 || ^18.0.0", react@>=16.8.0, react@>=16.9.0, "react@16.x.x || 17.x.x || 18.x.x", react@18.2.0:
+react@*, "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16 || ^17 || ^18 || ^19", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.6.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.0 || ^18.2.0", react@^18.0.0, react@^18.2.0, "react@>= 16.8.0", "react@>= 16.8.3", react@>=16.6.0, react@>=16.8, "react@>=16.8 || ^17.0.0 || ^18.0.0", react@>=16.8.0, react@>=16.9.0, "react@16.x.x || 17.x.x || 18.x.x", react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

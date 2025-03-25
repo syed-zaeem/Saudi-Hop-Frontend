@@ -56,15 +56,6 @@ const ManageHotels = () => {
     setLoadingImages(loadingState);
   };
 
-  const deleteItem = async (_id) => {
-    try {
-      await HostelAPI.deleteHotel(_id);
-      setHotels((prev) => prev.filter((hotel) => hotel._id !== _id));
-    } catch (error) {
-      console.error("Error deleting hotel:", error);
-    }
-  };
-
   return (
     <div>
       <div className="main-content p-4">
@@ -89,7 +80,7 @@ const ManageHotels = () => {
           {hotels.map((hotel) => (
             <div
               key={hotel._id}
-              className="max-w-sm bg-white border border-gray-300 rounded-lg shadow-sm">
+              className="max-w-sm max-h-[350px] bg-white border border-gray-300 rounded-lg shadow-sm flex flex-col justify-between">
               {/* Image */}
               <div className="w-full h-40 bg-gray-300 flex items-center justify-center rounded-t-lg overflow-hidden">
                 {loadingImages[hotel._id] ? (
@@ -105,21 +96,32 @@ const ManageHotels = () => {
                 )}
               </div>
 
-              <div className="p-5">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-                  {hotel.title}
-                </h5>
-                <p className="mb-3 font-normal text-gray-700">
-                  {hotel.description.substring(0, 100) ||
-                    "No description available."}
-                  ...
-                </p>
+              <div className="p-5 flex flex-col justify-between h-full">
+                <div className="flex flex-col h-full">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                    {hotel.title}
+                  </h5>
+                  <p className="mb-3 font-normal text-gray-700">
+                    {hotel.description ? (
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: hotel.description.substring(0, 100),
+                        }}
+                      />
+                    ) : (
+                      "No description available."
+                    )}
+                    ...
+                  </p>
 
-                <div className="flex flex-row gap-1 items-center py-2">
-                  <RiMapPin2Line />
-                  {hotel.destination}
+                  <div className="flex flex-row gap-1 items-center py-2">
+                    <RiMapPin2Line />
+                    {hotel.destination}
+                  </div>
                 </div>
-                <div className="flex w-full gap-2">
+
+                {/* Button Section */}
+                <div className="flex w-full gap-2 mt-auto">
                   <Link
                     to={`/edit/hotel/${hotel._id}`}
                     className="w-full inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
@@ -139,11 +141,6 @@ const ManageHotels = () => {
                       />
                     </svg>
                   </Link>
-                  <button
-                    onClick={() => deleteItem(hotel._id)}
-                    className="w-full inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-400 rounded-lg hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300">
-                    Delete
-                  </button>
                 </div>
               </div>
             </div>

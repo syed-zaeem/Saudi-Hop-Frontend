@@ -39,7 +39,7 @@ const IntroTown = ({ paragraphs }) => {
       </div>
       {/* End .col */}
 
-      <div className="col-xl-4">
+      {/* <div className="col-xl-4">
         <div className="relative d-flex ml-35 xl:ml-0">
           <img
             src="/img/pages/destinations/map.png"
@@ -53,7 +53,7 @@ const IntroTown = ({ paragraphs }) => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

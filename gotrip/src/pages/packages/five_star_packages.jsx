@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header1 from "@/components/header/header-1";
 import HeroSectionPackages from "@/components/Packages/Hero_Section_Packages";
 import Pagination from "@/components/hotel-list/common/Pagination";
@@ -6,10 +7,31 @@ import DropdownSelelctBar from "@/components/hotel-list/common/DropdownSelelctBa
 import PackagesCards from "@/components/Packages/Packages_Cards";
 import CallToActions from "@/components/common/CallToActions";
 import DefaultFooter from "@/components/footer/default";
+import { fiveStarPackagesData } from "@/data/packages";
+import MetaComponent from "@/components/common/MetaComponent";
+import { getAllPackages } from "@/features/packageSlice";
+import { useDispatch } from "react-redux";
+import { getAllHotels } from "@/features/hotelSlice";
+
+const metadata = {
+  title: "Luxury 5-Star Umrah Packages – Exclusive Pilgrimage | Saudi Hop",
+  description:
+    "Discover our exclusive 5-star Umrah packages with world-class hotels near Haram in Makkah and Medina. Book your luxury pilgrimage with Saudi Hop for an unforgettable experience.",
+  keywords:
+    "5-star Umrah packages, luxury Umrah deals, Makkah and Medina hotels, premium Umrah packages, book Umrah Saudi Hop",
+};
 
 const FiveStarPackages = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllPackages());
+    dispatch(getAllHotels())
+  }, []);
+
   return (
     <>
+      <MetaComponent meta={metadata} />
       <Header1 />
       <HeroSectionPackages
         title="5 Star Umrah Packages"
@@ -17,32 +39,33 @@ const FiveStarPackages = () => {
         heroImage="/img/masthead/hero_background/package_three_background.avif"
       />
 
-      <section className="page_paragraph" data-aos="fade-up">
-        <h3 className="page_paragraph_heading">
-          Experience unparalleled luxury and comfort with our exclusive 5-star
-          Umrah packages.
-        </h3>
-        <p className="page_paragraph_paragraph">
-          Explore our curated collection of 5-star Umrah packages, featuring
-          options for all preferences: from all-inclusive to budget-friendly,
-          couples' retreats to family getaways. Crafted by our team of experts,
-          each package ensures peace of mind throughout your journey, from
-          inquiry to return flight. Experience the essence of your Muslim
-          identity with our premier Islamic destinations. Choose from our
-          selection and embark on a soul-refreshing pilgrimage today.
-        </p>
-      </section>
+      <main>
+        <section className="page_paragraph" data-aos="fade-up">
+          <h3 className="page_paragraph_heading">
+            Experience unparalleled luxury and comfort with our exclusive 5-star
+            Umrah packages.
+          </h3>
+          <p className="page_paragraph_paragraph">
+            Explore our curated collection of 5-star Umrah packages, featuring
+            options for all preferences: from all-inclusive to budget-friendly,
+            couples' retreats to family getaways. Crafted by our team of
+            experts, each package ensures peace of mind throughout your journey,
+            from inquiry to return flight. Experience the essence of your Muslim
+            identity with our premier Islamic destinations. Choose from our
+            selection and embark on a soul-refreshing pilgrimage today.
+          </p>
+        </section>
 
-      <section className="page_paragraph" data-aos="fade-up">
-        <h3 className="packages_page_paragraph_heading">
-          5 Star Umrah Package Deals: Choose from Luxurious to Deluxe Options!
-        </h3>
-      </section>
+        <section className="page_paragraph" data-aos="fade-up">
+          <h3 className="packages_page_paragraph_heading">
+            5 Star Umrah Package Deals: Choose from Luxurious to Deluxe Options!
+          </h3>
+        </section>
 
-      <section className="layout-pt-md layout-pb-lg">
-        <div className="container">
-          <div className="row y-gap-20 justify-between items-center">
-            {/* <div className="col-auto">
+        <section className="layout-pt-md layout-pb-lg">
+          <div className="container">
+            <div className="row y-gap-20 justify-between items-center">
+              {/* <div className="col-auto">
               <div className="row x-gap-20 y-gap-10 items-center">
                 <div className="col-auto">
                   <div className="text-18 fw-500">Filter</div>
@@ -62,18 +85,19 @@ const FiveStarPackages = () => {
               </button>
             </div> */}
 
-            {/* <div className="border-top-light mt-30 mb-30"></div> */}
+              {/* <div className="border-top-light mt-30 mb-30"></div> */}
 
-            <div className="row y-gap-30">
-              <PackagesCards />
+              <div className="row y-gap-30">
+                <PackagesCards category="5 Star" packagesData={fiveStarPackagesData} />
+              </div>
+              {/* End .row */}
             </div>
             {/* End .row */}
           </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End layout for listing sidebar and content */}
+          {/* End .container */}
+        </section>
+        {/* End layout for listing sidebar and content */}
+      </main>
 
       <CallToActions />
       {/* End Call To Actions Section */}

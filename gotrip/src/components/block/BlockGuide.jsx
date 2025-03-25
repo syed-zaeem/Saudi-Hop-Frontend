@@ -38,7 +38,7 @@ const BlockGuide = () => {
               <img
                 src={item.icon}
                 style={{ width: "52px" }}
-                alt="image"
+                alt={item.title}
                 className="js-lazy"
               />
             </div>

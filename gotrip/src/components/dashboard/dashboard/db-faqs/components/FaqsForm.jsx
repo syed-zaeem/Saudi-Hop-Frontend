@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addNewFaq } from "@/features/faqSlice";
+// import { addNewFaq } from "@/features/faqSlice";
 import { useNavigate } from "react-router-dom";
 
 const FaqsForm = () => {
@@ -19,7 +19,7 @@ const FaqsForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(newFaq)
-    dispatch(addNewFaq(newFaq))
+    // dispatch(addNewFaq(newFaq))
     navigate("/dashboard/db-faqs")
   }
 

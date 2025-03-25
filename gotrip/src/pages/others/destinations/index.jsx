@@ -26,8 +26,11 @@ import DestinationsCards from "@/components/destinations/Destinations_Cards";
 import HeroSectionDestinations from "@/components/destinations/Hero_Section_Destinations";
 
 const metadata = {
-  title: "Destinations || GoTrip - Travel & Tour ReactJs Template",
-  description: "GoTrip - Travel & Tour ReactJs Template",
+  title: "Top Tourist Destinations in Saudi Arabia – Explore with Saudi Hop",
+  description:
+    "Explore the top tourist destinations in Saudi Arabia, including Al Ula, Riyadh, Jeddah, and more. Uncover historical sites, cultural landmarks, and adventure experiences with Saudi Hop.",
+  keywords:
+    "top Saudi Arabia destinations, tourist places in Saudi Arabia, visit Al Ula, Riyadh travel guide, Jeddah attractions, Saudi Hop tours",
 };
 
 const Destinations = () => {
@@ -41,26 +44,30 @@ const Destinations = () => {
 
       <HeroSectionDestinations />
 
-      <section className="layout-pt-md layout-pb-md">
-        <div className="container">
-          <div className="row y-gap-20 justify-between items-end" style={{marginTop: '40px'}}>
-            <div className="col-auto">
-              <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Saudi Destinations</h2>
+      <main>
+        <section className="layout-pt-md layout-pb-md">
+          <div className="container">
+            <div
+              className="row y-gap-20 justify-between items-end"
+              style={{ marginTop: "40px" }}
+            >
+              <div className="col-auto">
+                <div className="sectionTitle -md">
+                  <h2 className="sectionTitle__title">Saudi Destinations</h2>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="row y-gap-30 pt-20 sm:pt-20 item_gap-x30">
-            {/* <Hotels /> */}
-            {/* <TopDestinations /> */}
-            <DestinationsCards />
+            <div className="row y-gap-30 pt-20 sm:pt-20 item_gap-x30">
+              {/* <Hotels /> */}
+              {/* <TopDestinations /> */}
+              <DestinationsCards />
+            </div>
           </div>
-        </div>
-      </section>
-      {/* End  Hotel sections */}
+        </section>
+        {/* End  Hotel sections */}
 
-      {/* <section className="layout-pt-md layout-pb-md">
+        {/* <section className="layout-pt-md layout-pb-md">
         <div className="container">
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
@@ -90,9 +97,9 @@ const Destinations = () => {
         </div>
         
       </section> */}
-      {/* Popular Car Hire Sections */}
+        {/* Popular Car Hire Sections */}
 
-      {/* <section className="layout-pt-md layout-pb-lg">
+        {/* <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row">
             <div className="col-auto">
@@ -122,9 +129,9 @@ const Destinations = () => {
         </div>
         
       </section> */}
-      {/* End Top sights in London */}
+        {/* End Top sights in London */}
 
-      {/* <section className="layout-pt-md layout-pb-lg">
+        {/* <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row y-gap-20">
             <div className="col-auto">
@@ -145,7 +152,8 @@ const Destinations = () => {
         </div>
         
       </section> */}
-      {/* End top destinations */}
+        {/* End top destinations */}
+      </main>
 
       <CallToActions />
       {/* End Call To Actions Section */}

@@ -5,50 +5,46 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
-const faqItems = [
-  {
-    id: 1,
-    question: "What is Material Tailwind?",
-    answer:
-      "Material Tailwind is a free and open-source library that combines Material Design with Tailwind CSS.",
-  },
-  {
-    id: 2,
-    question: "How to use Material Tailwind?",
-    answer:
-      "You can install Material Tailwind via npm or yarn and use the pre-built components for faster development.",
-  },
-  {
-    id: 3,
-    question: "What can I do with Material Tailwind?",
-    answer:
-      "You can create modern, responsive, and beautiful UIs quickly using Material Tailwind's components and utilities.",
-  },
-];
-
-export function FaqsAccordion() {
+export function FaqsAccordion({ category }) {
   const [open, setOpen] = React.useState(null);
+  const { faqs, loading, error } = useSelector((state) => state.faqs);
 
   const handleOpen = (id) => setOpen(open === id ? null : id);
 
+  // Ensure faqs is an array and filter based on category
+  const filteredFaqs = Array.isArray(faqs) ? faqs.filter(item => item.category === category) : [];
+
+  if (loading) {
+    return <p>Loading FAQs...</p>;
+  }
+
+  if (error) {
+    return <p className="text-red-500">Error: {error}</p>;
+  }
+
+  if (filteredFaqs.length === 0) {
+    return <p className="text-gray-500">No FAQs available for this category.</p>;
+  }
+
   return (
     <>
-      {faqItems.map((item) => (
+      {filteredFaqs.map((item) => (
         <Accordion
-          key={item.id}
-          open={open === item.id}
+          key={item._id} // Using _id from JSON
+          open={open === item._id}
           className="mb-2 rounded-md border border-blue-gray-100 p-4"
         >
           <AccordionHeader
-            onClick={() => handleOpen(item.id)}
+            onClick={() => handleOpen(item._id)}
             className={`border-b-0 transition-colors ${
-              open === item.id ? "text-blue-600" : ""
+              open === item._id ? "text-blue-600" : ""
             }`}
           >
             <div className="flex justify-between items-center w-full md:text-md">
               {item.question}
-              {open === item.id ? <FaMinus /> : <FaPlus />}
+              {open === item._id ? <FaMinus /> : <FaPlus />}
             </div>
           </AccordionHeader>
 

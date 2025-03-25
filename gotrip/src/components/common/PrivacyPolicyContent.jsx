@@ -8,7 +8,7 @@ const PrivacyPolicyContent = () => {
         <div className="section-bg__item col-12">
           <img
             src="/img/pages/Terms_And_Conditions/hero_section_3.jpeg"
-            alt="image"
+            alt="Saudi Hop Privacy Policy - Data Protection Information"
           />
         </div>
         {/* End section-bg__item */}

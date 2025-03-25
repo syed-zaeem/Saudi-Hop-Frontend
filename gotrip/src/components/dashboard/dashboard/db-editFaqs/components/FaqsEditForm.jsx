@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { updateFaq } from "@/features/faqSlice";
+// import { updateFaq } from "@/features/faqSlice";
 
 const FaqsEditForm = () => {
   const { id } = useParams();
@@ -41,7 +41,7 @@ const FaqsEditForm = () => {
     e.preventDefault();
     console.log("The updated faq is: " , faq)
     dispatch(
-      updateFaq({id: id, updatedFaq: faq})
+      // updateFaq({id: id, updatedFaq: faq})
     );
     navigate("/dashboard/db-Faqs");
   };

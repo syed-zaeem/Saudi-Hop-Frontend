@@ -7,8 +7,11 @@ import MetaComponent from "@/components/common/MetaComponent";
 import TermsAndConditions from "@/components/common/TermsAndConditions";
 
 const metadata = {
-  title: "Terms & Conditions || GoTrip - Travel & Tour ReactJs Template",
-  description: "GoTrip - Travel & Tour ReactJs Template",
+  title: "Terms and Conditions | Saudi Hop – Umrah & Travel Services Policy",
+  description:
+    "Explore Saudi Hop's Terms and Conditions. Understand our Umrah service policies, user obligations, refund guidelines, and legal information.",
+  keywords:
+    "Saudi Hop terms and conditions, Umrah service policy, user agreement, refund policy, legal guidelines, travel terms",
 };
 
 const Terms = () => {
@@ -23,13 +26,15 @@ const Terms = () => {
       <DefaultHeader />
       {/* End Header 1 */}
 
-      <section className="">
-        <div className="">
-          {/* <TermsConent /> */}
-          <TermsAndConditions />
-        </div>
-      </section>
-      {/* End terms section */}
+      <main>
+        <section className="">
+          <div className="">
+            {/* <TermsConent /> */}
+            <TermsAndConditions />
+          </div>
+        </section>
+        {/* End terms section */}
+      </main>
 
       <CallToActions />
       {/* End Call To Actions Section */}

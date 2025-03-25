@@ -30,7 +30,7 @@ const MainFilterSearchBoxPackages = () => {
                 {/* Right Content */}
                 <div className="">
                   <h4 className="text-15 fw-500 ls-2 lh-16">Open Everyday</h4>
-                  <h4 className="text-18 fw-500 ls-2 lh-16">0208 944 9145</h4>
+                  <h4 className="text-18 fw-500 ls-2 lh-16">020 8944 9145</h4>
                 </div>
               </div>
             </div>

@@ -5,12 +5,13 @@ import CurrenctyMegaMenu from "../CurrenctyMegaMenu";
 import LanguageMegaMenu from "../LanguageMegaMenu";
 
 import MobileMenu from "../MobileMenu";
+import MainMenuForWhiteBg from "../MainMenuForWhiteBg";
 
 const Header1 = () => {
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
-    if (window.scrollY >= 10) {
+    if (window.scrollY >= 150) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -34,13 +35,14 @@ const Header1 = () => {
                 <Link to="/" className="header-logo mr-20">
                   {/* <img src="/img/general/logo-dark.svg" alt="logo icon" />
                   <img src="/img/general/logo-dark.svg" alt="logo icon" /> */}
-                  <img src="/img/general/logo-saudi-hop.avif" alt="Saudi Hop" />
+                  <img src="/img/general/saudi_hop_logo_light-removebg.png" alt="Saudi Hop" />
                 </Link>
                 {/* End logo */}
 
                 <div className="header-menu">
                   <div className="header-menu__content">
-                    <MainMenu style="text-dark-1" />
+                    {/* <MainMenu style="text-dark-1" /> */}
+                    <MainMenuForWhiteBg />
                   </div>
                 </div>
                 {/* End header-menu */}

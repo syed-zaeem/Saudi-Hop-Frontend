@@ -54,7 +54,7 @@ const Home_1 = () => {
       <Hero1 />
       {/* End Hero 1 */}
       <main>
-        <section className="page_paragraph" data-aos="fade-up">
+        <section className="page_paragraph mt-80" data-aos="fade-up">
           <h3 className="page_paragraph_heading">
             Discover exceptional Umrah Packages at unbeatable prices
           </h3>
@@ -240,7 +240,7 @@ const Home_1 = () => {
           {/* End container */}
         </section>
 
-        <section className="layout-pt-lg layout-pb-md" data-aos="fade-up">
+        <section className="layout-pt-lg layout-pb-sm" data-aos="fade-up">
           <div className="container">
             <div className="row y-gap-20 justify-between items-end">
               <div className="col-auto">
@@ -274,7 +274,7 @@ const Home_1 = () => {
         </section>
         {/* End Popular Destinations */}
 
-        <section className="layout-pt-md layout-pb-md">
+        <section className="layout-pt-sm layout-pb-md">
           <div className="page_paragraph">
             <h3 className="trippairup_paragraph_heading">
               Enhance Your Umrah Experience: Pair Your Trip with a Stay at Our

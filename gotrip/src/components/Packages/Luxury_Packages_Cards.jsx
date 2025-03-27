@@ -143,7 +143,7 @@ const LuxuryPackagesCards = ({ category, packagesData }) => {
                 <div className="fw-500">
                   Starting from{" "}
                   <span style={{ color: "rgb(134, 118, 38)" }}>
-                    US${item?.price}
+                  £{item?.price}
                   </span>
                 </div>
               </div>

@@ -13,7 +13,8 @@ const initialState = {
 export const getAllHotels = createAsyncThunk(
   "hotels/getAllHotels",
   async () => {
-    const res = await fetch("http://209.97.137.58/hotels/");
+    // const res = await fetch("http://209.97.137.58/hotels/");
+    const res = await fetch("http://localhost:5000/hotels/")
 
     const response = await res.json();
     console.log("This is the response of redux hotels: ", response);

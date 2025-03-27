@@ -9,7 +9,8 @@ export const uploadImage = createAsyncThunk(
   "files/uploadImage",
   async (file) => {
     console.log("In the files slice: ", file);
-    const res = await fetch("http://209.97.137.58:5000/files/upload", {
+    // const res = await fetch("http://209.97.137.58:5000/files/upload", {
+    const res = await fetch("http://localhost:5000/files/upload", {
       method: "POST",
       headers: {
         //   "Content-Type": "application/json",
@@ -30,7 +31,7 @@ export const getAllBlogs = createAsyncThunk(
   async (searchQuery = "") => {
     console.log("I am here in redux of blogs", searchQuery);
     const res = await fetch(
-      `http://209.97.137.58:5000/blogs/search?query=${searchQuery}`,
+      `http://localhost:5000/blogs/search?query=${searchQuery}`,
       {
         method: "GET",
       }

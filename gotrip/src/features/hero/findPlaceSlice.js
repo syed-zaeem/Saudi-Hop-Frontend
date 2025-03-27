@@ -7,7 +7,7 @@ const initialState = {
     { id: 3, name: "5 Star", path: "five-star-packages" },
     { id: 4, name: "Ultra Luxury", path: "ultra-luxury-packages" },
     { id: 5, name: "Group Bookings", path: "/" },
-    { id: 6, name: "Umrah +", path: "/" },
+    { id: 6, name: "Umrah +", path: "/umrah+-packages" },
   ],
   currentTab: "",
 };

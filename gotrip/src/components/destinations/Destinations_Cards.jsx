@@ -49,9 +49,9 @@ const DestinationsCards = () => {
                       <p>{item.highlight}</p>
                     </div>
                   </div>
-                  <button className="text-dark-1 hover:text-blue-500">
+                  {/* <button className="text-dark-1 hover:text-blue-500">
                     <IoShareOutline size={28} />
-                  </button>
+                  </button> */}
 
                   {/* <div className="flex justify-between items-center text-light-1 text-15 lh-14 mt-5">
                     <p className="mr-2">{item.highlight}</p>

@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { testimonial1 } from "../../data/testimonialData";
+import { testimonial1, testimonialsData } from "../../data/testimonialData";
 
 const Testimonial = () => {
   var settings = {
@@ -36,7 +36,7 @@ const Testimonial = () => {
   return (
     <>
       <Slider {...settings}>
-        {testimonial1.map((item) => (
+        {testimonialsData.map((item) => (
           <div
             className="testimonials -type-1 bg-white rounded-4 pt-40 pb-30 px-40"
             key={item.id}
@@ -47,13 +47,13 @@ const Testimonial = () => {
             <p className="testimonials__text lh-18 fw-500 text-dark-1">
               {item.text}
             </p>
-            <div className="pt-20 mt-28 border-top-light">
+            <div className="pt-20 mt-20 border-top-light">
               <div className="row x-gap-20 y-gap-20 items-center">
                 <div className="col-auto">
                   <img src={item.avatar} alt="image" className="size-60" />
                 </div>
                 <div className="col-auto">
-                  <div className="text-15 fw-500 lh-14">{item.name}</div>
+                  <div className="text-17 fw-500 lh-14">{item.name}</div>
                   <div className="text-14 lh-14 text-light-1 mt-5">
                     {item.designation}
                   </div>

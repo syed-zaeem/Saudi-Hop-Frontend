@@ -13,34 +13,18 @@ import {
   isActiveParentChaild,
 } from "../../utils/linkActiveChecker";
 import { useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const MainMenu = ({ style = "" }) => {
-  const [navbar, setNavbar] = useState(false);
+const MainMenuForWhiteBg = ({ style = "" }) => {
   const { pathname } = useLocation();
   const [isActiveParent, setIsActiveParent] = useState(false);
-
-  const changeTextColor = () => {
-      if (window.scrollY >= 150) {
-        setNavbar(true);
-      } else {
-        setNavbar(false);
-      }
-    };
-  
-    useEffect(() => {
-      window.addEventListener("scroll", changeTextColor);
-      return () => {
-        window.removeEventListener("scroll", changeTextColor);
-      };
-    }, []);
 
   return (
     <nav className="menu js-navList">
       <ul className={`menu__nav ${style} -is-active`}>
         <li
           className={`${
-            isActiveParentChaild(homeItems, pathname) ? "current" : navbar? "text-dark" : "text-white"
+            isActiveParentChaild(homeItems, pathname) ? "current" : "text-dark"
           } menu-item-has-children`}
         >
           <Link to="/">
@@ -80,7 +64,7 @@ const MainMenu = ({ style = "" }) => {
 
         <li
           className={`${
-            isActiveParentChaild(packageItems, pathname) ? "current" : navbar? "text-dark" : "text-white"
+            isActiveParentChaild(packageItems, pathname) ? "current" : "text-dark"
           } menu-item-has-children`}
         >
           <Link href="/">
@@ -103,23 +87,23 @@ const MainMenu = ({ style = "" }) => {
         </li>
         {/* End Packages single menu */}
 
-        <li className={pathname === "/destinations" ? "current" : navbar? "text-dark" : "text-white"}>
+        <li className={pathname === "/destinations" ? "current" : "text-dark"}>
           <Link to="/destinations">Saudi Destinations</Link>
         </li>
         {/* End Destinatinos single menu */}
 
-        <li className={pathname === "/flights" ? "current" : navbar? "text-dark" : "text-white"}>
+        <li className={pathname === "/flights" ? "current" : "text-dark"}>
           <Link to="/destinations">Flights</Link>
         </li>
         {/* End Flights single menu */}
 
-        <li className={pathname === "/hotels" ? "current" : navbar? "text-dark" : "text-white"}>
+        <li className={pathname === "/hotels" ? "current" : "text-dark"}>
           <Link to="/hotels">Hotels</Link>
         </li>
         {/* End Flights single menu */}
 
         <li
-          className={pathname === "/blog-list" ? "current" : navbar? "text-dark" : "text-white"}
+          className={pathname === "/blog-list" ? "current" : "text-dark"}
         >
           <Link to="/blog-list">
             <span className="mr-10">News</span>
@@ -141,7 +125,7 @@ const MainMenu = ({ style = "" }) => {
         {/* End blogIems */}
 
         {pathname!=="/" ? <li
-          className={pathname === "/enquire" ? "current" : navbar? "text-dark" : "text-white"}
+          className={pathname === "/enquire" ? "current" : "text-dark"}
         >
           <Link to="/enquire">
             <span className="mr-10">Enquire</span>
@@ -199,7 +183,7 @@ const MainMenu = ({ style = "" }) => {
           </ul>
         </li> */}
 
-        {pathname !== "/" ? <li className={pathname === "/contact" ? "current" : navbar? "text-dark" : "text-white"}>
+        {pathname !== "/" ? <li className={pathname === "/contact" ? "current" : "text-dark"}>
           <Link to="/contact">Contact Us</Link>
         </li>: ""}
       </ul>
@@ -207,4 +191,4 @@ const MainMenu = ({ style = "" }) => {
   );
 };
 
-export default MainMenu;
+export default MainMenuForWhiteBg;

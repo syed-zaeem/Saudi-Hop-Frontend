@@ -194,7 +194,7 @@ const LuxurySinglePackage = () => {
   }
 
   const metadata = {
-    title: `${requiredPackage.title} – Ultra-Luxury From US$${requiredPackage.price} | Saudi Hop`,
+    title: `${requiredPackage.title} – Ultra-Luxury From £${requiredPackage.price} | Saudi Hop`,
     description: `${
       requiredPackage.title
     } offers ${requiredPackage.highlights.join(
@@ -235,7 +235,7 @@ const LuxurySinglePackage = () => {
                   className="text-2xl lg:text-3xl fw-500"
                   style={{ color: "rgb(134, 118, 38)" }}
                 >
-                  US${requiredPackage.price}
+                  £{requiredPackage.price}
                 </span>
               </div>
             </div>
@@ -309,8 +309,9 @@ const LuxurySinglePackage = () => {
                 <div className="px-30 py-30 border-light rounded-4 shadow-4">
                   <div className="d-flex items-center justify-between">
                     <div>
-                      <span className="text-20 fw-500">
-                        US${requiredPackage?.price}
+                      From
+                      <span className="text-20 fw-500 ml-2">
+                      £{requiredPackage?.price}
                       </span>
                     </div>
                     <div className="d-flex items-center">

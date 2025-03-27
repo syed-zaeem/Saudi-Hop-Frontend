@@ -76,7 +76,7 @@ export const packageItems = [
     routePath: "/group-booking-packages",
   },
   {
-    name: "Umrah + ",
+    name: "Umrah + Holidays",
     routePath: "/umrah+-packages",
   }
 ]

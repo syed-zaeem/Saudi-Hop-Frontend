@@ -43,8 +43,8 @@ const MainFilterSearchBox = () => {
         ))}
       </div>
 
-      {/* <div className=" mt-30 md:mt-5 js-tabs-content"> */}
-      {/* <div className="tabs__controls d-flex x-gap-30 y-gap-20 w-full mt-20 justify-center sm:justify-start js-tabs-controls">
+      <div className=" mt-30 md:mt-5 js-tabs-content"></div>
+      <div className="tabs__controls d-flex x-gap-30 y-gap-20 w-full mt-20 justify-center sm:justify-start js-tabs-controls">
         <div className="mainSearch bg-white px-10 py-2  lg:px-20 lg:py-1 rounded-100">
           <div className="button-grid items-center">
 
@@ -85,7 +85,7 @@ const MainFilterSearchBox = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       {/* End serarchbox tab-content */}
     </>
   );

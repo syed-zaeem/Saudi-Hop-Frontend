@@ -103,6 +103,7 @@ import Enquire from "./pages/others/Enquire";
 import SinglePackage from "./pages/packages/single_package";
 import LuxurySinglePackage from "./pages/packages/luxury_single_package";
 import UmrahPlusPackages from "./pages/packages/umrah_plus_packages";
+import { FaWhatsapp } from "react-icons/fa";
 
 function App() {
   useEffect(() => {
@@ -149,7 +150,10 @@ function App() {
               <Route path="contact" element={<Contact />} />
               <Route path="Enquire" element={<Enquire />} />
               <Route path="destinations" element={<Destinations />} />
-              <Route path="destination-details/:id" element={<SingleDestination />} />
+              <Route
+                path="destination-details/:id"
+                element={<SingleDestination />}
+              />
               <Route
                 path="three-star-packages"
                 element={<ThreeStarPackages />}
@@ -162,7 +166,10 @@ function App() {
                 element={<UltraLuxuryPackages />}
               />
               <Route path="package-details/:id" element={<SinglePackage />} />
-              <Route path="luxury-package-details/:id" element={<LuxurySinglePackage />} />
+              <Route
+                path="luxury-package-details/:id"
+                element={<LuxurySinglePackage />}
+              />
 
               <Route path="dashboard">
                 <Route path="db-dashboard" element={<DBDashboard />} />
@@ -247,7 +254,15 @@ function App() {
           <ScrollTopBehaviour />
         </BrowserRouter>
 
-        <SrollTop />
+        {/* <SrollTop /> */}
+        <a
+          href="https://wa.me/YOUR_PHONE_NUMBER"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-5 right-5 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 z-50 flex items-center justify-center"
+        >
+          <FaWhatsapp className="text-4xl" />
+        </a>
       </Provider>
     </main>
   );

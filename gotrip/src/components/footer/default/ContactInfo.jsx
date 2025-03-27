@@ -6,12 +6,12 @@ const ContactInfo = () => {
       action: "tel:020 8944 9145",
       text: "020 8944 9145",
     },
-    {
-      id: 2,
-      title: "Need live support?",
-      action: "team@saudihop.com",
-      text: "team@saudihop.com",
-    },
+    // {
+    //   id: 2,
+    //   title: "Need live support?",
+    //   action: "team@saudihop.com",
+    //   text: "team@saudihop.com",
+    // },
   ];
   return (
     <>

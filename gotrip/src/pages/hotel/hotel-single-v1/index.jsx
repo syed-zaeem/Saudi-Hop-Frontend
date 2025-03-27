@@ -52,7 +52,7 @@ const HotelSingleV1Dynamic = () => {
 
   const metadata = {
     title: `${hotel.title} – Luxury Stay in ${hotel.location} | Saudi Hop`,
-    description: `Experience ${hotel.title} in ${hotel.location} – luxury amenities, prime location, and exclusive offers starting at US$${hotel.price} per night. Book your perfect stay with Saudi Hop today.`,
+    description: `Experience ${hotel.title} in ${hotel.location} – luxury amenities, prime location, and exclusive offers starting at £${hotel.price} per night. Book your perfect stay with Saudi Hop today.`,
     keywords: `${hotel.title}, ${hotel.location} hotels, luxury stay in ${hotel.location}, best hotels in ${hotel.location}, ${hotel.title} rates, premium accommodation ${hotel.location}`,
   };
 
@@ -150,8 +150,9 @@ const HotelSingleV1Dynamic = () => {
                   <div className="px-30 py-30 border-light rounded-4 shadow-4">
                     <div className="d-flex items-center justify-between">
                       <div>
-                        <span className="text-20 fw-500">
-                          US${hotel?.price}
+                        From
+                        <span className="text-20 fw-500 ml-2">
+                        £{hotel?.price}
                         </span>
                       </div>
                       <div className="d-flex items-center">

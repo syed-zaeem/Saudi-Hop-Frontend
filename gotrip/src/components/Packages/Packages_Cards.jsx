@@ -146,7 +146,7 @@ const PackagesCards = ({ category, packagesData }) => {
               <div className="mt-5">
                 <div className="fw-500">
                   Starting from{" "}
-                  <span className="text-blue-1">US${item?.price}</span>
+                  <span className="text-blue-1">£{item?.price}</span>
                 </div>
               </div>
             </div>

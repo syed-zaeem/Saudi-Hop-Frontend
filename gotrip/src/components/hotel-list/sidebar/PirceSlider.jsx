@@ -63,8 +63,8 @@ const PriceSlider = () => {
 
       <div className="d-flex justify-between mb-20">
         <div className="text-15 text-dark-1">
-          <span className="js-lower mx-1">${price[0]}</span> -
-          <span className="js-upper mx-1">${price[1]}</span>
+          <span className="js-lower mx-1">£{price[0]}</span> -
+          <span className="js-upper mx-1">£{price[1]}</span>
         </div>
       </div>
 

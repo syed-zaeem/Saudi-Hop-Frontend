@@ -267,7 +267,7 @@ const HotelsSingleDestination = ({ destination }) => {
                       <img
                         className="rounded-4 col-12 js-lazy"
                         src={hotelImages[item._id] || "placeholder-image-url"} // Fallback for missing images
-                        alt={`${item?.title} in ${item?.location} – Starting from US$${item?.price}`}
+                        alt={`${item?.title} in ${item?.location} – Starting from £${item?.price}`}
                       />
                     </div>
                   </div>
@@ -282,7 +282,7 @@ const HotelsSingleDestination = ({ destination }) => {
                   <div className="mt-5">
                     <div className="fw-500">
                       Starting from{" "}
-                      <span className="text-blue-1">US${item?.price}</span>
+                      <span className="text-blue-1">£{item?.price}</span>
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,5 @@
-const apiCall = `http://209.97.137.58:5000/files`;
+// const apiCall = `http://209.97.137.58:5000/files`;
+const apiCall = `http://localhost:5000/files`
 
 const getFile = async (fileName) => {
   fileName = fileName.replace(/\\/g, "/").split("/").pop();

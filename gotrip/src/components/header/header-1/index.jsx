@@ -6,13 +6,13 @@ import LanguageMegaMenu from "../LanguageMegaMenu";
 import MobileMenu from "../MobileMenu";
 import { FaPhoneAlt, FaTags } from "react-icons/fa";
 
-const Header1 = () => {
+const Header1 = ({logo}) => {
   const [navbar, setNavbar] = useState(false);
 
   const { pathname } = useLocation();
 
   const changeBackground = () => {
-    if (window.scrollY >= 10) {
+    if (window.scrollY >= 150) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -28,7 +28,8 @@ const Header1 = () => {
 
   return (
     <>
-      <header className={`header ${navbar ? "bg-dark-1 is-sticky" : ""}`}>
+      {/* <header className={`header ${navbar ? "bg-dark-1 is-sticky" : ""}`}> */}
+      <header className={`header ${navbar ? "bg-light is-sticky" : ""}`}>
         <div className="header__container px-30 sm:px-20">
           <div className="row justify-between items-center">
             <div className="col-auto">
@@ -36,7 +37,8 @@ const Header1 = () => {
                 <Link to="/" className="header-logo mr-20">
                   {/* <img src="/img/general/logo-light.svg" alt="logo icon" />
                   <img src="/img/general/logo-dark.svg" alt="logo icon" /> */}
-                  <img src="/img/general/logo-saudi-hop.avif" alt="Saudi Hop" />
+                  {/* <img src={logo} alt="Saudi Hop" /> */}
+                  <img src={navbar?"/img/general/saudi_hop_logo_light-removebg.png":"/img/general/saudi_hop_logo_dark-removebg.png"} alt="Saudi Hop" />
                 </Link>
                 {/* End logo */}
 
@@ -80,7 +82,7 @@ const Header1 = () => {
                   {pathname === "/" && (
                     <Link
                       to="/enquire"
-                      className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
+                      className={`button px-30 fw-400 text-14 ${navbar?"border-black text-dark -outline-black":"border-white text-light -outline-white"} h-50 ml-20`}
                     >
                       <FaPhoneAlt size={20} className="" />
 
@@ -100,7 +102,7 @@ const Header1 = () => {
                   {pathname === "/" && (
                     <Link
                       to="/enquire"
-                      className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
+                      className={`button px-30 fw-400 text-14 ${navbar?"border-black text-black -outline-black":"border-white text-light -outline-white"} h-50 ml-20`}
                     >
                       Enquire
                     </Link>

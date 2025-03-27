@@ -12,6 +12,18 @@ const footercontent = [
   },
   {
     id: 2,
+    title: "Resources",
+    menuList: [
+      { name: "3 Star Packages", routerPath: "/three-star-packages" },
+      { name: "4 Star Packages", routerPath: "/four-star-packages" },
+      { name: "5 Star Packages", routerPath: "/five-star-packages" },
+      { name: "Ultra-Luxury Packages", routerPath: "/ultra-luxury-packages" },
+      { name: "Group Bookings", routerPath: "/" },
+      { name: "Umrah + Holidays", routerPath: "/umrah+-packages" },
+    ],
+  },
+  {
+    id: 3,
     title: "Support",
     menuList: [
       { name: "Contact Us", routerPath: "/contact" },
@@ -22,18 +34,5 @@ const footercontent = [
       { name: "FAQs", routerPath: "/faqs"},
     ],
   },
-  // {
-  //   id: 3,
-  //   title: "Other Services",
-  //   menuList: [
-  //     { name: "Car hire", routerPath: "/" },
-  //     { name: "Activity Finder", routerPath: "/" },
-  //     { name: "Tour List", routerPath: "/" },
-  //     { name: "Flight finder", routerPath: "/" },
-  //     { name: "Cruise Ticket", routerPath: "/" },
-  //     { name: "Holiday Rental", routerPath: "/" },
-  //     { name: "Travel Agents", routerPath: "/" },
-  //   ],
-  // },
 ];
 export default footercontent;

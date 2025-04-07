@@ -192,7 +192,7 @@ const SinglePackage = () => {
   }
 
   const metadata = {
-    title: `${requiredPackage.title} – From £${requiredPackage.price} | Saudi Hop`,
+    title: `${requiredPackage.title} – From GBP £${requiredPackage.price} | Saudi Hop`,
     description: `${
       requiredPackage.title
     } includes ${requiredPackage.highlights.join(
@@ -229,7 +229,7 @@ const SinglePackage = () => {
                 <div className="text-lg">
                   From{" "}
                   <span className="text-2xl lg:text-3xl text-blue-1 fw-500">
-                  £{requiredPackage.price}
+                  GBP £{requiredPackage.price}
                   </span>
                 </div>
               </div>
@@ -304,7 +304,7 @@ const SinglePackage = () => {
                       <div>
                         From
                         <span className="text-20 fw-500 ml-2">
-                        £{requiredPackage?.price}
+                        GBP £{requiredPackage?.price}
                         </span>
                       </div>
                       <div className="d-flex items-center">

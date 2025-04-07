@@ -49,7 +49,7 @@ const HotelProperties = () => {
                       className="rounded-4 col-12 js-lazy"
                       // src={item.images[0]}
                       src={hotelImages[item._id]}
-                      alt={`${item?.title} – Hotel in ${item?.location} | Price: £${item?.price}`}
+                      alt={`${item?.title} – Hotel in ${item?.location} | Price: GBP £${item?.price}`}
                     />
                   </div>
                 </div>
@@ -113,7 +113,7 @@ const HotelProperties = () => {
                     <p className="text-14 text-light-1 mt-50 md:mt-20 pr-[36px]">
                       From
                     </p>
-                    <div className="text-22 lh-12 fw-600">£{item?.price}</div>
+                    <div className="text-22 lh-12 fw-600">GBP £{item?.price}</div>
                   </div>
 
                   <Link

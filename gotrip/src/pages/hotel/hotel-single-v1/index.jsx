@@ -52,7 +52,7 @@ const HotelSingleV1Dynamic = () => {
 
   const metadata = {
     title: `${hotel.title} – Luxury Stay in ${hotel.location} | Saudi Hop`,
-    description: `Experience ${hotel.title} in ${hotel.location} – luxury amenities, prime location, and exclusive offers starting at £${hotel.price} per night. Book your perfect stay with Saudi Hop today.`,
+    description: `Experience ${hotel.title} in ${hotel.location} – luxury amenities, prime location, and exclusive offers starting at GBP £${hotel.price} per night. Book your perfect stay with Saudi Hop today.`,
     keywords: `${hotel.title}, ${hotel.location} hotels, luxury stay in ${hotel.location}, best hotels in ${hotel.location}, ${hotel.title} rates, premium accommodation ${hotel.location}`,
   };
 
@@ -81,7 +81,7 @@ const HotelSingleV1Dynamic = () => {
         <section className="layout-pt-md layout-pb-lg">
           <div className="container">
             <div className="row y-gap-30">
-              <div className="col-xl-8">
+              <div className="col-xl-7">
                 <div className="row y-gap-40">
                   {/* <div className="col-12">
                   <h3 className="text-22 fw-500">Property highlights</h3>
@@ -144,7 +144,7 @@ const HotelSingleV1Dynamic = () => {
               </div>
               {/* End .col-xl-8 */}
 
-              <div className="col-xl-4">
+              <div className="col-xl-5">
                 {/* <SidebarRight hotel={hotel} /> */}
                 <aside className="ml-50 lg:ml-0">
                   <div className="px-30 py-30 border-light rounded-4 shadow-4">
@@ -152,7 +152,7 @@ const HotelSingleV1Dynamic = () => {
                       <div>
                         From
                         <span className="text-20 fw-500 ml-2">
-                        £{hotel?.price}
+                        GBP £{hotel?.price}
                         </span>
                       </div>
                       <div className="d-flex items-center">

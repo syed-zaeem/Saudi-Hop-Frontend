@@ -115,7 +115,7 @@ const StarPackages = ({ category, title, uniqueId }) => {
                   <div className="mt-5">
                     <div className="fw-500">
                       Starting from{" "}
-                      <span className="text-blue-1">£{item?.price}</span>
+                      <span className="text-blue-1">GBP £{item?.price}</span>
                     </div>
                   </div>
                 </div>

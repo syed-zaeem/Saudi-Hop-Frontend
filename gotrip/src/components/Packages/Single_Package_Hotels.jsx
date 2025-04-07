@@ -332,7 +332,7 @@ const SinglePackageHotels = ({ hotelIds }) => {
                       src={
                         hotelImages[item._id] || "https://via.placeholder.com/150"
                       }
-                      alt={`${item?.title} in ${item?.location} – Starting from £${item?.price}`}
+                      alt={`${item?.title} in ${item?.location} – Starting from GBP £${item?.price}`}
                       onError={(e) => {
                         e.target.src = "https://via.placeholder.com/150";
                       }}
@@ -350,7 +350,7 @@ const SinglePackageHotels = ({ hotelIds }) => {
                 <div className="mt-5">
                   <div className="fw-500">
                     Starting from{" "}
-                    <span className="text-blue-1">£{item?.price}</span>
+                    <span className="text-blue-1">GBP £{item?.price}</span>
                   </div>
                 </div>
               </div>

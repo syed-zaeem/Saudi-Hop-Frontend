@@ -90,7 +90,7 @@ export default function GalleryOne({ hotel }) {
                   <div className="text-lg">
                     From{" "}
                     <span className="text-2xl lg:text-3xl text-blue-1 fw-500">
-                    £{hotel?.price}
+                    GBP £{hotel?.price}
                     </span>
                   </div>
                 </div>

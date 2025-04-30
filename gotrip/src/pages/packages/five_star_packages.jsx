@@ -26,7 +26,7 @@ const FiveStarPackages = () => {
 
   useEffect(() => {
     dispatch(getAllPackages());
-    dispatch(getAllHotels())
+    dispatch(getAllHotels());
   }, []);
 
   return (
@@ -34,7 +34,7 @@ const FiveStarPackages = () => {
       <MetaComponent meta={metadata} />
       <Header1 />
       <HeroSectionPackages
-        title="5 Star Umrah Packages"
+        title="Luxury Umrah Packages"
         paragraph="Indulge in unmatched luxury and comfort with our exclusive 5-star Umrah packages."
         heroImage="/img/masthead/hero_background/package_three_background.avif"
       />
@@ -42,23 +42,23 @@ const FiveStarPackages = () => {
       <main>
         <section className="page_paragraph" data-aos="fade-up">
           <h3 className="page_paragraph_heading">
-            Experience unparalleled luxury and comfort with our exclusive 5-star
-            Umrah packages.
+            Indulge in luxury and comfort with our exclusive Luxury Umrah
+            packages, providing an exceptional travel experience.
           </h3>
           <p className="page_paragraph_paragraph">
-            Explore our curated collection of 5-star Umrah packages, featuring
-            options for all preferences: from all-inclusive to budget-friendly,
-            couples' retreats to family getaways. Crafted by our team of
-            experts, each package ensures peace of mind throughout your journey,
-            from inquiry to return flight. Experience the essence of your Muslim
-            identity with our premier Islamic destinations. Choose from our
-            selection and embark on a soul-refreshing pilgrimage today.
+            Explore our meticulously crafted Luxury Umrah packages, with options
+            ranging from all inclusive luxurious stays to tailored packages for
+            those seeking comfort and style. Whether you're traveling solo, as a
+            couple, or with family, each package is designed to offer the
+            highest level of service and convenience, ensuring a peaceful and
+            enriching pilgrimage. Choose the perfect Luxury package and immerse
+            yourself in the serenity of your journey.
           </p>
         </section>
 
         <section className="page_paragraph" data-aos="fade-up">
           <h3 className="packages_page_paragraph_heading">
-            5 Star Umrah Package Deals: Choose from Luxurious to Deluxe Options!
+          Luxury Umrah Package Deals: Choose from Premium to Elite Options!
           </h3>
         </section>
 
@@ -88,7 +88,10 @@ const FiveStarPackages = () => {
               {/* <div className="border-top-light mt-30 mb-30"></div> */}
 
               <div className="row y-gap-30">
-                <PackagesCards category="5 Star" packagesData={fiveStarPackagesData} />
+                <PackagesCards
+                  category="5 Star"
+                  packagesData={fiveStarPackagesData}
+                />
               </div>
               {/* End .row */}
             </div>

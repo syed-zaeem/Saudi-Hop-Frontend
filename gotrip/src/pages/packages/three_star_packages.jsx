@@ -37,7 +37,7 @@ const ThreeStarPackages = () => {
 
       <Header1 />
       <HeroSectionPackages
-        title="3 Star Umrah Packages"
+        title="Economy Umrah Packages"
         paragraph="Experience unbeatable affordability and value with our budget-friendly 3 star Umrah packages."
         heroImage="/img/masthead/hero_background/package_one_background.avif"
       />
@@ -45,23 +45,23 @@ const ThreeStarPackages = () => {
       <main>
         <section className="page_paragraph" data-aos="fade-up">
           <h3 className="page_paragraph_heading">
-            Delve into the unmatched comfort and value of our economy 3-star
-            Umrah packages.
+            Experience unbeatable affordability and value with our
+            budget-friendly Economy Umrah packages.
           </h3>
           <p className="page_paragraph_paragraph">
-            Discover our carefully selected array of 3-star Umrah packages,
-            tailored to suit various preferences: from comprehensive to
-            budget-conscious, romantic escapes to family-friendly options.
-            Designed by our skilled team, each package guarantees a seamless
-            journey from inquiry to departure. Immerse yourself in the spiritual
-            significance of our top Islamic destinations. Select from our
-            offerings and embark on a rejuvenating pilgrimage today.
+            Explore our thoughtfully curated range of Economy Umrah packages,
+            designed to cater to a variety of preferences: from all-inclusive to
+            budget-conscious options, romantic getaways to family-friendly
+            choices. Each package ensures a seamless journey from inquiry to
+            departure, providing access to the spiritual significance of the top
+            Islamic destinations. Select the perfect Economy package and embark
+            on a rejuvenating pilgrimage today.
           </p>
         </section>
 
         <section className="page_paragraph" data-aos="fade-up">
           <h3 className="packages_page_paragraph_heading">
-            3 Star Umrah Package Deals: Choose from Economical to
+            Economy Umrah Package Deals: Choose from Affordable to
             Budget-Friendly Options!
           </h3>
         </section>

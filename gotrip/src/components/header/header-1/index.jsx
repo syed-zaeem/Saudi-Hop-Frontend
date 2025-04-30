@@ -79,7 +79,7 @@ const Header1 = ({logo}) => {
                     Become An Expert
                   </Link> */}
 
-                  {pathname === "/" && (
+                  {/* {pathname === "/" && ( */}
                     <Link
                       to="/enquire"
                       className={`button px-30 fw-400 text-14 ${navbar?"border-black text-dark -outline-black":"border-white text-light -outline-white"} h-50 ml-20`}
@@ -93,20 +93,20 @@ const Header1 = ({logo}) => {
                         </h4>
                       </div>
                     </Link>
-                  )}
+                  {/* )} */}
 
                   <div className="col-auto">
                     <div className="w-1 mr-4 ml-20 h-20 bg-white-20" />
                   </div>
 
-                  {pathname === "/" && (
+                  {/* {pathname === "/" && ( */}
                     <Link
                       to="/enquire"
                       className={`button px-30 fw-400 text-14 ${navbar?"border-black text-black -outline-black":"border-white text-light -outline-white"} h-50 ml-20`}
                     >
                       Enquire
                     </Link>
-                  )}
+                  {/* )} */}
                 </div>
                 {/* End btn-group */}
 

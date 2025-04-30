@@ -104,6 +104,8 @@ import SinglePackage from "./pages/packages/single_package";
 import LuxurySinglePackage from "./pages/packages/luxury_single_package";
 import UmrahPlusPackages from "./pages/packages/umrah_plus_packages";
 import { FaWhatsapp } from "react-icons/fa";
+import Flights from "./pages/flight";
+import GroupBookings from "./pages/packages/group_bookings";
 
 function App() {
   useEffect(() => {
@@ -149,6 +151,7 @@ function App() {
               <Route path="invoice" element={<Invoice />} />
               <Route path="contact" element={<Contact />} />
               <Route path="Enquire" element={<Enquire />} />
+              <Route path="flights" element={<Flights />} />
               <Route path="destinations" element={<Destinations />} />
               <Route
                 path="destination-details/:id"
@@ -161,6 +164,7 @@ function App() {
               <Route path="four-star-packages" element={<FourStarPackages />} />
               <Route path="five-star-packages" element={<FiveStarPackages />} />
               <Route path="umrah+-packages" element={<UmrahPlusPackages />} />
+              <Route path="group-bookings-packages" element={<GroupBookings /> } />
               <Route
                 path="ultra-luxury-packages"
                 element={<UltraLuxuryPackages />}

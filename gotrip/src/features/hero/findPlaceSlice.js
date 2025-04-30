@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   tabs: [
-    { id: 1, name: "3 Star", path: "three-star-packages" },
-    { id: 2, name: "4 Star", path: "four-star-packages" },
-    { id: 3, name: "5 Star", path: "five-star-packages" },
+    { id: 1, name: "Economy", path: "three-star-packages" },
+    { id: 2, name: "Premium", path: "four-star-packages" },
+    { id: 3, name: "Luxury", path: "five-star-packages" },
     { id: 4, name: "Ultra Luxury", path: "ultra-luxury-packages" },
     { id: 5, name: "Group Bookings", path: "/" },
     { id: 6, name: "Umrah +", path: "/umrah+-packages" },

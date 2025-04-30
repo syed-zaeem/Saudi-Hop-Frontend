@@ -180,7 +180,7 @@ const About = () => {
           <div className="container">
             <div className="border-bottom-light pb-40">
               <div className="row y-gap-30 justify-center text-center">
-                <Counter />
+                {/* <Counter /> */}
               </div>
             </div>
           </div>

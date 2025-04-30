@@ -35,7 +35,7 @@ const MainFilterSearchBoxDestinations = () => {
               </div>
             </div>
 
-            <div className="searchMenu-date px-20 lg:py-1 lg:px-0 js-form-dd js-calendar">
+            <div onClick={()=>{navigate("/enquire")}} className="searchMenu-date px-20 lg:py-1 lg:px-0 js-form-dd js-calendar">
               <div className="items-center bg-gray-100 contact_box_section">
                 {/* Left Icon (Fixed Size) */}
                 <MdEmail size={28} className="text-gray-600" />

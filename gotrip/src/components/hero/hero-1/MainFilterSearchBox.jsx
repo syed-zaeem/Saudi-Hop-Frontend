@@ -59,7 +59,7 @@ const MainFilterSearchBox = () => {
               </div>
             </div>
 
-            <div className="searchMenu-date px-30 lg:py-1 lg:px-0">
+            <div onClick={()=>{navigate("/enquire")}} className="searchMenu-date px-20 lg:py-1 lg:px-0">
               <div className="items-center bg-gray-100 p-3 contact_box_section">
                 <MdEmail size={28} className="text-gray-600" />
 
@@ -73,13 +73,15 @@ const MainFilterSearchBox = () => {
             </div>
             <div className="searchMenu-date px-30 lg:py-1 lg:px-0">
               <div className="items-center bg-gray-100 p-3 contact_box_section">
-                <MdEmail size={28} className="text-gray-600" />
+                {/* Left Icon (Fixed Size) */}
+                <FaKaaba size={28} className="text-gray-600" />
 
-                <div className="ml-20">
+                {/* Right Content */}
+                <div className="">
                   <h4 className="text-15 fw-500 ls-2 lh-16">
-                    Request Quote Now
+                    View Best Offers
                   </h4>
-                  <h4 className="text-18 fw-500 ls-2 lh-16">Enquire</h4>
+                  <h4 className="text-18 fw-500 ls-2 lh-16">Discover</h4>
                 </div>
               </div>
             </div>

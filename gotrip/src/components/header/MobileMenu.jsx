@@ -150,7 +150,7 @@ const MobileMenu = () => {
           {/* End  Desitinations Menu */}
 
           <MenuItem
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/flights")}
             className={pathname === "/flights" ? "menu-active-link" : ""}
           >
             Flights
@@ -166,15 +166,15 @@ const MobileMenu = () => {
           {/* End  Hotels Menu */}
 
           <MenuItem
-            onClick={() => navigate("/")}
-            className={pathname === "/blogs" ? "menu-active-link" : ""}
+            onClick={() => navigate("/blog-list")}
+            className={pathname === "/blog-list" ? "menu-active-link" : ""}
           >
-            Blogs
+            News
           </MenuItem>
           {/* End Blogs Menu */}
 
           <MenuItem
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/enquire")}
             className={pathname === "/enquire" ? "menu-active-link" : ""}
           >
             Enquire

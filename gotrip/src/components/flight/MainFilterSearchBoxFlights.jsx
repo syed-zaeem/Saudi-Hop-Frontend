@@ -9,7 +9,7 @@ import { FaPhoneAlt, FaTags } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaKaaba } from "react-icons/fa6"; // Kaaba Icon
 
-const MainFilterSearchBoxPackages = () => {
+const MainFilterSearchBoxFlights = () => {
   const { tabs, currentTab } = useSelector((state) => state.hero) || {};
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ const MainFilterSearchBoxPackages = () => {
               </div>
             </div>
 
-            <div onClick={()=>{navigate("/enquire")}} className="searchMenu-date px-20 lg:py-1 lg:px-0 js-form-dd js-calendar">
+            <div className="searchMenu-date px-20 lg:py-1 lg:px-0 js-form-dd js-calendar">
               <div className="items-center bg-gray-100 contact_box_section">
                 {/* Left Icon (Fixed Size) */}
                 <MdEmail size={28} className="text-gray-600" />
@@ -84,4 +84,4 @@ const MainFilterSearchBoxPackages = () => {
   );
 };
 
-export default MainFilterSearchBoxPackages;
+export default MainFilterSearchBoxFlights;

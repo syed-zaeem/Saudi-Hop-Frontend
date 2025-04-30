@@ -22,20 +22,19 @@ const metadata = {
 };
 
 const FourStarPackages = () => {
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getAllPackages())
-    dispatch(getAllHotels())
-  }, [])
+    dispatch(getAllPackages());
+    dispatch(getAllHotels());
+  }, []);
 
   return (
     <>
       <MetaComponent meta={metadata} />
       <Header1 />
       <HeroSectionPackages
-        title="4 Star Umrah Packages"
+        title="Premium Umrah Packages"
         paragraph="Discover elevated comfort and indulgence with our distinctive 4 star Umrah packages."
         heroImage="/img/masthead/hero_background/package_two_background.avif"
       />
@@ -43,24 +42,23 @@ const FourStarPackages = () => {
       <main>
         <section className="page_paragraph" data-aos="fade-up">
           <h3 className="page_paragraph_heading">
-            Embark on a journey of comfort and luxury with our distinguished
-            4-star Umrah packages.
+            Elevate your pilgrimage experience with our Premium Umrah packages,
+            offering superior comfort and indulgence.
           </h3>
           <p className="page_paragraph_paragraph">
-            Delve into our thoughtfully curated assortment of 4-star Umrah
-            packages, catering to a variety of preferences: from inclusive
-            options to economical choices, romantic escapes to family
-            adventures. Meticulously crafted by our seasoned team, each package
-            guarantees a seamless experience from inquiry to departure. Immerse
-            yourself in the spiritual essence of our premier Islamic
-            destinations. Select from our array of offerings and embark on a
-            rejuvenating pilgrimage today.
+            Our Premium Umrah packages are carefully crafted to meet various
+            traveler preferences, offering a range of choices from inclusive
+            options to value-driven deals, perfect for couples or family
+            adventures. Each journey is designed with a focus on comfort and
+            spiritual connection, ensuring a smooth and enriching pilgrimage.
+            Select from our exclusive Premium options and enjoy an unforgettable
+            Umrah experience.
           </p>
         </section>
 
         <section className="page_paragraph" data-aos="fade-up">
           <h3 className="packages_page_paragraph_heading">
-            4 Star Umrah Package Deals: Reserve Premium to Affordable Options!
+          Premium Umrah Package Deals: Reserve Comfort and Value-Focused Options!
           </h3>
         </section>
 
@@ -90,7 +88,10 @@ const FourStarPackages = () => {
               {/* <div className="border-top-light mt-30 mb-30"></div> */}
 
               <div className="row y-gap-30">
-                <PackagesCards category="4 Star" packagesData={fourStarPackagesData} />
+                <PackagesCards
+                  category="4 Star"
+                  packagesData={fourStarPackagesData}
+                />
               </div>
               {/* End .row */}
             </div>

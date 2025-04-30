@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import MainMenu from "../MainMenu";
 import CurrenctyMegaMenu from "../CurrenctyMegaMenu";
 import LanguageMegaMenu from "../LanguageMegaMenu";
+import { FaPhoneAlt, FaTags } from "react-icons/fa";
 
 import MobileMenu from "../MobileMenu";
 import MainMenuForWhiteBg from "../MainMenuForWhiteBg";
@@ -35,7 +36,10 @@ const Header1 = () => {
                 <Link to="/" className="header-logo mr-20">
                   {/* <img src="/img/general/logo-dark.svg" alt="logo icon" />
                   <img src="/img/general/logo-dark.svg" alt="logo icon" /> */}
-                  <img src="/img/general/saudi_hop_logo_light-removebg.png" alt="Saudi Hop" />
+                  <img
+                    src="/img/general/saudi_hop_logo_light-removebg.png"
+                    alt="Saudi Hop"
+                  />
                 </Link>
                 {/* End logo */}
 
@@ -82,6 +86,35 @@ const Header1 = () => {
                   >
                     Sign In / Register
                   </Link> */}
+
+                  {/* {pathname === "/" && ( */}
+                  <Link
+                    to="/enquire"
+                    className={`button px-30 fw-400 text-14 border-black text-dark -outline-black h-50 ml-20`}
+                  >
+                    <FaPhoneAlt size={20} className="" />
+
+                    {/* Right Content */}
+                    <div className=" ml-20">
+                      <h4 className="text-14 fw-500 ls-2 lh-16">
+                        020 8944 9145
+                      </h4>
+                    </div>
+                  </Link>
+                  {/* )} */}
+
+                  <div className="col-auto">
+                    <div className="w-1 mr-4 ml-20 h-20 bg-white-20" />
+                  </div>
+
+                  {/* {pathname === "/" && ( */}
+                  <Link
+                    to="/enquire"
+                    className={`button px-30 fw-400 text-14 border-black text-black -outline-black h-50 ml-20`}
+                  >
+                    Enquire
+                  </Link>
+                  {/* )} */}
                 </div>
                 {/* End btn-group */}
 

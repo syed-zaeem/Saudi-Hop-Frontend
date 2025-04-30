@@ -93,7 +93,7 @@ const MainMenuForWhiteBg = ({ style = "" }) => {
         {/* End Destinatinos single menu */}
 
         <li className={pathname === "/flights" ? "current" : "text-dark"}>
-          <Link to="/destinations">Flights</Link>
+          <Link to="/flights">Flights</Link>
         </li>
         {/* End Flights single menu */}
 
@@ -124,13 +124,13 @@ const MainMenuForWhiteBg = ({ style = "" }) => {
         </li>
         {/* End blogIems */}
 
-        {pathname!=="/" ? <li
+        {/* {pathname!=="/" ? <li
           className={pathname === "/enquire" ? "current" : "text-dark"}
         >
           <Link to="/enquire">
             <span className="mr-10">Enquire</span>
           </Link>
-        </li> : ""}
+        </li> : ""} */}
         {/* End Enquire */}
 
         {/* <li
@@ -183,9 +183,9 @@ const MainMenuForWhiteBg = ({ style = "" }) => {
           </ul>
         </li> */}
 
-        {pathname !== "/" ? <li className={pathname === "/contact" ? "current" : "text-dark"}>
+        {/* {pathname !== "/" ? <li className={pathname === "/contact" ? "current" : "text-dark"}>
           <Link to="/contact">Contact Us</Link>
-        </li>: ""}
+        </li>: ""} */}
       </ul>
     </nav>
   );

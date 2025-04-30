@@ -12,27 +12,26 @@ const index = () => {
           className="js-lazy"
         />
       </div>
-      <div className="container sm:mt-32 lg:mt-0">
+      <div className="container sm:mt-32 md:mt-0 lg:-mt-20 xl:-mt-16">
         <div className="row justify-center">
           <div className="col-auto ">
             <div className="flex flex-row align-items-center gap-20">
               <div className="text-left lg:text-center md:mt-20 mt-0 lg:w-full w-2/3 ">
                 <h1
-                  className="text-60 lg:text-40 md:text-30 text-white"
+                  className="text-40 md:text-30 lg:text-30 text-white"
                   data-aos="fade-up"
                 >
-                  Umrah & Dubai
+                  Discover Saudi Arabia — Faith, Culture, and Adventure Await
                 </h1>
                 <p
                   className="text-white mt-6 md:mt-8"
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
-                  Embark on a <strong>spiritual Umrah pilgrimage</strong> and
-                  complement it with a{" "}
-                  <strong>luxurious getaway in Dubai</strong>. Discover the
-                  perfect blend of <strong>faith, comfort, and travel</strong>{" "}
-                  with our exclusive Umrah and tourism packages.
+                  Explore the spiritual journey of Umrah and the rich landscapes
+                  of Saudi Arabia with exclusive packages for every traveller.
+                  Whether for pilgrimage or leisure, we handle everything —
+                  flights, hotels, tours, and more.
                 </p>
               </div>
 
@@ -70,7 +69,7 @@ const index = () => {
             {/* End hero title */}
 
             <div
-              className="tabs -underline mt-60 mb-4 js-tabs"
+              className="tabs -underline mt-40 mb-4 js-tabs"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -79,7 +78,6 @@ const index = () => {
             {/* End tab-filter */}
 
             {/* Floating WhatsApp Button */}
-            
           </div>
         </div>
       </div>

@@ -1018,6 +1018,50 @@
   }
 }
 
+.whychooseusflights_button {
+  width: 36%;
+  margin-left: 32%;
+  margin-top: 40px;
+  font-size: 20px;
+
+  @include media-below(lg) {
+    width: 44%;
+    margin-left: 28%;
+  }
+
+  @include media-below(md) {
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  @include media-below(sm) {
+    width: 84%;
+    margin-left: 8%;
+  }
+}
+
+.ourflightsservices_button{
+  width: 36%;
+  margin-left: 32%;
+  margin-top: 40px;
+  font-size: 20px;
+
+  @include media-below(lg) {
+    width: 44%;
+    margin-left: 28%;
+  }
+
+  @include media-below(md) {
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  @include media-below(sm) {
+    width: 84%;
+    margin-left: 8%;
+  }
+}
+
 .book_now_button {
   padding: 12px 0px;
   margin: 20px auto;
@@ -1107,6 +1151,33 @@
     width: 50%;
     margin-left: 25%;
     font-size: 16px;
+  }
+}
+
+
+.flex_right_col_button_groupbooking {
+  width: 40%;
+  margin-top: 20px;
+  padding: 15px 10px;
+  font-size: 18px;
+
+  @include media-below(xl) {
+    width: 45%;
+  }
+
+  @include media-below(lg) {
+    width: 40%;
+    font-size: 18px;
+  }
+
+  @include media-below(md) {
+    width: 43%;
+    font-size: 17px;
+  }
+
+  @include media-below(sm) {
+    width: 80%;
+    font-size: 17px;
   }
 }
 

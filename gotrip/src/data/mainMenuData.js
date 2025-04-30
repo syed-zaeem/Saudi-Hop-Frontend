@@ -56,15 +56,15 @@ export const blogItems = [
 ];
 export const packageItems = [
   {
-    name: "3 Star Packages",
+    name: "Economy Packages",
     routePath: "/three-star-packages",
   },
   {
-    name: "4 Star Packages",
+    name: "Premium Packages",
     routePath: "/four-star-packages",
   },
   {
-    name: "5 Star Packages",
+    name: "Luxury Packages",
     routePath: "/five-star-packages",
   },
   {
@@ -73,10 +73,10 @@ export const packageItems = [
   },
   {
     name: "Group Booking Packages",
-    routePath: "/group-booking-packages",
+    routePath: "/group-bookings-packages",
   },
   {
-    name: "Umrah + Holidays",
+    name: "Umrah +",
     routePath: "/umrah+-packages",
   }
 ]
